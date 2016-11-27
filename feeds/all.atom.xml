@@ -16293,7 +16293,7 @@ OIK = 1 № 1
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="python политология выборы"></category></entry><entry><title>Везение одной партии</title><link href="https://ischurov.github.io/vezenie-odnoi-partii.html" rel="alternate"></link><published>2014-08-26T22:23:00-03:00</published><updated>2014-08-26T22:23:00-03:00</updated><author><name>Илья Щуров</name></author><id>tag:ischurov.github.io,2014-08-26:vezenie-odnoi-partii.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
+</summary><category term="python"></category><category term="политология"></category><category term="выборы"></category></entry><entry><title>Везение одной партии</title><link href="https://ischurov.github.io/vezenie-odnoi-partii.html" rel="alternate"></link><published>2014-08-26T22:23:00-03:00</published><updated>2014-08-26T22:23:00-03:00</updated><author><name>Илья Щуров</name></author><id>tag:ischurov.github.io,2014-08-26:vezenie-odnoi-partii.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
