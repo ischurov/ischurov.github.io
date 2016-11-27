@@ -23,6 +23,17 @@
 </head>
 	
 <body>
+<!-- facebook social -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8&appId=454295064733340";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- /facebook social -->
+
 
     <div class="container">
 	  
@@ -41,7 +52,7 @@
 		<h1>Полгода плохая погода, полгода совсем никуда</h1>
 		
 <div class="metadata">
-  <time datetime="2015-03-11T17:06:05-03:00" pubdate>Wed 11 March 2015</time>
+  <time datetime="2015-03-11T17:06:05-03:00" pubdate>2015-03-11</time>
     <address class="vcard author">
       Автор: <a class="url fn" href="https://ischurov.github.io/author/ilya-v-schurov.html">Ilya V. Schurov</a>
     </address>
@@ -51,15 +62,882 @@
 *
 * IPython notebook
 *
-*/.ansibold{font-weight:700}.ansiblack{}.ansired{color:#8b0000}.ansigreen{6400}.ansiyellow{color:#c4a000}.ansiblue{8b}.ansipurple{color:#9400d3}.ansicyan{color:#4682b4}.ansigray{color:gray}.ansibgblack{background-}.ansibgred{background-color:red}.ansibggreen{background-color:green}.ansibgyellow{background-color:#ff0}.ansibgblue{background-f}.ansibgpurple{background-color:#ff00ff}.ansibgcyan{background-ff}.ansibggray{background-color:gray}div.cell{border:1px solid transparent;display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;border-radius:2px;box-sizing:border-box;-moz-box-sizing:border-box;border-width:thin;border-style:solid;width:100%;padding:5px;margin:0;outline:0}div.cell.selected{border-color:#ababab}@media print{div.cell.selected{border-color:transparent}}.edit_mode div.cell.selected{border-color:green}.prompt{min-width:14ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}@-moz-document url-prefix(){div.inner_cell{overflow-x:hidden}}div.input_area{border:1px solid #cfcfcf;border-radius:2px;background:#f7f7f7;line-height:1.21429em}div.prompt:empty{padding-top:0;padding-bottom:0}div.unrecognized_cell{padding:5px 5px 5px 0;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}div.unrecognized_cell .inner_cell{border-radius:2px;padding:5px;font-weight:700;color:red;border:1px solid #cfcfcf;background:#eaeaea}div.unrecognized_cell .inner_cell a,div.unrecognized_cell .inner_cell a:hover{color:inherit;text-decoration:none}@media (max-width:540px){.prompt{text-align:left}div.unrecognized_cell>div.prompt{display:none}}div.code_cell{}div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}@media (max-width:540px){div.input{-webkit-box-orient:vertical;-moz-box-orient:vertical;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:navy;border-top:1px solid transparent}div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}div.input_area>div.highlight>pre{margin:0;border:none;padding:0;background-color:transparent}.CodeMirror{line-height:1.21429em;font-size:14px;height:auto;background:0 0}.CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}.CodeMirror-lines{padding:.4em}.CodeMirror-linenumber{padding:0 8px 0 4px}.CodeMirror-gutters{border-bottom-left-radius:2px;border-top-left-radius:2px}.CodeMirror pre{padding:0;border:0;border-radius:0}.highlight-base,.highlight-variable{}.highlight-variable-2{color:#1a1a1a}.highlight-variable-3{color:#333}.highlight-string{color:#BA2121}.highlight-comment{color:#408080;font-style:italic}.highlight-number{80}.highlight-atom{color:#88F}.highlight-keyword{color:green;font-weight:700}.highlight-builtin{color:green}.highlight-error{color:red}.highlight-operator{color:#A2F;font-weight:700}.highlight-meta{color:#A2F}.highlight-def{f}.highlight-string-2{color:#f50}.highlight-qualifier{color:#555}.highlight-bracket{color:#997}.highlight-tag{color:#170}.highlight-attribute{c}.highlight-header{f}.highlight-quote{90}.highlight-link{c}.cm-s-ipython span.cm-keyword{color:green;font-weight:700}.cm-s-ipython span.cm-atom{color:#88F}.cm-s-ipython span.cm-number{80}.cm-s-ipython span.cm-def{f}.cm-s-ipython span.cm-variable{}.cm-s-ipython span.cm-operator{color:#A2F;font-weight:700}.cm-s-ipython span.cm-variable-2{color:#1a1a1a}.cm-s-ipython span.cm-variable-3{color:#333}.cm-s-ipython span.cm-comment{color:#408080;font-style:italic}.cm-s-ipython span.cm-string{color:#BA2121}.cm-s-ipython span.cm-string-2{color:#f50}.cm-s-ipython span.cm-meta{color:#A2F}.cm-s-ipython span.cm-qualifier{color:#555}.cm-s-ipython span.cm-builtin{color:green}.cm-s-ipython span.cm-bracket{color:#997}.cm-s-ipython span.cm-tag{color:#170}.cm-s-ipython span.cm-attribute{c}.cm-s-ipython span.cm-header{f}.cm-s-ipython span.cm-quote{90}.cm-s-ipython span.cm-link{c}.cm-s-ipython span.cm-error{color:red}.cm-s-ipython span.cm-tab{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=')right no-repeat}div.output_wrapper{display:-webkit-box;-webkit-box-align:stretch;display:-moz-box;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;z-index:1}div.output_scroll{height:24em;width:100%;overflow:auto;border-radius:2px;-webkit-box-shadow:inset 0 2px 8px rgba(0,0,0,.8);box-shadow:inset 0 2px 8px rgba(0,0,0,.8);display:block}div.output_collapsed{margin:0;padding:0;display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}div.out_prompt_overlay{height:100%;padding:0 .4em;position:absolute;border-radius:2px}div.out_prompt_overlay:hover{-webkit-box-shadow:inset 0 0 1px #000;box-shadow:inset 0 0 1px #000;background:rgba(240,240,240,.5)}div.output_prompt{color:#8b0000}div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}div.output_area .MathJax_Display{text-align:left!important}div.output_area div.output_area img,div.output_area svg{max-width:100%;height:auto}div.output_area img.unconfined,div.output_area svg.unconfined{max-width:none}.output{display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}@media (max-width:540px){div.output_area{-webkit-box-orient:vertical;-moz-box-orient:vertical;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;background-color:transparent;border-radius:0}div.output_subarea{overflow-x:auto;padding:.4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1;max-width:calc(100% - 14ex)}div.output_text{text-align:left;line-height:1.21429em}div.output_stderr{background:#fdd}div.output_latex{text-align:left}div.output_javascript:empty{padding:0}.js-error{color:#8b0000}div.raw_input_container{font-family:monospace;padding-top:5px}span.raw_input_prompt{}input.raw_input{font-family:inherit;font-size:inherit;color:inherit;width:auto;vertical-align:baseline;padding:0 .25em;margin:0 .25em}input.raw_input:focus{box-shadow:none}p.p-space{margin-bottom:10px}div.output_unrecognized{padding:5px;font-weight:700;color:red}div.output_unrecognized a,div.output_unrecognized a:hover{color:inherit;text-decoration:none}.rendered_html{}.rendered_html :link,.rendered_html :visited,.rendered_html h1:first-child{margin-top:.538em}.rendered_html h2:first-child{margin-top:.636em}.rendered_html h3:first-child{margin-top:.777em}.rendered_html h4:first-child,.rendered_html h5:first-child,.rendered_html h6:first-child{margin-top:1em}.rendered_html *+ol,.rendered_html *+ul{margin-top:1em}.rendered_html *+table{margin-top:1em}.rendered_html *+p{margin-top:1em}.rendered_html *+img{margin-top:1em}div.text_cell{display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}@media (max-width:540px){div.text_cell>div.prompt{display:none}}div.text_cell_render{outline:0;resize:none;width:inherit;border-style:none;padding:.5em .5em .5em .4em;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}a.anchor-link:link{text-decoration:none;padding:0 20px;visibility:hidden}h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anchor-link,h5:hover .anchor-link,h6:hover .anchor-link{visibility:visible}.text_cell.rendered .input_area{display:none}.text_cell.rendered .text_cell.unrendered .text_cell_render{display:none}.cm-header-1,.cm-header-2,.cm-header-3,.cm-header-4,.cm-header-5,.cm-header-6{font-weight:700;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.cm-header-1{font-size:185.7%}.cm-header-2{font-size:157.1%}.cm-header-3{font-size:128.6%}.cm-header-4{font-size:110%}.cm-header-5,.cm-header-6{font-size:100%;font-style:italic}</style>
+*/
+/* CSS font colors for translated ANSI colors. */
+.ansibold {
+  font-weight: bold;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  border-left-width: 1px;
+  padding-left: 5px;
+  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #90CAF9;
+  border-left-color: #E3F2FD;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #E3F2FD;
+  border-right-width: 1px;
+  background: #E3F2FD;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected {
+  border-color: #ababab;
+  border-left-width: 0px;
+  padding-left: 6px;
+  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
+}
+@media print {
+  div.cell.selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected.jupyter-soft-selected {
+  border-left-width: 0;
+  padding-left: 6px;
+  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
+}
+.edit_mode div.cell.selected {
+  border-color: #66BB6A;
+  border-left-width: 0px;
+  padding-left: 6px;
+  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+@-moz-document url-prefix() {
+  div.inner_cell {
+    overflow-x: hidden;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell > div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+div.input_area > div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area > div.highlight > pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the <head> if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  padding: 0.4em;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
+  /* .CodeMirror-lines */
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #BA2121;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #AA22FF;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #BA2121;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #AA22FF;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but FF barfs all over that */
+  height: 24em;
+  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/FF */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+.rendered_html pre,
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+.rendered_html td,
+
+
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell > div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+</style>
 <style type="text/css">.highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
 .highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
 .highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
 .highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
 .highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
 .highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #A00000 } /* Generic.Deleted */
@@ -115,6 +993,43 @@
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
+<style type="text/css">
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+</style>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -126,6 +1041,7 @@
 <p>— Правда? Сейчас проверим…</p>
 <p>И я пошёл искать статистические данные по погоде в Москве. Они нашлись быстро — <a href="http://cliware.meteo.ru/inter/data.html">вот здесь</a> можно взять информацию за последние 50 лет. Судя по заглавной странице, это система Всероссийского научно-исследовательского института гидрометеорологической информации — звучит внушительно. С помощью найденных данных и математической статистики мы не только проверим сформулированную выше «народную примету», но и получим довольно неожиданную информацию о связи погоды в разные месяцы, а также своими глазами посмотрим на глобальное потепление.</p>
 <p>Поехали!</p>
+
 </div>
 </div>
 </div>
@@ -134,8 +1050,9 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Планируем">Планируем<a class="anchor-link" href="#Планируем">¶</a></h3><p>Мы нашли информацию о температуре за каждый день за последние 50 лет, но что мы теперь с ней будем делать? Чтобы подтвердить или опровергнуть нашу гипотезу, её надо переформулировать математически. Утверждение, «тепло в марте, значит, будет холодно в апреле», означает, что между двумя величинами — средней температурой за март и средней температурой за апрель — наблюдается <em>отрицательная корреляция</em>. То есть мы предполагаем, что в те года, в которые средняя температура за март была относительно высокой, средняя температура за апрель была относительно низкой. Конечно, всегда может встретиться аномальный год с жарким мартом и жарким апрелем — само по себе это не будет противоречить нашей гипотезе — но мы предполагаем, что такие случаи редки.</p>
+<h3 id="Планируем">&#1055;&#1083;&#1072;&#1085;&#1080;&#1088;&#1091;&#1077;&#1084;<a class="anchor-link" href="#Планируем">&#182;</a></h3><p>Мы нашли информацию о температуре за каждый день за последние 50 лет, но что мы теперь с ней будем делать? Чтобы подтвердить или опровергнуть нашу гипотезу, её надо переформулировать математически. Утверждение, «тепло в марте, значит, будет холодно в апреле», означает, что между двумя величинами — средней температурой за март и средней температурой за апрель — наблюдается <em>отрицательная корреляция</em>. То есть мы предполагаем, что в те года, в которые средняя температура за март была относительно высокой, средняя температура за апрель была относительно низкой. Конечно, всегда может встретиться аномальный год с жарким мартом и жарким апрелем — само по себе это не будет противоречить нашей гипотезе — но мы предполагаем, что такие случаи редки.</p>
 <p>Чтобы проверить эту гипотезу, нам потребуется вычислить среднюю температуру за каждый из интересующих нас месяцев каждого из 50 лет и вычислить величину, которая называется <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D1%80%D0%B5%D0%BB%D1%8F%D1%86%D0%B8%D1%8F#.D0.9A.D0.BE.D1.8D.D1.84.D1.84.D0.B8.D1.86.D0.B8.D0.B5.D0.BD.D1.82_.D0.BA.D0.BE.D1.80.D1.80.D0.B5.D0.BB.D1.8F.D1.86.D0.B8.D0.B8_.D0.9F.D0.B8.D1.80.D1.81.D0.BE.D0.BD.D0.B0">коэффициентом корреляции Пирсона</a>. К счастью, нам даже не нужно знать, по какой формуле её считать (хотя это и полезно), поскольку Python посчитаёт её за нас. Самое главное — подготовить для этого данные.</p>
+
 </div>
 </div>
 </div>
@@ -144,20 +1061,23 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Грузим">Грузим<a class="anchor-link" href="#Грузим">¶</a></h3><p>Для анализа данных в Python используется модуль под милым названием <code>pandas</code>.</p>
+<h3 id="Грузим">&#1043;&#1088;&#1091;&#1079;&#1080;&#1084;<a class="anchor-link" href="#Грузим">&#182;</a></h3><p>Для анализа данных в Python используется модуль под милым названием <code>pandas</code>.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [1]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -165,21 +1085,24 @@
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Чтобы загрузить эту таблицу в <code>pandas</code>, можно было скопировать её в какой-нибудь табличный процессор (например, Excel, Numbers или OpenOffice.org Calc), сохранить как CSV и загрузить с помощью <code>pd.read_csv</code>, но на самом деле всё проще: можно загружать сразу html-таблички.</p>
-<p>Есть одна небольшая проблема: ссылка, упомянутая выше, указывает не на страницу с таблицей, а на форму — собственно табличку вы получаете после выбора параметров в форме и нажатия на кнопку, при этом сами параметры не передаются в адресной строке (это так называемый POST-запрос). Поэтому загрузить эти данные в <code>pandas</code>, просто подставив адрес нужной страницы, не удастся. Так что я сохранил html-файл на свой локальный компьютер. Потом мы обсуждали этот пример со студентами и, похоже, своими запросами временно «положили» источник данных, так что пришлось пользоваться <a href="http://math-info.hse.ru/f/2014-15/nes-stat/climate.html">сохранённой копией</a> на страничке <a href="http://math-info.hse.ru/s14/s">нашего курса</a>.</p>
+<p>Есть одна небольшая проблема: ссылка, упомянутая выше, указывает не на страницу с таблицей, а на форму — собственно табличку вы получаете после выбора параметров в форме и нажатия на кнопку, при этом сами параметры не передаются в адресной строке (это так называемый POST-запрос). Поэтому загрузить эти данные в <code>pandas</code>, просто подставив адрес нужной страницы, не удастся. Так что я сохранил html-файл на свой локальный компьютер. Потом мы обсуждали этот пример со студентами и, похоже, своими запросами временно «положили» источник данных, так что пришлось пользоваться <a href="http://math-info.hse.ru/f/2014-15/nes-stat/climate.html">сохранённой копией</a> на страничке <a href="http://math-info.hse.ru/s14/s">нашего курса</a>.</p>
 <p>Итак, данные у нас есть — поехали.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [2]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s">"http://math-info.hse.ru/f/2014-15/nes-stat/climate.html"</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s2">&quot;http://math-info.hse.ru/f/2014-15/nes-stat/climate.html&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -187,29 +1110,39 @@
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Параметр <code>header=0</code> показывает, что нулевая (то есть первая) строчка должна использоваться как строка заголовков (имён переменных). Без него возникает множество технических проблем, которые, впрочем, тоже преодолимы.</p>
-<p>Одако, если вывести сейчас переменную <code>dat</code>, получится что-то не очень понятное — вместо красивой таблички нечто текстовое. А если попытаться работать с <code>dat</code> как с dataframe (так в <code>pandas</code>, вслед за <code>R</code>, называются таблицы с данными), то и вообще ничего не получится. Дело в том, что <code>dat</code> сейчас — не dataframe. А что же?</p>
+<p>Одако, если вывести сейчас переменную <code>dat</code>, получится что-то не очень понятное — вместо красивой таблички нечто текстовое. А если попытаться работать с <code>dat</code> как с dataframe (так в <code>pandas</code>, вслед за <code>R</code>, называются таблицы с данными), то и вообще ничего не получится. Дело в том, что <code>dat</code> сейчас — не dataframe. А что же?</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="nb">type</span><span class="p">(</span><span class="n">dat</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">dat</span><span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
+
+
 <div class="output_text output_subarea output_execute_result">
 <pre>list</pre>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -217,28 +1150,38 @@
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Логично. Это список. На html-страничке ведь может быть несколько таблиц. <code>pd.read_html</code> каждую из них поместит в свой dataframe и создаст список dataframe'ов. В нашем случае этот список очень простой. Если бы мы читали документацию, то сразу бы об этом узнали.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [4]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="nb">len</span><span class="p">(</span><span class="n">dat</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">dat</span><span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
+
+
 <div class="output_text output_subarea output_execute_result">
 <pre>1</pre>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -246,116 +1189,128 @@
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>В нём всего один элемент. Извлечём его из списка и назовём тем же именем, что раньше называли список. (Сам список нам больше не понадобится.)</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [5]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">dat</span> <span class="o">=</span> <span class="n">dat</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dat</span> <span class="o">=</span> <span class="n">dat</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">dat</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
+
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>STATION_ID</th>
-<th>STATION_NM</th>
-<th>DATE_OBS</th>
-<th>TMPMAX</th>
-<th>Q</th>
-<th>TMPMIN</th>
-<th>Q.1</th>
-<th>TMPMN</th>
-<th>Q.2</th>
-<th>PRECIP</th>
-<th>Q.3</th>
-<th>D</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td> 27612</td>
-<td> МОСКВА ВДНХ</td>
-<td> 1948-01-01</td>
-<td>NaN</td>
-<td> 9</td>
-<td>NaN</td>
-<td> 9</td>
-<td>NaN</td>
-<td> 9</td>
-<td>NaN</td>
-<td> 9</td>
-<td> 9</td>
-</tr>
-<tr>
-<th>1</th>
-<td> 27612</td>
-<td> МОСКВА ВДНХ</td>
-<td> 1948-01-02</td>
-<td>NaN</td>
-<td> 9</td>
-<td>NaN</td>
-<td> 9</td>
-<td>NaN</td>
-<td> 9</td>
-<td>NaN</td>
-<td> 9</td>
-<td> 9</td>
-</tr>
-<tr>
-<th>2</th>
-<td> 27612</td>
-<td> МОСКВА ВДНХ</td>
-<td> 1948-01-03</td>
-<td>NaN</td>
-<td> 9</td>
-<td>NaN</td>
-<td> 9</td>
-<td>NaN</td>
-<td> 9</td>
-<td>NaN</td>
-<td> 9</td>
-<td> 9</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>STATION_ID</th>
+      <th>STATION_NM</th>
+      <th>DATE_OBS</th>
+      <th>TMPMAX</th>
+      <th>Q</th>
+      <th>TMPMIN</th>
+      <th>Q.1</th>
+      <th>TMPMN</th>
+      <th>Q.2</th>
+      <th>PRECIP</th>
+      <th>Q.3</th>
+      <th>D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 27612</td>
+      <td> МОСКВА ВДНХ</td>
+      <td> 1948-01-01</td>
+      <td>NaN</td>
+      <td> 9</td>
+      <td>NaN</td>
+      <td> 9</td>
+      <td>NaN</td>
+      <td> 9</td>
+      <td>NaN</td>
+      <td> 9</td>
+      <td> 9</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td> 27612</td>
+      <td> МОСКВА ВДНХ</td>
+      <td> 1948-01-02</td>
+      <td>NaN</td>
+      <td> 9</td>
+      <td>NaN</td>
+      <td> 9</td>
+      <td>NaN</td>
+      <td> 9</td>
+      <td>NaN</td>
+      <td> 9</td>
+      <td> 9</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td> 27612</td>
+      <td> МОСКВА ВДНХ</td>
+      <td> 1948-01-03</td>
+      <td>NaN</td>
+      <td> 9</td>
+      <td>NaN</td>
+      <td> 9</td>
+      <td>NaN</td>
+      <td> 9</td>
+      <td>NaN</td>
+      <td> 9</td>
+      <td> 9</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Теперь в <code>dat</code> лежит честный dataframe. Часть столбцов имеют понятный без специальных пояснений смысл: <code>TMPMAX</code> — максимальная температура за день, <code>TMPMIN</code> — минимальная, <code>TMPMN</code> — средняя (от слова <em>mean</em>), <code>PRECIP</code> — уровень осадков (<em>precipitation</em>). Ещё есть непонятные столбцы <code>Q</code> и <code>D</code>, значения которых мне не ведомы. Название и идентификатор станции нам тоже не слишком нужны. От них можно избавиться, например, вот так.</p>
+<p>Теперь в <code>dat</code> лежит честный dataframe. Часть столбцов имеют понятный без специальных пояснений смысл: <code>TMPMAX</code> — максимальная температура за день, <code>TMPMIN</code> — минимальная, <code>TMPMN</code> — средняя (от слова <em>mean</em>), <code>PRECIP</code> — уровень осадков (<em>precipitation</em>). Ещё есть непонятные столбцы <code>Q</code> и <code>D</code>, значения которых мне не ведомы. Название и идентификатор станции нам тоже не слишком нужны. От них можно избавиться, например, вот так.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [6]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">dat</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s">'STATION_ID'</span><span class="p">,</span> <span class="s">'STATION_NM'</span><span class="p">,</span> <span class="s">'Q'</span><span class="p">,</span><span class="s">'Q.1'</span><span class="p">,</span><span class="s">'Q.2'</span><span class="p">,</span><span class="s">'Q.3'</span><span class="p">,</span><span class="s">'D'</span><span class="p">],</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dat</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;STATION_ID&#39;</span><span class="p">,</span> <span class="s1">&#39;STATION_NM&#39;</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span><span class="s1">&#39;Q.1&#39;</span><span class="p">,</span><span class="s1">&#39;Q.2&#39;</span><span class="p">,</span><span class="s1">&#39;Q.3&#39;</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">],</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -363,83 +1318,92 @@
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Параметр <code>axis=1</code> означает, что нужно выкинуть столбцы, а не строки, <code>inplace=True</code> означает, что это нужно сделать «на месте», то есть модифицировать dataframe, а не вернуть его версию.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [7]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">dat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
+
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>DATE_OBS</th>
-<th>TMPMAX</th>
-<th>TMPMIN</th>
-<th>TMPMN</th>
-<th>PRECIP</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td> 1948-01-01</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>1</th>
-<td> 1948-01-02</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>2</th>
-<td> 1948-01-03</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>3</th>
-<td> 1948-01-04</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>4</th>
-<td> 1948-01-05</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>DATE_OBS</th>
+      <th>TMPMAX</th>
+      <th>TMPMIN</th>
+      <th>TMPMN</th>
+      <th>PRECIP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 1948-01-01</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td> 1948-01-02</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td> 1948-01-03</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td> 1948-01-04</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td> 1948-01-05</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -447,84 +1411,93 @@
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>В строчках за 1948 год нет никаких полезных данных и их надо бы выкинуть. Проще всего это сделать с помощью <code>.dropna</code> — это команда, выкидывающая строки (или столбцы, если вызывать с <code>axis=1</code>), в которых есть неопределенные ячейки (например, содержащие <code>NaN</code>).</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [8]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">dat</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dat</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">dat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
+
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>DATE_OBS</th>
-<th>TMPMAX</th>
-<th>TMPMIN</th>
-<th>TMPMN</th>
-<th>PRECIP</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>345</th>
-<td> 1948-12-11</td>
-<td> 2.4</td>
-<td> -4.5</td>
-<td> -1.1</td>
-<td> 0.0</td>
-</tr>
-<tr>
-<th>346</th>
-<td> 1948-12-12</td>
-<td> 1.9</td>
-<td> -8.7</td>
-<td> -6.2</td>
-<td> 0.5</td>
-</tr>
-<tr>
-<th>347</th>
-<td> 1948-12-13</td>
-<td>-7.4</td>
-<td>-12.3</td>
-<td>-10.1</td>
-<td> 0.0</td>
-</tr>
-<tr>
-<th>348</th>
-<td> 1948-12-14</td>
-<td>-5.6</td>
-<td>-13.2</td>
-<td> -9.4</td>
-<td> 0.0</td>
-</tr>
-<tr>
-<th>349</th>
-<td> 1948-12-15</td>
-<td>-3.6</td>
-<td> -9.2</td>
-<td> -6.6</td>
-<td> 0.0</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>DATE_OBS</th>
+      <th>TMPMAX</th>
+      <th>TMPMIN</th>
+      <th>TMPMN</th>
+      <th>PRECIP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>345</th>
+      <td> 1948-12-11</td>
+      <td> 2.4</td>
+      <td> -4.5</td>
+      <td> -1.1</td>
+      <td> 0.0</td>
+    </tr>
+    <tr>
+      <th>346</th>
+      <td> 1948-12-12</td>
+      <td> 1.9</td>
+      <td> -8.7</td>
+      <td> -6.2</td>
+      <td> 0.5</td>
+    </tr>
+    <tr>
+      <th>347</th>
+      <td> 1948-12-13</td>
+      <td>-7.4</td>
+      <td>-12.3</td>
+      <td>-10.1</td>
+      <td> 0.0</td>
+    </tr>
+    <tr>
+      <th>348</th>
+      <td> 1948-12-14</td>
+      <td>-5.6</td>
+      <td>-13.2</td>
+      <td> -9.4</td>
+      <td> 0.0</td>
+    </tr>
+    <tr>
+      <th>349</th>
+      <td> 1948-12-15</td>
+      <td>-3.6</td>
+      <td> -9.2</td>
+      <td> -6.6</td>
+      <td> 0.0</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -532,191 +1505,215 @@
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Как видимо, 1948 год начинается не с начала и в нём есть только кусок декабря, так что мы его тоже, пожалуй, выкинем, от греха подальше. Я это сделал, просмотрев табличку вручную и заметив номер нужной мне строчки.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [9]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">dat</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">365</span><span class="p">:</span><span class="mi">370</span><span class="p">]</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dat</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">365</span><span class="p">:</span><span class="mi">370</span><span class="p">]</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
+
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>DATE_OBS</th>
-<th>TMPMAX</th>
-<th>TMPMIN</th>
-<th>TMPMN</th>
-<th>PRECIP</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>365</th>
-<td> 1948-12-31</td>
-<td>-1.2</td>
-<td>-5.3</td>
-<td>-2.3</td>
-<td> 0.0</td>
-</tr>
-<tr>
-<th>366</th>
-<td> 1949-01-01</td>
-<td>-2.1</td>
-<td>-6.7</td>
-<td>-4.2</td>
-<td> 0.0</td>
-</tr>
-<tr>
-<th>367</th>
-<td> 1949-01-02</td>
-<td>-0.5</td>
-<td>-6.7</td>
-<td>-1.2</td>
-<td> 4.2</td>
-</tr>
-<tr>
-<th>368</th>
-<td> 1949-01-03</td>
-<td> 1.1</td>
-<td>-2.1</td>
-<td>-0.7</td>
-<td> 0.0</td>
-</tr>
-<tr>
-<th>369</th>
-<td> 1949-01-04</td>
-<td> 3.3</td>
-<td> 0.9</td>
-<td> 2.3</td>
-<td> 0.0</td>
-</tr>
-<tr>
-<th>370</th>
-<td> 1949-01-05</td>
-<td> 4.0</td>
-<td>-0.9</td>
-<td> 1.1</td>
-<td> 0.8</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>DATE_OBS</th>
+      <th>TMPMAX</th>
+      <th>TMPMIN</th>
+      <th>TMPMN</th>
+      <th>PRECIP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>365</th>
+      <td> 1948-12-31</td>
+      <td>-1.2</td>
+      <td>-5.3</td>
+      <td>-2.3</td>
+      <td> 0.0</td>
+    </tr>
+    <tr>
+      <th>366</th>
+      <td> 1949-01-01</td>
+      <td>-2.1</td>
+      <td>-6.7</td>
+      <td>-4.2</td>
+      <td> 0.0</td>
+    </tr>
+    <tr>
+      <th>367</th>
+      <td> 1949-01-02</td>
+      <td>-0.5</td>
+      <td>-6.7</td>
+      <td>-1.2</td>
+      <td> 4.2</td>
+    </tr>
+    <tr>
+      <th>368</th>
+      <td> 1949-01-03</td>
+      <td> 1.1</td>
+      <td>-2.1</td>
+      <td>-0.7</td>
+      <td> 0.0</td>
+    </tr>
+    <tr>
+      <th>369</th>
+      <td> 1949-01-04</td>
+      <td> 3.3</td>
+      <td> 0.9</td>
+      <td> 2.3</td>
+      <td> 0.0</td>
+    </tr>
+    <tr>
+      <th>370</th>
+      <td> 1949-01-05</td>
+      <td> 4.0</td>
+      <td>-0.9</td>
+      <td> 1.1</td>
+      <td> 0.8</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [10]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">dat</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">345</span><span class="p">,</span><span class="mi">366</span><span class="p">),</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dat</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">345</span><span class="p">,</span><span class="mi">366</span><span class="p">),</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">dat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>DATE_OBS</th>
-<th>TMPMAX</th>
-<th>TMPMIN</th>
-<th>TMPMN</th>
-<th>PRECIP</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>366</th>
-<td> 1949-01-01</td>
-<td>-2.1</td>
-<td>-6.7</td>
-<td>-4.2</td>
-<td> 0.0</td>
-</tr>
-<tr>
-<th>367</th>
-<td> 1949-01-02</td>
-<td>-0.5</td>
-<td>-6.7</td>
-<td>-1.2</td>
-<td> 4.2</td>
-</tr>
-<tr>
-<th>368</th>
-<td> 1949-01-03</td>
-<td> 1.1</td>
-<td>-2.1</td>
-<td>-0.7</td>
-<td> 0.0</td>
-</tr>
-<tr>
-<th>369</th>
-<td> 1949-01-04</td>
-<td> 3.3</td>
-<td> 0.9</td>
-<td> 2.3</td>
-<td> 0.0</td>
-</tr>
-<tr>
-<th>370</th>
-<td> 1949-01-05</td>
-<td> 4.0</td>
-<td>-0.9</td>
-<td> 1.1</td>
-<td> 0.8</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>DATE_OBS</th>
+      <th>TMPMAX</th>
+      <th>TMPMIN</th>
+      <th>TMPMN</th>
+      <th>PRECIP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>366</th>
+      <td> 1949-01-01</td>
+      <td>-2.1</td>
+      <td>-6.7</td>
+      <td>-4.2</td>
+      <td> 0.0</td>
+    </tr>
+    <tr>
+      <th>367</th>
+      <td> 1949-01-02</td>
+      <td>-0.5</td>
+      <td>-6.7</td>
+      <td>-1.2</td>
+      <td> 4.2</td>
+    </tr>
+    <tr>
+      <th>368</th>
+      <td> 1949-01-03</td>
+      <td> 1.1</td>
+      <td>-2.1</td>
+      <td>-0.7</td>
+      <td> 0.0</td>
+    </tr>
+    <tr>
+      <th>369</th>
+      <td> 1949-01-04</td>
+      <td> 3.3</td>
+      <td> 0.9</td>
+      <td> 2.3</td>
+      <td> 0.0</td>
+    </tr>
+    <tr>
+      <th>370</th>
+      <td> 1949-01-05</td>
+      <td> 4.0</td>
+      <td>-0.9</td>
+      <td> 1.1</td>
+      <td> 0.8</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Рисуем">Рисуем<a class="anchor-link" href="#Рисуем">¶</a></h3><p>Чтобы убедиться, что всё в порядке, нарисуем несколько картинок.</p>
+<h3 id="Рисуем">&#1056;&#1080;&#1089;&#1091;&#1077;&#1084;<a class="anchor-link" href="#Рисуем">&#182;</a></h3><p>Чтобы убедиться, что всё в порядке, нарисуем несколько картинок.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [11]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="o">%</span><span class="k">matplotlib</span> inline
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="n">dat</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt"></div>
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAEACAYAAACj0I2EAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsfXeYHMXx9lu7lySdIkIBZUASIAQyiCzDiWBMMGByzgbb
@@ -1263,10 +2260,13 @@ rXDljRdnOVYAagA8AWAF3IigI0rd504cu+lwlXKLAbwDlxkNsGOnHLsTAHR47+lC729Kuc8961hk
 YWFh0U1gRS4WFhYW3QSWoVtYWFh0E1iGbmFhYdFNYBm6hYWFRTeBZegWFhYW3QSWoVtYWFh0E1iG
 bmFhYdFNYBm6hYWFRTfB/wMvYoZvTnXVqQAAAABJRU5ErkJggg==
 ">
-</img></div>
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1274,23 +2274,30 @@ bmFhYdFNYBm6hYWFRTfB/wMvYoZvTnXVqQAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Что-нибудь видно? Не очень. Это потому, что мы попытались вывести на одном графике четыре разных параметра, да ещё и за кучу лет. Давайте возьмём поменьше данных для визуализации.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [12]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c"># только средняя температура и данные за три года</span>
-<span class="n">dat</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">365</span><span class="o">*</span><span class="mi">3</span><span class="p">][</span><span class="s">'TMPMN'</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># только средняя температура и данные за три года</span>
+<span class="n">dat</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">365</span><span class="o">*</span><span class="mi">3</span><span class="p">][</span><span class="s1">&#39;TMPMN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt"></div>
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAEACAYAAACj0I2EAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJztnXnYJFV1/z9nlved1WFYHHAAB1lU3BBUXKIOKogaxTVB
@@ -1632,10 +2639,13 @@ NuAmXDqMru0EDvPX6gbgY2Xb1aXNrwSux6XWvtz/PjGhNm+1ek5t/z0+ymVUNseORRERERETgtIl
 l4iIiIiIwSASekRERMSEIBJ6RERExIQgEnpERETEhCASekRERMSEIBJ6RERExIQgEnpERETEhCAS
 ekRERMSE4P8DeqwyPedR/DcAAAAASUVORK5CYII=
 ">
-</img></div>
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1643,23 +2653,30 @@ ekRERMSE4P8DeqwyPedR/DcAAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Это график температуры за первые три года наблюдений.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [13]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">dat</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">365</span><span class="o">*</span><span class="mi">3</span><span class="p">][</span><span class="s">'TMPMN'</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">rolling_mean</span><span class="p">(</span><span class="n">dat</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">365</span><span class="o">*</span><span class="mi">3</span><span class="p">][</span><span class="s">'TMPMN'</span><span class="p">],</span><span class="mi">30</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s">'red'</span><span class="p">);</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dat</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">365</span><span class="o">*</span><span class="mi">3</span><span class="p">][</span><span class="s1">&#39;TMPMN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">rolling_mean</span><span class="p">(</span><span class="n">dat</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">365</span><span class="o">*</span><span class="mi">3</span><span class="p">][</span><span class="s1">&#39;TMPMN&#39;</span><span class="p">],</span><span class="mi">30</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">);</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt"></div>
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAEACAYAAACj0I2EAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsnXeYVcX5xz/v9gWWpSOgiEqxoGIBERsqolhj790UE7s/
@@ -2100,10 +3117,13 @@ ryL641pBVDHYuxE1Ez1pbgKagfVEw2F0Wydwovut1gA/SVpXNzVfCKwmGlp7qXvNblDNe+N8ztv/
 d1wrl3ppto5FhmEYDULilothGIZRHSygG4ZhNAgW0A3DMBoEC+iGYRgNggV0wzCMBsECumEYRoNg
 Ad0wDKNBsIBuGIbRIPw/BZ42Fms4MN8AAAAASUVORK5CYII=
 ">
-</img></div>
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2111,6 +3131,7 @@ Ad0wDKNBsIBuGIbRIPw/BZ42Fms4MN8AAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>А здесь на него наложено <em>скользящее среднее</em> (<em>rolling mean</em>) за месяц, сглаживающее резкие колебания.</p>
+
 </div>
 </div>
 </div>
@@ -2120,22 +3141,29 @@ Ad0wDKNBsIBuGIbRIPw/BZ42Fms4MN8AAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Посмотрим, что происходит в масштабе десятилетий.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [14]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">pd</span><span class="o">.</span><span class="n">rolling_mean</span><span class="p">(</span><span class="n">dat</span><span class="p">[</span><span class="s">'TMPMN'</span><span class="p">],</span><span class="mi">365</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s">'blue'</span><span class="p">);</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">rolling_mean</span><span class="p">(</span><span class="n">dat</span><span class="p">[</span><span class="s1">&#39;TMPMN&#39;</span><span class="p">],</span><span class="mi">365</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">);</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt"></div>
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWYAAAEACAYAAACAi9xRAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJztfXe4JUW1/dpMIAsiShQGUQQxDAKiAnoJIij6REGQJ/JU
@@ -2478,10 +3506,13 @@ OgnAjQAexkCLe2OddQVgWQA/APB3AOcCWND1NTdYd2/CoOPpEgAXY0Aoa6S689bfNgAeM8/qhea3
 c5/bXxpgkpCQkNAzJCkjISEhoWdIxJyQkJDQMyRiTkhISOgZEjEnJCQk9AyJmBMSEhJ6hkTMCQkJ
 CT1DIuaEhISEniERc0JCQkLP8P8BhsAYsSwFn5QAAAAASUVORK5CYII=
 ">
-</img></div>
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2489,23 +3520,30 @@ CT1DIuaEhISEniERc0JCQkLP8P8BhsAYsSwFn5QAAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Здесь было сглаживание по годам.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [15]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">pd</span><span class="o">.</span><span class="n">rolling_mean</span><span class="p">(</span><span class="n">dat</span><span class="p">[</span><span class="s">'TMPMN'</span><span class="p">],</span><span class="mi">365</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'blue'</span><span class="p">)</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">rolling_mean</span><span class="p">(</span><span class="n">dat</span><span class="p">[</span><span class="s">'TMPMN'</span><span class="p">],</span><span class="mi">3650</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s">'red'</span><span class="p">);</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">rolling_mean</span><span class="p">(</span><span class="n">dat</span><span class="p">[</span><span class="s1">&#39;TMPMN&#39;</span><span class="p">],</span><span class="mi">365</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">rolling_mean</span><span class="p">(</span><span class="n">dat</span><span class="p">[</span><span class="s1">&#39;TMPMN&#39;</span><span class="p">],</span><span class="mi">3650</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">);</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt"></div>
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWYAAAEACAYAAACAi9xRAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsnXe4JEXV/z/n3r13IyxhCUtccpKsBAFZMaNiFhEwAwqI
@@ -2913,10 +3951,13 @@ YvVgk++6ADzaigNoSxSSgfOU3APF7gdxvDPAsn/fuZw3/9q+Y/qvbpTTyIXYXlCabgDGgHngFfAQ
 IqWgdBS7n8bvJPA1fqvPYjubOf/UYCIikowuZYiIJKPCLCKSjAqziEgyKswiIsmoMIuIJKPCLCKS
 jAqziEgyKswiIsl8A+3cZEKWzFmPAAAAAElFTkSuQmCC
 ">
-</img></div>
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2924,22 +3965,29 @@ jAqziEgyKswiIsl8A+3cZEKWzFmPAAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Сглаживание по годам и десятилетиям на одной картинке.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [16]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">pd</span><span class="o">.</span><span class="n">rolling_mean</span><span class="p">(</span><span class="n">dat</span><span class="p">[</span><span class="s">'TMPMN'</span><span class="p">],</span><span class="mi">3650</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'red'</span><span class="p">);</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">rolling_mean</span><span class="p">(</span><span class="n">dat</span><span class="p">[</span><span class="s1">&#39;TMPMN&#39;</span><span class="p">],</span><span class="mi">3650</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">);</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt"></div>
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXAAAAEACAYAAACqOy3+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJztnXm4XFWVt98fAZLczCEhIFMQARWQAAIi2gaxEWgGbScc
@@ -3176,10 +4224,13 @@ NHARcD9wEzCz1++5g7I7mvAQ7XbgNoLymeGyqyi7NxEC9i0A5se//Yv+2fODPI7jOH2Km1Acx3H6
 FFfgjuM4fYorcMdxnD7FFbjjOE6f4grccRynT3EF7jiO06e4Anccx+lTXIE7juP0Kf8f0jMsGj3t
 ZgoAAAAASUVORK5CYII=
 ">
-</img></div>
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -3187,6 +4238,7 @@ ZgoAAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>И, наконец, красный график отдельно. Если вас когда-нибудь интресовал вопрос о том, есть или нет глобальное потепление, то теперь, наверное, он отпал. (Вообще-то такого вопроса нет: климат меняется и действительно теплеет; вопрос, который широко обсуждается — является ли это результатом действий челвоека или это естественный процесс. Но на него мы так сходу не ответим.)</p>
+
 </div>
 </div>
 </div>
@@ -3195,24 +4247,31 @@ ZgoAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Упорядочиваем">Упорядочиваем<a class="anchor-link" href="#Упорядочиваем">¶</a></h3><p>Картинки красивые, но по вертикальной оси написана какая-то ерунда. Это потому, что строчки сейчас индексируются числами (да ещё и отсчёт начинается с 367). Для более разумного поведения было бы хорошо индексировать строчки датами из колонки <code>DATE_OBS</code>. В нашем случае проблема осложняется тем, что система не воспринимает эту колонку как колонку с датами. Давайте же решим эту проблему.</p>
+<h3 id="Упорядочиваем">&#1059;&#1087;&#1086;&#1088;&#1103;&#1076;&#1086;&#1095;&#1080;&#1074;&#1072;&#1077;&#1084;<a class="anchor-link" href="#Упорядочиваем">&#182;</a></h3><p>Картинки красивые, но по вертикальной оси написана какая-то ерунда. Это потому, что строчки сейчас индексируются числами (да ещё и отсчёт начинается с 367). Для более разумного поведения было бы хорошо индексировать строчки датами из колонки <code>DATE_OBS</code>. В нашем случае проблема осложняется тем, что система не воспринимает эту колонку как колонку с датами. Давайте же решим эту проблему.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [17]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">dat</span><span class="p">[</span><span class="s">'DATE_OBS'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">dat</span><span class="p">[</span><span class="s">'DATE_OBS'</span><span class="p">])</span>
-<span class="n">dat</span><span class="p">[</span><span class="s">'DATE_OBS'</span><span class="p">]</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dat</span><span class="p">[</span><span class="s1">&#39;DATE_OBS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">dat</span><span class="p">[</span><span class="s1">&#39;DATE_OBS&#39;</span><span class="p">])</span>
+<span class="n">dat</span><span class="p">[</span><span class="s1">&#39;DATE_OBS&#39;</span><span class="p">]</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[17]:</div>
+
+
 <div class="output_text output_subarea output_execute_result">
 <pre>366   1949-01-01
 367   1949-01-02
@@ -3247,9 +4306,12 @@ ZgoAAAAASUVORK5CYII=
 21488   2006-10-31
 Name: DATE_OBS, Length: 21121, dtype: datetime64[ns]</pre>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -3257,106 +4319,121 @@ Name: DATE_OBS, Length: 21121, dtype: datetime64[ns]</pre>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Мы видим <code>dtype: datetime64</code>, что означает, что теперь типом данных являются даты. Сделаем теперь этот столбец индексом.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [18]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">dat</span><span class="o">.</span><span class="n">index</span><span class="o">=</span><span class="n">dat</span><span class="p">[</span><span class="s">'DATE_OBS'</span><span class="p">]</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dat</span><span class="o">.</span><span class="n">index</span><span class="o">=</span><span class="n">dat</span><span class="p">[</span><span class="s1">&#39;DATE_OBS&#39;</span><span class="p">]</span>
 <span class="n">dat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[18]:</div>
+
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>DATE_OBS</th>
-<th>TMPMAX</th>
-<th>TMPMIN</th>
-<th>TMPMN</th>
-<th>PRECIP</th>
-</tr>
-<tr>
-<th>DATE_OBS</th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>1949-01-01</th>
-<td>1949-01-01</td>
-<td>-2.1</td>
-<td>-6.7</td>
-<td>-4.2</td>
-<td> 0.0</td>
-</tr>
-<tr>
-<th>1949-01-02</th>
-<td>1949-01-02</td>
-<td>-0.5</td>
-<td>-6.7</td>
-<td>-1.2</td>
-<td> 4.2</td>
-</tr>
-<tr>
-<th>1949-01-03</th>
-<td>1949-01-03</td>
-<td> 1.1</td>
-<td>-2.1</td>
-<td>-0.7</td>
-<td> 0.0</td>
-</tr>
-<tr>
-<th>1949-01-04</th>
-<td>1949-01-04</td>
-<td> 3.3</td>
-<td> 0.9</td>
-<td> 2.3</td>
-<td> 0.0</td>
-</tr>
-<tr>
-<th>1949-01-05</th>
-<td>1949-01-05</td>
-<td> 4.0</td>
-<td>-0.9</td>
-<td> 1.1</td>
-<td> 0.8</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>DATE_OBS</th>
+      <th>TMPMAX</th>
+      <th>TMPMIN</th>
+      <th>TMPMN</th>
+      <th>PRECIP</th>
+    </tr>
+    <tr>
+      <th>DATE_OBS</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1949-01-01</th>
+      <td>1949-01-01</td>
+      <td>-2.1</td>
+      <td>-6.7</td>
+      <td>-4.2</td>
+      <td> 0.0</td>
+    </tr>
+    <tr>
+      <th>1949-01-02</th>
+      <td>1949-01-02</td>
+      <td>-0.5</td>
+      <td>-6.7</td>
+      <td>-1.2</td>
+      <td> 4.2</td>
+    </tr>
+    <tr>
+      <th>1949-01-03</th>
+      <td>1949-01-03</td>
+      <td> 1.1</td>
+      <td>-2.1</td>
+      <td>-0.7</td>
+      <td> 0.0</td>
+    </tr>
+    <tr>
+      <th>1949-01-04</th>
+      <td>1949-01-04</td>
+      <td> 3.3</td>
+      <td> 0.9</td>
+      <td> 2.3</td>
+      <td> 0.0</td>
+    </tr>
+    <tr>
+      <th>1949-01-05</th>
+      <td>1949-01-05</td>
+      <td> 4.0</td>
+      <td>-0.9</td>
+      <td> 1.1</td>
+      <td> 0.8</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [19]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">pd</span><span class="o">.</span><span class="n">rolling_mean</span><span class="p">(</span><span class="n">dat</span><span class="p">[</span><span class="s">'TMPMN'</span><span class="p">],</span><span class="mi">3650</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s">'red'</span><span class="p">);</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">rolling_mean</span><span class="p">(</span><span class="n">dat</span><span class="p">[</span><span class="s1">&#39;TMPMN&#39;</span><span class="p">],</span><span class="mi">3650</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">);</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt"></div>
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXAAAAEFCAYAAAD69rxNAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJztnXe4JFW1t98fMwwDQw6CJAcERECSCUXlGAAxgKCCWUS5
@@ -3617,10 +4694,13 @@ bFf6UM4pLyAqdkkvT3mrrEOIRzkyYbyc6jDT/cAdp98sH+3MyxJmsiea2VckzQc2MLPzkoZmtjS6
 yTqO49QUN6E4juPUFDehOI1G0hqEYL9ZXmpmd+SUO05lcBOK4zhOTXETiuM4Tk1xBe44jlNTXIE7
 juPUFFfgjuM4NcUVuOM4Tk35/60xZrXDhcepAAAAAElFTkSuQmCC
 ">
-</img></div>
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -3628,231 +4708,249 @@ juPUFFfgjuM4NcUVuOM4Tk35/60xZrXDhcepAAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Теперь горизонтальная ось подписана верно. Кстати, срезы с датами тоже работают.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [20]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 <span class="n">dat</span><span class="p">[</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2001</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">25</span><span class="p">):</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2001</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)]</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[20]:</div>
+
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>DATE_OBS</th>
-<th>TMPMAX</th>
-<th>TMPMIN</th>
-<th>TMPMN</th>
-<th>PRECIP</th>
-</tr>
-<tr>
-<th>DATE_OBS</th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>2001-01-25</th>
-<td>2001-01-25</td>
-<td> -6.6</td>
-<td>-14.8</td>
-<td>-11.0</td>
-<td>  0.0</td>
-</tr>
-<tr>
-<th>2001-01-26</th>
-<td>2001-01-26</td>
-<td> -3.5</td>
-<td> -8.7</td>
-<td> -5.3</td>
-<td>  0.7</td>
-</tr>
-<tr>
-<th>2001-01-27</th>
-<td>2001-01-27</td>
-<td> -0.4</td>
-<td> -4.5</td>
-<td> -2.5</td>
-<td>  2.7</td>
-</tr>
-<tr>
-<th>2001-01-28</th>
-<td>2001-01-28</td>
-<td>  1.4</td>
-<td> -0.4</td>
-<td>  0.8</td>
-<td>  3.7</td>
-</tr>
-<tr>
-<th>2001-01-29</th>
-<td>2001-01-29</td>
-<td>  2.9</td>
-<td>  0.8</td>
-<td>  1.4</td>
-<td>  1.1</td>
-</tr>
-<tr>
-<th>2001-01-30</th>
-<td>2001-01-30</td>
-<td>  1.5</td>
-<td> -0.1</td>
-<td>  0.6</td>
-<td>  1.4</td>
-</tr>
-<tr>
-<th>2001-01-31</th>
-<td>2001-01-31</td>
-<td>  0.1</td>
-<td> -1.8</td>
-<td> -0.7</td>
-<td>  0.6</td>
-</tr>
-<tr>
-<th>2001-02-01</th>
-<td>2001-02-01</td>
-<td> -1.7</td>
-<td> -7.4</td>
-<td> -4.5</td>
-<td>  0.0</td>
-</tr>
-<tr>
-<th>2001-02-02</th>
-<td>2001-02-02</td>
-<td> -3.0</td>
-<td>-12.3</td>
-<td> -8.1</td>
-<td> 13.2</td>
-</tr>
-<tr>
-<th>2001-02-03</th>
-<td>2001-02-03</td>
-<td> -9.3</td>
-<td>-16.7</td>
-<td>-13.0</td>
-<td>  2.6</td>
-</tr>
-<tr>
-<th>2001-02-04</th>
-<td>2001-02-04</td>
-<td> -8.4</td>
-<td>-16.2</td>
-<td>-10.7</td>
-<td> 13.4</td>
-</tr>
-<tr>
-<th>2001-02-05</th>
-<td>2001-02-05</td>
-<td>-11.0</td>
-<td>-22.1</td>
-<td>-16.0</td>
-<td>  0.9</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>DATE_OBS</th>
+      <th>TMPMAX</th>
+      <th>TMPMIN</th>
+      <th>TMPMN</th>
+      <th>PRECIP</th>
+    </tr>
+    <tr>
+      <th>DATE_OBS</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2001-01-25</th>
+      <td>2001-01-25</td>
+      <td> -6.6</td>
+      <td>-14.8</td>
+      <td>-11.0</td>
+      <td>  0.0</td>
+    </tr>
+    <tr>
+      <th>2001-01-26</th>
+      <td>2001-01-26</td>
+      <td> -3.5</td>
+      <td> -8.7</td>
+      <td> -5.3</td>
+      <td>  0.7</td>
+    </tr>
+    <tr>
+      <th>2001-01-27</th>
+      <td>2001-01-27</td>
+      <td> -0.4</td>
+      <td> -4.5</td>
+      <td> -2.5</td>
+      <td>  2.7</td>
+    </tr>
+    <tr>
+      <th>2001-01-28</th>
+      <td>2001-01-28</td>
+      <td>  1.4</td>
+      <td> -0.4</td>
+      <td>  0.8</td>
+      <td>  3.7</td>
+    </tr>
+    <tr>
+      <th>2001-01-29</th>
+      <td>2001-01-29</td>
+      <td>  2.9</td>
+      <td>  0.8</td>
+      <td>  1.4</td>
+      <td>  1.1</td>
+    </tr>
+    <tr>
+      <th>2001-01-30</th>
+      <td>2001-01-30</td>
+      <td>  1.5</td>
+      <td> -0.1</td>
+      <td>  0.6</td>
+      <td>  1.4</td>
+    </tr>
+    <tr>
+      <th>2001-01-31</th>
+      <td>2001-01-31</td>
+      <td>  0.1</td>
+      <td> -1.8</td>
+      <td> -0.7</td>
+      <td>  0.6</td>
+    </tr>
+    <tr>
+      <th>2001-02-01</th>
+      <td>2001-02-01</td>
+      <td> -1.7</td>
+      <td> -7.4</td>
+      <td> -4.5</td>
+      <td>  0.0</td>
+    </tr>
+    <tr>
+      <th>2001-02-02</th>
+      <td>2001-02-02</td>
+      <td> -3.0</td>
+      <td>-12.3</td>
+      <td> -8.1</td>
+      <td> 13.2</td>
+    </tr>
+    <tr>
+      <th>2001-02-03</th>
+      <td>2001-02-03</td>
+      <td> -9.3</td>
+      <td>-16.7</td>
+      <td>-13.0</td>
+      <td>  2.6</td>
+    </tr>
+    <tr>
+      <th>2001-02-04</th>
+      <td>2001-02-04</td>
+      <td> -8.4</td>
+      <td>-16.2</td>
+      <td>-10.7</td>
+      <td> 13.4</td>
+    </tr>
+    <tr>
+      <th>2001-02-05</th>
+      <td>2001-02-05</td>
+      <td>-11.0</td>
+      <td>-22.1</td>
+      <td>-16.0</td>
+      <td>  0.9</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Усредняем">Усредняем<a class="anchor-link" href="#Усредняем">¶</a></h3><p>Впрочем, мы отвлеклись. Вернёмся к нашей задаче: верно ли, что более тёплый март — это признак того, что апрель будет более холодным? Иными словами, правда ли, что средняя температура за март и апрель отрицательно скоррелированы? Чтобы это понять, нам потребуется сформировать новую таблицу, в которой наблюдением (то есть строчкой) будет один год, а переменными (то есть столбцами) будет средняя температура за каждый месяц.</p>
+<h3 id="Усредняем">&#1059;&#1089;&#1088;&#1077;&#1076;&#1085;&#1103;&#1077;&#1084;<a class="anchor-link" href="#Усредняем">&#182;</a></h3><p>Впрочем, мы отвлеклись. Вернёмся к нашей задаче: верно ли, что более тёплый март — это признак того, что апрель будет более холодным? Иными словами, правда ли, что средняя температура за март и апрель отрицательно скоррелированы? Чтобы это понять, нам потребуется сформировать новую таблицу, в которой наблюдением (то есть строчкой) будет один год, а переменными (то есть столбцами) будет средняя температура за каждый месяц.</p>
 <p>Для начала добавим в нашу таблицу столбцы, соответствующие году, месяцу и дню.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [21]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">dat</span><span class="p">[</span><span class="s">'Year'</span><span class="p">]</span><span class="o">=</span><span class="n">dat</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span>
-<span class="n">dat</span><span class="p">[</span><span class="s">'Mon'</span><span class="p">]</span><span class="o">=</span><span class="n">dat</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span>
-<span class="n">dat</span><span class="p">[</span><span class="s">'Day'</span><span class="p">]</span><span class="o">=</span><span class="n">dat</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">day</span>
-<span class="n">dates</span><span class="o">=</span><span class="n">dat</span><span class="p">[[</span><span class="s">'Year'</span><span class="p">,</span><span class="s">'Mon'</span><span class="p">,</span><span class="s">'Day'</span><span class="p">]]</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dat</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">dat</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span>
+<span class="n">dat</span><span class="p">[</span><span class="s1">&#39;Mon&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">dat</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span>
+<span class="n">dat</span><span class="p">[</span><span class="s1">&#39;Day&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">dat</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">day</span>
+<span class="n">dates</span><span class="o">=</span><span class="n">dat</span><span class="p">[[</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span><span class="s1">&#39;Mon&#39;</span><span class="p">,</span><span class="s1">&#39;Day&#39;</span><span class="p">]]</span>
 <span class="n">dates</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[21]:</div>
+
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>Year</th>
-<th>Mon</th>
-<th>Day</th>
-</tr>
-<tr>
-<th>DATE_OBS</th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>1949-01-01</th>
-<td> 1949</td>
-<td> 1</td>
-<td> 1</td>
-</tr>
-<tr>
-<th>1949-01-02</th>
-<td> 1949</td>
-<td> 1</td>
-<td> 2</td>
-</tr>
-<tr>
-<th>1949-01-03</th>
-<td> 1949</td>
-<td> 1</td>
-<td> 3</td>
-</tr>
-<tr>
-<th>1949-01-04</th>
-<td> 1949</td>
-<td> 1</td>
-<td> 4</td>
-</tr>
-<tr>
-<th>1949-01-05</th>
-<td> 1949</td>
-<td> 1</td>
-<td> 5</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Mon</th>
+      <th>Day</th>
+    </tr>
+    <tr>
+      <th>DATE_OBS</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1949-01-01</th>
+      <td> 1949</td>
+      <td> 1</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>1949-01-02</th>
+      <td> 1949</td>
+      <td> 1</td>
+      <td> 2</td>
+    </tr>
+    <tr>
+      <th>1949-01-03</th>
+      <td> 1949</td>
+      <td> 1</td>
+      <td> 3</td>
+    </tr>
+    <tr>
+      <th>1949-01-04</th>
+      <td> 1949</td>
+      <td> 1</td>
+      <td> 4</td>
+    </tr>
+    <tr>
+      <th>1949-01-05</th>
+      <td> 1949</td>
+      <td> 1</td>
+      <td> 5</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -3860,138 +4958,150 @@ juPUFFfgjuM4NcUVuOM4Tk35/60xZrXDhcepAAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Теперь переопределим индекс более удобным для нас образом.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [22]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">dat</span><span class="o">.</span><span class="n">index</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_tuples</span><span class="p">(</span><span class="n">dates</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">names</span><span class="o">=</span><span class="n">dates</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dat</span><span class="o">.</span><span class="n">index</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_tuples</span><span class="p">(</span><span class="n">dates</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">names</span><span class="o">=</span><span class="n">dates</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Предыдущей командой мы создали так называемый <em>мультииндекс</em>, то есть индекс с несколькими измерениями. Простейший пример мультииндекса из математики — индекс у матрицы $a_{i,j}$. Можно считать $i$ и $j$ двумя разными индексами, а можно считать пару $(i,j)$ одним мульииндексом. Мультииндекс — способ записать в обычную таблицу многомерную информацию. В данном случае у нас в мультииндексе три измерения — год, месяц, день. Вот так теперь выглядит наш dataframe.</p>
+<p>Предыдущей командой мы создали так называемый <em>мультииндекс</em>, то есть индекс с несколькими измерениями. Простейший пример мультииндекса из математики — индекс у матрицы $a_{i,j}$. Можно считать $i$ и $j$ двумя разными индексами, а можно считать пару $(i,j)$ одним мульииндексом. Мультииндекс — способ записать в обычную таблицу многомерную информацию. В данном случае у нас в мультииндексе три измерения — год, месяц, день. Вот так теперь выглядит наш dataframe.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [23]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">dat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[23]:</div>
+
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th></th>
-<th></th>
-<th>DATE_OBS</th>
-<th>TMPMAX</th>
-<th>TMPMIN</th>
-<th>TMPMN</th>
-<th>PRECIP</th>
-<th>Year</th>
-<th>Mon</th>
-<th>Day</th>
-</tr>
-<tr>
-<th>Year</th>
-<th>Mon</th>
-<th>Day</th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th rowspan="5" valign="top">1949</th>
-<th rowspan="5" valign="top">1</th>
-<th>1</th>
-<td>1949-01-01</td>
-<td>-2.1</td>
-<td>-6.7</td>
-<td>-4.2</td>
-<td> 0.0</td>
-<td> 1949</td>
-<td> 1</td>
-<td> 1</td>
-</tr>
-<tr>
-<th>2</th>
-<td>1949-01-02</td>
-<td>-0.5</td>
-<td>-6.7</td>
-<td>-1.2</td>
-<td> 4.2</td>
-<td> 1949</td>
-<td> 1</td>
-<td> 2</td>
-</tr>
-<tr>
-<th>3</th>
-<td>1949-01-03</td>
-<td> 1.1</td>
-<td>-2.1</td>
-<td>-0.7</td>
-<td> 0.0</td>
-<td> 1949</td>
-<td> 1</td>
-<td> 3</td>
-</tr>
-<tr>
-<th>4</th>
-<td>1949-01-04</td>
-<td> 3.3</td>
-<td> 0.9</td>
-<td> 2.3</td>
-<td> 0.0</td>
-<td> 1949</td>
-<td> 1</td>
-<td> 4</td>
-</tr>
-<tr>
-<th>5</th>
-<td>1949-01-05</td>
-<td> 4.0</td>
-<td>-0.9</td>
-<td> 1.1</td>
-<td> 0.8</td>
-<td> 1949</td>
-<td> 1</td>
-<td> 5</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>DATE_OBS</th>
+      <th>TMPMAX</th>
+      <th>TMPMIN</th>
+      <th>TMPMN</th>
+      <th>PRECIP</th>
+      <th>Year</th>
+      <th>Mon</th>
+      <th>Day</th>
+    </tr>
+    <tr>
+      <th>Year</th>
+      <th>Mon</th>
+      <th>Day</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">1949</th>
+      <th rowspan="5" valign="top">1</th>
+      <th>1</th>
+      <td>1949-01-01</td>
+      <td>-2.1</td>
+      <td>-6.7</td>
+      <td>-4.2</td>
+      <td> 0.0</td>
+      <td> 1949</td>
+      <td> 1</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1949-01-02</td>
+      <td>-0.5</td>
+      <td>-6.7</td>
+      <td>-1.2</td>
+      <td> 4.2</td>
+      <td> 1949</td>
+      <td> 1</td>
+      <td> 2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1949-01-03</td>
+      <td> 1.1</td>
+      <td>-2.1</td>
+      <td>-0.7</td>
+      <td> 0.0</td>
+      <td> 1949</td>
+      <td> 1</td>
+      <td> 3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1949-01-04</td>
+      <td> 3.3</td>
+      <td> 0.9</td>
+      <td> 2.3</td>
+      <td> 0.0</td>
+      <td> 1949</td>
+      <td> 1</td>
+      <td> 4</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1949-01-05</td>
+      <td> 4.0</td>
+      <td>-0.9</td>
+      <td> 1.1</td>
+      <td> 0.8</td>
+      <td> 1949</td>
+      <td> 1</td>
+      <td> 5</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -3999,109 +5109,118 @@ juPUFFfgjuM4NcUVuOM4Tk35/60xZrXDhcepAAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Нам нужно для каждого года и каждого месяца найти среднюю температуру за этот месяц. Для этого следует сгруппировать элемены таблички по году и месяцу и к тому, что получилось, применить метод <code>.mean()</code>.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [24]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">year_day_mean</span><span class="o">=</span><span class="n">dat</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">year_day_mean</span><span class="o">=</span><span class="n">dat</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="n">year_day_mean</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[24]:</div>
+
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th></th>
-<th>TMPMAX</th>
-<th>TMPMIN</th>
-<th>TMPMN</th>
-<th>PRECIP</th>
-<th>Year</th>
-<th>Mon</th>
-<th>Day</th>
-</tr>
-<tr>
-<th>Year</th>
-<th>Mon</th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th rowspan="5" valign="top">1949</th>
-<th>1</th>
-<td> -1.300000</td>
-<td> -6.493548</td>
-<td> -3.670968</td>
-<td> 0.854839</td>
-<td> 1949</td>
-<td> 1</td>
-<td> 16.0</td>
-</tr>
-<tr>
-<th>2</th>
-<td> -3.571429</td>
-<td>-11.075000</td>
-<td> -7.339286</td>
-<td> 0.789286</td>
-<td> 1949</td>
-<td> 2</td>
-<td> 14.5</td>
-</tr>
-<tr>
-<th>3</th>
-<td>  1.390323</td>
-<td> -6.470968</td>
-<td> -2.780645</td>
-<td> 2.419355</td>
-<td> 1949</td>
-<td> 3</td>
-<td> 16.0</td>
-</tr>
-<tr>
-<th>4</th>
-<td>  9.056667</td>
-<td> -0.066667</td>
-<td>  4.280000</td>
-<td> 0.603333</td>
-<td> 1949</td>
-<td> 4</td>
-<td> 15.5</td>
-</tr>
-<tr>
-<th>5</th>
-<td> 21.377419</td>
-<td>  9.093548</td>
-<td> 15.225806</td>
-<td> 1.016129</td>
-<td> 1949</td>
-<td> 5</td>
-<td> 16.0</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>TMPMAX</th>
+      <th>TMPMIN</th>
+      <th>TMPMN</th>
+      <th>PRECIP</th>
+      <th>Year</th>
+      <th>Mon</th>
+      <th>Day</th>
+    </tr>
+    <tr>
+      <th>Year</th>
+      <th>Mon</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">1949</th>
+      <th>1</th>
+      <td> -1.300000</td>
+      <td> -6.493548</td>
+      <td> -3.670968</td>
+      <td> 0.854839</td>
+      <td> 1949</td>
+      <td> 1</td>
+      <td> 16.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td> -3.571429</td>
+      <td>-11.075000</td>
+      <td> -7.339286</td>
+      <td> 0.789286</td>
+      <td> 1949</td>
+      <td> 2</td>
+      <td> 14.5</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>  1.390323</td>
+      <td> -6.470968</td>
+      <td> -2.780645</td>
+      <td> 2.419355</td>
+      <td> 1949</td>
+      <td> 3</td>
+      <td> 16.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>  9.056667</td>
+      <td> -0.066667</td>
+      <td>  4.280000</td>
+      <td> 0.603333</td>
+      <td> 1949</td>
+      <td> 4</td>
+      <td> 15.5</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td> 21.377419</td>
+      <td>  9.093548</td>
+      <td> 15.225806</td>
+      <td> 1.016129</td>
+      <td> 1949</td>
+      <td> 5</td>
+      <td> 16.0</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -4109,23 +5228,30 @@ juPUFFfgjuM4NcUVuOM4Tk35/60xZrXDhcepAAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Почти то, что нужно. Теперь оставим лишь интересующий нас параметр — среднюю температуру за день (усредненную потом ещё и за месяц), то есть <code>TMPMN</code>.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [25]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">tmpmn</span><span class="o">=</span><span class="n">year_day_mean</span><span class="p">[</span><span class="s">'TMPMN'</span><span class="p">]</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">tmpmn</span><span class="o">=</span><span class="n">year_day_mean</span><span class="p">[</span><span class="s1">&#39;TMPMN&#39;</span><span class="p">]</span>
 <span class="n">tmpmn</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[25]:</div>
+
+
 <div class="output_text output_subarea output_execute_result">
 <pre>Year  Mon
 1949  1      -3.670968
@@ -4135,9 +5261,12 @@ juPUFFfgjuM4NcUVuOM4Tk35/60xZrXDhcepAAAAAElFTkSuQmCC
       5      15.225806
 Name: TMPMN, dtype: float64</pre>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -4145,141 +5274,150 @@ Name: TMPMN, dtype: float64</pre>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>И сделаем из одномерной таблицы с мультииндексом двумерную таблицу с обычными одномерными индексами:</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [26]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">mon_mean</span><span class="o">=</span><span class="n">tmpmn</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">mon_mean</span><span class="o">=</span><span class="n">tmpmn</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
 <span class="n">mon_mean</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[26]:</div>
+
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th>Mon</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-<th>10</th>
-<th>11</th>
-<th>12</th>
-</tr>
-<tr>
-<th>Year</th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>1949</th>
-<td> -3.670968</td>
-<td> -7.339286</td>
-<td>-2.780645</td>
-<td> 4.280000</td>
-<td> 15.225806</td>
-<td> 16.973333</td>
-<td> 17.425806</td>
-<td> 16.074194</td>
-<td> 11.506667</td>
-<td> 4.800000</td>
-<td>-0.423333</td>
-<td>-4.322581</td>
-</tr>
-<tr>
-<th>1950</th>
-<td>-18.022581</td>
-<td> -6.764286</td>
-<td>-2.225806</td>
-<td> 9.043333</td>
-<td> 11.738710</td>
-<td> 15.123333</td>
-<td> 16.177419</td>
-<td> 14.080645</td>
-<td> 11.990000</td>
-<td> 4.745161</td>
-<td>-0.433333</td>
-<td>-5.503226</td>
-</tr>
-<tr>
-<th>1951</th>
-<td>-12.138710</td>
-<td>-12.264286</td>
-<td>-3.996774</td>
-<td> 8.403333</td>
-<td>  9.738710</td>
-<td> 17.706667</td>
-<td> 18.590323</td>
-<td> 18.325806</td>
-<td> 11.990000</td>
-<td> 2.780645</td>
-<td>-4.810000</td>
-<td>-1.251613</td>
-</tr>
-<tr>
-<th>1952</th>
-<td> -4.135484</td>
-<td> -7.096552</td>
-<td>-9.106452</td>
-<td> 5.166667</td>
-<td> 10.358065</td>
-<td> 17.340000</td>
-<td> 17.870968</td>
-<td> 16.848387</td>
-<td> 12.136667</td>
-<td> 3.925806</td>
-<td>-1.133333</td>
-<td>-5.883871</td>
-</tr>
-<tr>
-<th>1953</th>
-<td>-10.403226</td>
-<td>-15.614286</td>
-<td>-2.606452</td>
-<td> 7.183333</td>
-<td> 11.645161</td>
-<td> 19.193333</td>
-<td> 19.025806</td>
-<td> 17.290323</td>
-<td> 10.046667</td>
-<td> 5.790323</td>
-<td>-3.156667</td>
-<td>-5.632258</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th>Mon</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>11</th>
+      <th>12</th>
+    </tr>
+    <tr>
+      <th>Year</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1949</th>
+      <td> -3.670968</td>
+      <td> -7.339286</td>
+      <td>-2.780645</td>
+      <td> 4.280000</td>
+      <td> 15.225806</td>
+      <td> 16.973333</td>
+      <td> 17.425806</td>
+      <td> 16.074194</td>
+      <td> 11.506667</td>
+      <td> 4.800000</td>
+      <td>-0.423333</td>
+      <td>-4.322581</td>
+    </tr>
+    <tr>
+      <th>1950</th>
+      <td>-18.022581</td>
+      <td> -6.764286</td>
+      <td>-2.225806</td>
+      <td> 9.043333</td>
+      <td> 11.738710</td>
+      <td> 15.123333</td>
+      <td> 16.177419</td>
+      <td> 14.080645</td>
+      <td> 11.990000</td>
+      <td> 4.745161</td>
+      <td>-0.433333</td>
+      <td>-5.503226</td>
+    </tr>
+    <tr>
+      <th>1951</th>
+      <td>-12.138710</td>
+      <td>-12.264286</td>
+      <td>-3.996774</td>
+      <td> 8.403333</td>
+      <td>  9.738710</td>
+      <td> 17.706667</td>
+      <td> 18.590323</td>
+      <td> 18.325806</td>
+      <td> 11.990000</td>
+      <td> 2.780645</td>
+      <td>-4.810000</td>
+      <td>-1.251613</td>
+    </tr>
+    <tr>
+      <th>1952</th>
+      <td> -4.135484</td>
+      <td> -7.096552</td>
+      <td>-9.106452</td>
+      <td> 5.166667</td>
+      <td> 10.358065</td>
+      <td> 17.340000</td>
+      <td> 17.870968</td>
+      <td> 16.848387</td>
+      <td> 12.136667</td>
+      <td> 3.925806</td>
+      <td>-1.133333</td>
+      <td>-5.883871</td>
+    </tr>
+    <tr>
+      <th>1953</th>
+      <td>-10.403226</td>
+      <td>-15.614286</td>
+      <td>-2.606452</td>
+      <td> 7.183333</td>
+      <td> 11.645161</td>
+      <td> 19.193333</td>
+      <td> 19.025806</td>
+      <td> 17.290323</td>
+      <td> 10.046667</td>
+      <td> 5.790323</td>
+      <td>-3.156667</td>
+      <td>-5.632258</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -4287,252 +5425,264 @@ Name: TMPMN, dtype: float64</pre>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Вот теперь совсем то, что нужно! Дадим месяцам осмысленные имена.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [27]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">mon_mean</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">'Jan'</span><span class="p">,</span><span class="s">'Feb'</span><span class="p">,</span><span class="s">'Mar'</span><span class="p">,</span><span class="s">'Apr'</span><span class="p">,</span><span class="s">'May'</span><span class="p">,</span><span class="s">'Jun'</span><span class="p">,</span><span class="s">'Jul'</span><span class="p">,</span>
-                  <span class="s">'Aug'</span><span class="p">,</span><span class="s">'Sep'</span><span class="p">,</span><span class="s">'Oct'</span><span class="p">,</span><span class="s">'Nov'</span><span class="p">,</span><span class="s">'Dec'</span><span class="p">]</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">mon_mean</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Jan&#39;</span><span class="p">,</span><span class="s1">&#39;Feb&#39;</span><span class="p">,</span><span class="s1">&#39;Mar&#39;</span><span class="p">,</span><span class="s1">&#39;Apr&#39;</span><span class="p">,</span><span class="s1">&#39;May&#39;</span><span class="p">,</span><span class="s1">&#39;Jun&#39;</span><span class="p">,</span><span class="s1">&#39;Jul&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;Aug&#39;</span><span class="p">,</span><span class="s1">&#39;Sep&#39;</span><span class="p">,</span><span class="s1">&#39;Oct&#39;</span><span class="p">,</span><span class="s1">&#39;Nov&#39;</span><span class="p">,</span><span class="s1">&#39;Dec&#39;</span><span class="p">]</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Считаем!">Считаем!<a class="anchor-link" href="#Считаем!">¶</a></h3><p>Барабанная дробь! Торжественный момент: мы наконец можем посчитать интересующие нас корреляции! Та-дам!</p>
+<h3 id="Считаем!">&#1057;&#1095;&#1080;&#1090;&#1072;&#1077;&#1084;!<a class="anchor-link" href="#Считаем!">&#182;</a></h3><p>Барабанная дробь! Торжественный момент: мы наконец можем посчитать интересующие нас корреляции! Та-дам!</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [28]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">corr</span><span class="o">=</span><span class="n">mon_mean</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">corr</span><span class="o">=</span><span class="n">mon_mean</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
 <span class="n">corr</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[28]:</div>
+
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>Jan</th>
-<th>Feb</th>
-<th>Mar</th>
-<th>Apr</th>
-<th>May</th>
-<th>Jun</th>
-<th>Jul</th>
-<th>Aug</th>
-<th>Sep</th>
-<th>Oct</th>
-<th>Nov</th>
-<th>Dec</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>Jan</th>
-<td> 1.000000</td>
-<td> 0.384755</td>
-<td> 0.257302</td>
-<td> 0.216484</td>
-<td> 0.047153</td>
-<td> 0.039691</td>
-<td> 0.206568</td>
-<td>-0.120758</td>
-<td> 0.134955</td>
-<td> 0.117936</td>
-<td>-0.142560</td>
-<td>-0.059667</td>
-</tr>
-<tr>
-<th>Feb</th>
-<td> 0.384755</td>
-<td> 1.000000</td>
-<td> 0.379095</td>
-<td> 0.216300</td>
-<td> 0.017000</td>
-<td> 0.028284</td>
-<td> 0.252928</td>
-<td>-0.097432</td>
-<td> 0.033740</td>
-<td> 0.071301</td>
-<td> 0.059700</td>
-<td>-0.012276</td>
-</tr>
-<tr>
-<th>Mar</th>
-<td> 0.257302</td>
-<td> 0.379095</td>
-<td> 1.000000</td>
-<td> 0.328143</td>
-<td> 0.071455</td>
-<td> 0.177538</td>
-<td> 0.091281</td>
-<td> 0.022202</td>
-<td>-0.081379</td>
-<td>-0.037189</td>
-<td>-0.031521</td>
-<td>-0.075481</td>
-</tr>
-<tr>
-<th>Apr</th>
-<td> 0.216484</td>
-<td> 0.216300</td>
-<td> 0.328143</td>
-<td> 1.000000</td>
-<td> 0.041331</td>
-<td> 0.017182</td>
-<td> 0.159124</td>
-<td>-0.117359</td>
-<td> 0.028134</td>
-<td> 0.037973</td>
-<td> 0.077483</td>
-<td> 0.000211</td>
-</tr>
-<tr>
-<th>May</th>
-<td> 0.047153</td>
-<td> 0.017000</td>
-<td> 0.071455</td>
-<td> 0.041331</td>
-<td> 1.000000</td>
-<td>-0.121644</td>
-<td> 0.028159</td>
-<td> 0.118944</td>
-<td> 0.038196</td>
-<td> 0.178622</td>
-<td> 0.175155</td>
-<td>-0.156485</td>
-</tr>
-<tr>
-<th>Jun</th>
-<td> 0.039691</td>
-<td> 0.028284</td>
-<td> 0.177538</td>
-<td> 0.017182</td>
-<td>-0.121644</td>
-<td> 1.000000</td>
-<td> 0.306204</td>
-<td> 0.093280</td>
-<td>-0.060803</td>
-<td> 0.111169</td>
-<td>-0.370548</td>
-<td> 0.150160</td>
-</tr>
-<tr>
-<th>Jul</th>
-<td> 0.206568</td>
-<td> 0.252928</td>
-<td> 0.091281</td>
-<td> 0.159124</td>
-<td> 0.028159</td>
-<td> 0.306204</td>
-<td> 1.000000</td>
-<td> 0.411425</td>
-<td> 0.131770</td>
-<td> 0.132230</td>
-<td> 0.000195</td>
-<td> 0.053797</td>
-</tr>
-<tr>
-<th>Aug</th>
-<td>-0.120758</td>
-<td>-0.097432</td>
-<td> 0.022202</td>
-<td>-0.117359</td>
-<td> 0.118944</td>
-<td> 0.093280</td>
-<td> 0.411425</td>
-<td> 1.000000</td>
-<td> 0.222137</td>
-<td> 0.179547</td>
-<td> 0.123741</td>
-<td> 0.002483</td>
-</tr>
-<tr>
-<th>Sep</th>
-<td> 0.134955</td>
-<td> 0.033740</td>
-<td>-0.081379</td>
-<td> 0.028134</td>
-<td> 0.038196</td>
-<td>-0.060803</td>
-<td> 0.131770</td>
-<td> 0.222137</td>
-<td> 1.000000</td>
-<td> 0.277824</td>
-<td> 0.077645</td>
-<td> 0.054884</td>
-</tr>
-<tr>
-<th>Oct</th>
-<td> 0.117936</td>
-<td> 0.071301</td>
-<td>-0.037189</td>
-<td> 0.037973</td>
-<td> 0.178622</td>
-<td> 0.111169</td>
-<td> 0.132230</td>
-<td> 0.179547</td>
-<td> 0.277824</td>
-<td> 1.000000</td>
-<td> 0.146520</td>
-<td>-0.031469</td>
-</tr>
-<tr>
-<th>Nov</th>
-<td>-0.142560</td>
-<td> 0.059700</td>
-<td>-0.031521</td>
-<td> 0.077483</td>
-<td> 0.175155</td>
-<td>-0.370548</td>
-<td> 0.000195</td>
-<td> 0.123741</td>
-<td> 0.077645</td>
-<td> 0.146520</td>
-<td> 1.000000</td>
-<td>-0.112312</td>
-</tr>
-<tr>
-<th>Dec</th>
-<td>-0.059667</td>
-<td>-0.012276</td>
-<td>-0.075481</td>
-<td> 0.000211</td>
-<td>-0.156485</td>
-<td> 0.150160</td>
-<td> 0.053797</td>
-<td> 0.002483</td>
-<td> 0.054884</td>
-<td>-0.031469</td>
-<td>-0.112312</td>
-<td> 1.000000</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Jan</th>
+      <th>Feb</th>
+      <th>Mar</th>
+      <th>Apr</th>
+      <th>May</th>
+      <th>Jun</th>
+      <th>Jul</th>
+      <th>Aug</th>
+      <th>Sep</th>
+      <th>Oct</th>
+      <th>Nov</th>
+      <th>Dec</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Jan</th>
+      <td> 1.000000</td>
+      <td> 0.384755</td>
+      <td> 0.257302</td>
+      <td> 0.216484</td>
+      <td> 0.047153</td>
+      <td> 0.039691</td>
+      <td> 0.206568</td>
+      <td>-0.120758</td>
+      <td> 0.134955</td>
+      <td> 0.117936</td>
+      <td>-0.142560</td>
+      <td>-0.059667</td>
+    </tr>
+    <tr>
+      <th>Feb</th>
+      <td> 0.384755</td>
+      <td> 1.000000</td>
+      <td> 0.379095</td>
+      <td> 0.216300</td>
+      <td> 0.017000</td>
+      <td> 0.028284</td>
+      <td> 0.252928</td>
+      <td>-0.097432</td>
+      <td> 0.033740</td>
+      <td> 0.071301</td>
+      <td> 0.059700</td>
+      <td>-0.012276</td>
+    </tr>
+    <tr>
+      <th>Mar</th>
+      <td> 0.257302</td>
+      <td> 0.379095</td>
+      <td> 1.000000</td>
+      <td> 0.328143</td>
+      <td> 0.071455</td>
+      <td> 0.177538</td>
+      <td> 0.091281</td>
+      <td> 0.022202</td>
+      <td>-0.081379</td>
+      <td>-0.037189</td>
+      <td>-0.031521</td>
+      <td>-0.075481</td>
+    </tr>
+    <tr>
+      <th>Apr</th>
+      <td> 0.216484</td>
+      <td> 0.216300</td>
+      <td> 0.328143</td>
+      <td> 1.000000</td>
+      <td> 0.041331</td>
+      <td> 0.017182</td>
+      <td> 0.159124</td>
+      <td>-0.117359</td>
+      <td> 0.028134</td>
+      <td> 0.037973</td>
+      <td> 0.077483</td>
+      <td> 0.000211</td>
+    </tr>
+    <tr>
+      <th>May</th>
+      <td> 0.047153</td>
+      <td> 0.017000</td>
+      <td> 0.071455</td>
+      <td> 0.041331</td>
+      <td> 1.000000</td>
+      <td>-0.121644</td>
+      <td> 0.028159</td>
+      <td> 0.118944</td>
+      <td> 0.038196</td>
+      <td> 0.178622</td>
+      <td> 0.175155</td>
+      <td>-0.156485</td>
+    </tr>
+    <tr>
+      <th>Jun</th>
+      <td> 0.039691</td>
+      <td> 0.028284</td>
+      <td> 0.177538</td>
+      <td> 0.017182</td>
+      <td>-0.121644</td>
+      <td> 1.000000</td>
+      <td> 0.306204</td>
+      <td> 0.093280</td>
+      <td>-0.060803</td>
+      <td> 0.111169</td>
+      <td>-0.370548</td>
+      <td> 0.150160</td>
+    </tr>
+    <tr>
+      <th>Jul</th>
+      <td> 0.206568</td>
+      <td> 0.252928</td>
+      <td> 0.091281</td>
+      <td> 0.159124</td>
+      <td> 0.028159</td>
+      <td> 0.306204</td>
+      <td> 1.000000</td>
+      <td> 0.411425</td>
+      <td> 0.131770</td>
+      <td> 0.132230</td>
+      <td> 0.000195</td>
+      <td> 0.053797</td>
+    </tr>
+    <tr>
+      <th>Aug</th>
+      <td>-0.120758</td>
+      <td>-0.097432</td>
+      <td> 0.022202</td>
+      <td>-0.117359</td>
+      <td> 0.118944</td>
+      <td> 0.093280</td>
+      <td> 0.411425</td>
+      <td> 1.000000</td>
+      <td> 0.222137</td>
+      <td> 0.179547</td>
+      <td> 0.123741</td>
+      <td> 0.002483</td>
+    </tr>
+    <tr>
+      <th>Sep</th>
+      <td> 0.134955</td>
+      <td> 0.033740</td>
+      <td>-0.081379</td>
+      <td> 0.028134</td>
+      <td> 0.038196</td>
+      <td>-0.060803</td>
+      <td> 0.131770</td>
+      <td> 0.222137</td>
+      <td> 1.000000</td>
+      <td> 0.277824</td>
+      <td> 0.077645</td>
+      <td> 0.054884</td>
+    </tr>
+    <tr>
+      <th>Oct</th>
+      <td> 0.117936</td>
+      <td> 0.071301</td>
+      <td>-0.037189</td>
+      <td> 0.037973</td>
+      <td> 0.178622</td>
+      <td> 0.111169</td>
+      <td> 0.132230</td>
+      <td> 0.179547</td>
+      <td> 0.277824</td>
+      <td> 1.000000</td>
+      <td> 0.146520</td>
+      <td>-0.031469</td>
+    </tr>
+    <tr>
+      <th>Nov</th>
+      <td>-0.142560</td>
+      <td> 0.059700</td>
+      <td>-0.031521</td>
+      <td> 0.077483</td>
+      <td> 0.175155</td>
+      <td>-0.370548</td>
+      <td> 0.000195</td>
+      <td> 0.123741</td>
+      <td> 0.077645</td>
+      <td> 0.146520</td>
+      <td> 1.000000</td>
+      <td>-0.112312</td>
+    </tr>
+    <tr>
+      <th>Dec</th>
+      <td>-0.059667</td>
+      <td>-0.012276</td>
+      <td>-0.075481</td>
+      <td> 0.000211</td>
+      <td>-0.156485</td>
+      <td> 0.150160</td>
+      <td> 0.053797</td>
+      <td> 0.002483</td>
+      <td> 0.054884</td>
+      <td>-0.031469</td>
+      <td>-0.112312</td>
+      <td> 1.000000</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -4540,26 +5690,33 @@ Name: TMPMN, dtype: float64</pre>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>На табличку с цифрами смотреть не очень приятно, так что мы лучше нарисуем картинку.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [29]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">corr</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s">'seismic'</span><span class="p">,</span><span class="n">interpolation</span><span class="o">=</span><span class="s">'none'</span><span class="p">,</span><span class="n">vmin</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">corr</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;seismic&#39;</span><span class="p">,</span><span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span><span class="n">vmin</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">corr</span><span class="p">)),</span><span class="n">corr</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">corr</span><span class="p">)),</span><span class="n">corr</span><span class="o">.</span><span class="n">columns</span><span class="p">);</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt"></div>
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATsAAAEACAYAAADMYdGpAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3Xm4VNWZ7/HvTzAB9aKxTYcYBzRAWgUFnIAolEZvo7ZG
@@ -4745,34 +5902,44 @@ tnYE7jOzT5Wsj/6Zb87fo6StzWxFeP4z4Hkzu6SBOBXvv3Ttpcd3YyX9I/AbOu8vTbf/lZH0D8Ac
 kpFI8fron3kP/B6/Es68P0Wy23j5Ztqua1FNMbJzzrnu1uMjO+ec2xw82TnnOoInO+dcR/Bk55zr
 CJ7snHMdwZOdc64j/H/rZuy5JH6TPAAAAABJRU5ErkJggg==
 ">
-</img></div>
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Красные квадратики означают положительную корреляцию, синие — отрицательную. Как видим, исходное утверждение «если март тёплый, то апрель будет холодным», подтвердилось с точностью до наоборот — корреляция положительная. А вот между июнем и ноябрём — отрицательная. (Интересно, почему так?)</p>
+<p>Красные квадратики означают положительную корреляцию, синие — отрицательную. Как видим, исходное утверждение «если март тёплый, то апрель будет холодным», подтвердилось с точностью до наоборот — корреляция положительная. А вот между июнем и ноябрём — отрицательная. (Интересно, почему так?)</p>
 <p>Проиллюстрируем утверждение о корреляциях на графиках, которые называются точечными диаграммами или диаграммами рассеяния (scatter plot).</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [30]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">mon_mean</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s">'scatter'</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s">'Mar'</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s">'Apr'</span><span class="p">);</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">mon_mean</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Mar&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;Apr&#39;</span><span class="p">);</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt"></div>
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAX0AAAEPCAYAAACukxSbAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAHLBJREFUeJzt3X2wXVV5x/HvAwgmjRFv6mgtTC/a0iJlGmmlTIsaX/JS
@@ -4906,34 +6073,44 @@ IbCi7//uai+eyGQ00hdZ2tXA99z9loELU6wGvll+/ezWU4nUpJG+yEIO4O7fcPc39d3Wm73zGuCV
 ZnY9xcW9fYn7iCRLSyuLiHSIRvoiIh2iTl9EpEPU6YuIdIg6fRGRDlGnLyLSIer0RUQ6RJ2+iEiH
 qNMXEemQ/wci8i1p86ltCAAAAABJRU5ErkJggg==
 ">
-</img></div>
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Каждая точка на графике — это один год, по горизонтальной оси отмечена средняя температура за март, а по вертикальной — за апрель. Видно, что график немного вытянут вдоль диагонали, которая идёт «из левого нижнего угла в правый верхний» — это и соответствует наличию положительной корреляции.</p>
+<p>Каждая точка на графике — это один год, по горизонтальной оси отмечена средняя температура за март, а по вертикальной — за апрель. Видно, что график немного вытянут вдоль диагонали, которая идёт «из левого нижнего угла в правый верхний» — это и соответствует наличию положительной корреляции.</p>
 <p>А вот аналогичный график для пары июнь — ноябрь:</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [31]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">mon_mean</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s">'scatter'</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s">'Jun'</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s">'Nov'</span><span class="p">);</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">mon_mean</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Jun&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;Nov&#39;</span><span class="p">);</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt"></div>
+
+
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYgAAAEPCAYAAABY9lNGAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAGzVJREFUeJzt3X+wHXd53/H3xxZ2Ba6wpTS4BAdBx6SQDAiDHU/rwYJE
@@ -5060,22 +6237,26 @@ rc3f8PT30fqJx0+V/z5J8X0VZr3hAmG2Nl8DXibpDElnU15u3GwI/InGrAFJ64BTEfGQpDuA+4EH
 KaaSphnVt5jZMPhy32YNSHoF8O/Lrzc1GyRPMZnVJOlfALcDv5o6FrN58gjCzMym8gjCzMymcoEw
 M7OpXCDMzGwqFwgzM5vKBcLMzKZygTAzs6n+P9SdpOg1FaL5AAAAAElFTkSuQmCC
 ">
-</img></div>
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Постскриптум">Постскриптум<a class="anchor-link" href="#Постскриптум">¶</a></h3><p>— Неправда твоя! Данные ясно показывают, что если март тёплый, то и апрель тёплый.</p>
+<h3 id="Постскриптум">&#1055;&#1086;&#1089;&#1090;&#1089;&#1082;&#1088;&#1080;&#1087;&#1090;&#1091;&#1084;<a class="anchor-link" href="#Постскриптум">&#182;</a></h3><p>— Неправда твоя! Данные ясно показывают, что если март тёплый, то и апрель тёплый.</p>
 <p>— Не верю что-то.</p>
 <p>— У меня статистика за 50 лет.</p>
 <p>— А у меня личный опыт! Вот, помню, несколько лет назад ноябрь был тёплый, а декабрь холодный…</p>
 <p>— Ну, у ноября с декабрём как раз отрицательная корреляция.</p>
 <p>— Вот! Я же говорил! Я был прав!</p>
+
 </div>
 </div>
 </div>
@@ -5084,13 +6265,14 @@ M7OpXCDMzGwqFwgzM5vKBcLMzKZygTAzs6n+P9SdpOg1FaL5AAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Упражнения">Упражнения<a class="anchor-link" href="#Упражнения">¶</a></h3><ol>
+<h3 id="Упражнения">&#1059;&#1087;&#1088;&#1072;&#1078;&#1085;&#1077;&#1085;&#1080;&#1103;<a class="anchor-link" href="#Упражнения">&#182;</a></h3><ol>
 <li>На сколько градусов растёт в среднем температура за один год? (Посчитать регрессию с помощью <code>statsmodels</code>.)</li>
 <li>На сколько градусов вырастет в среднем температура в апреле, если она выросла на 1 градус в марте? </li>
 <li>А на сколько она упадёт в ноябре, если она выросла на один градус в декабре? </li>
 <li>Значимы ли коэффициенты регрессий в этих задачах?</li>
 <li>Известна поговорка «после дождичка в четверг» (о маловероятном событии). Проверить с помощью теста Стьюдента, отличается ли статистически значимо уровень осадков (<code>PRECIP</code>), выпадающих по четвергам, от уровня осадков в остальные дни недели? (Подсказка: <code>dat.index.weekday</code>.)</li>
 </ol>
+
 </div>
 </div>
 </div>
@@ -5130,6 +6312,12 @@ M7OpXCDMzGwqFwgzM5vKBcLMzKZygTAzs6n+P9SdpOg1FaL5AAAAAElFTkSuQmCC
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	</p>
 
+	<div class="comments">
+	<h2>Комментарии</h2>
+<div class="fb-comments" data-href="https://ischurov.github.io"
+    data-numposts="5"></div>
+
+	</div>
 
 		  </div>	
 		  
@@ -5140,8 +6328,8 @@ M7OpXCDMzGwqFwgzM5vKBcLMzKZygTAzs6n+P9SdpOg1FaL5AAAAAElFTkSuQmCC
 	              <h2>Об авторе</h2>
 			      <p style='hyphens: auto'>
                     Меня зовут Илья Щуров. Математик. Любитель Py&shy;thon.
-Пишу научные статьи со смешными названиями. Работаю в НИУ ВШЭ. Понемногу
-программирую, фотографирую и путешествую.
+Пишу научные статьи со смешными названиями. Работаю в НИУ ВШЭ. Преподаю. Понемногу
+про&shy;грам&shy;ми&shy;рую, фото&shy;гра&shy;фи&shy;рую и пу&shy;те&shy;шес&shy;твую.
 			      </p>
 			    </aside>
 
@@ -5152,6 +6340,28 @@ M7OpXCDMzGwqFwgzM5vKBcLMzKZygTAzs6n+P9SdpOg1FaL5AAAAAElFTkSuQmCC
 	                <li class="active"><a href="https://ischurov.github.io/category/konspekt.html">конспект</a></li>
 	            </ul>
 	          </nav>
+              <nav>
+                  <h2>Теги</h2>
+                  <p style='text-align:left'>
+                    <a href="#3d-ref">3d<span><sup>1</sup></span></a>  
+                    <a href="#api-ref">API<span><sup>1</sup></span></a>  
+                    <a href="#gmail-ref">gmail<span><sup>1</sup></span></a>  
+                    <a href="#korreliatsiia-ref">корреляция<span><sup>1</sup></span></a>  
+                    <a href="#matplotlib-ref">matplotlib<span><sup>1</sup></span></a>  
+                    <a href="#mplot3d-ref">mplot3d<span><sup>1</sup></span></a>  
+                    <a href="#odeint-ref">odeint<span><sup>1</sup></span></a>  
+                    <a href="#pandas-ref">pandas<span><sup>1</sup></span></a>  
+                    <a href="#pogoda-ref">погода<span><sup>1</sup></span></a>  
+                    <a href="#politologiia-ref">политология<span><sup>1</sup></span></a>  
+                    <a href="#pyplot-ref">pyplot<span><sup>1</sup></span></a>  
+                    <a href="#python-ref">python<span><sup>4</sup></span></a>  
+                    <a href="#python-politologiia-vybory-ref">python политология выборы<span><sup>1</sup></span></a>  
+                    <a href="#statistika-ref">статистика<span><sup>1</sup></span></a>  
+                    <a href="#teorver-ref">теорвер<span><sup>1</sup></span></a>  
+                    <a href="#vybory-ref">выборы<span><sup>1</sup></span></a>  
+                    <a href="#xkcd-ref">xkcd<span><sup>1</sup></span></a>  
+                  </p>
+                </nav>
 
 	            <aside>
 	            <h2>Соцсети</h2>

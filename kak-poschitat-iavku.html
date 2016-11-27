@@ -23,6 +23,17 @@
 </head>
 	
 <body>
+<!-- facebook social -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8&appId=454295064733340";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- /facebook social -->
+
 
     <div class="container">
 	  
@@ -41,7 +52,7 @@
 		<h1>Как посчитать явку</h1>
 		
 <div class="metadata">
-  <time datetime="2014-09-15T00:53:00+04:00" pubdate>Mon 15 September 2014</time>
+  <time datetime="2014-09-15T00:53:00+04:00" pubdate>2014-09-15</time>
     <address class="vcard author">
       Автор: <a class="url fn" href="https://ischurov.github.io/author/ilya-v-schurov.html">Ilya V. Schurov</a>
     </address>
@@ -51,15 +62,882 @@
 *
 * IPython notebook
 *
-*/.ansibold{font-weight:700}.ansiblack{}.ansired{color:#8b0000}.ansigreen{6400}.ansiyellow{color:#c4a000}.ansiblue{8b}.ansipurple{color:#9400d3}.ansicyan{color:#4682b4}.ansigray{color:gray}.ansibgblack{background-}.ansibgred{background-color:red}.ansibggreen{background-color:green}.ansibgyellow{background-color:#ff0}.ansibgblue{background-f}.ansibgpurple{background-color:#ff00ff}.ansibgcyan{background-ff}.ansibggray{background-color:gray}div.cell{border:1px solid transparent;display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;border-radius:2px;box-sizing:border-box;-moz-box-sizing:border-box;border-width:thin;border-style:solid;width:100%;padding:5px;margin:0;outline:0}div.cell.selected{border-color:#ababab}@media print{div.cell.selected{border-color:transparent}}.edit_mode div.cell.selected{border-color:green}.prompt{min-width:14ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}@-moz-document url-prefix(){div.inner_cell{overflow-x:hidden}}div.input_area{border:1px solid #cfcfcf;border-radius:2px;background:#f7f7f7;line-height:1.21429em}div.prompt:empty{padding-top:0;padding-bottom:0}div.unrecognized_cell{padding:5px 5px 5px 0;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}div.unrecognized_cell .inner_cell{border-radius:2px;padding:5px;font-weight:700;color:red;border:1px solid #cfcfcf;background:#eaeaea}div.unrecognized_cell .inner_cell a,div.unrecognized_cell .inner_cell a:hover{color:inherit;text-decoration:none}@media (max-width:540px){.prompt{text-align:left}div.unrecognized_cell>div.prompt{display:none}}div.code_cell{}div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}@media (max-width:540px){div.input{-webkit-box-orient:vertical;-moz-box-orient:vertical;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:navy;border-top:1px solid transparent}div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}div.input_area>div.highlight>pre{margin:0;border:none;padding:0;background-color:transparent}.CodeMirror{line-height:1.21429em;font-size:14px;height:auto;background:0 0}.CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}.CodeMirror-lines{padding:.4em}.CodeMirror-linenumber{padding:0 8px 0 4px}.CodeMirror-gutters{border-bottom-left-radius:2px;border-top-left-radius:2px}.CodeMirror pre{padding:0;border:0;border-radius:0}.highlight-base,.highlight-variable{}.highlight-variable-2{color:#1a1a1a}.highlight-variable-3{color:#333}.highlight-string{color:#BA2121}.highlight-comment{color:#408080;font-style:italic}.highlight-number{80}.highlight-atom{color:#88F}.highlight-keyword{color:green;font-weight:700}.highlight-builtin{color:green}.highlight-error{color:red}.highlight-operator{color:#A2F;font-weight:700}.highlight-meta{color:#A2F}.highlight-def{f}.highlight-string-2{color:#f50}.highlight-qualifier{color:#555}.highlight-bracket{color:#997}.highlight-tag{color:#170}.highlight-attribute{c}.highlight-header{f}.highlight-quote{90}.highlight-link{c}.cm-s-ipython span.cm-keyword{color:green;font-weight:700}.cm-s-ipython span.cm-atom{color:#88F}.cm-s-ipython span.cm-number{80}.cm-s-ipython span.cm-def{f}.cm-s-ipython span.cm-variable{}.cm-s-ipython span.cm-operator{color:#A2F;font-weight:700}.cm-s-ipython span.cm-variable-2{color:#1a1a1a}.cm-s-ipython span.cm-variable-3{color:#333}.cm-s-ipython span.cm-comment{color:#408080;font-style:italic}.cm-s-ipython span.cm-string{color:#BA2121}.cm-s-ipython span.cm-string-2{color:#f50}.cm-s-ipython span.cm-meta{color:#A2F}.cm-s-ipython span.cm-qualifier{color:#555}.cm-s-ipython span.cm-builtin{color:green}.cm-s-ipython span.cm-bracket{color:#997}.cm-s-ipython span.cm-tag{color:#170}.cm-s-ipython span.cm-attribute{c}.cm-s-ipython span.cm-header{f}.cm-s-ipython span.cm-quote{90}.cm-s-ipython span.cm-link{c}.cm-s-ipython span.cm-error{color:red}.cm-s-ipython span.cm-tab{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=')right no-repeat}div.output_wrapper{display:-webkit-box;-webkit-box-align:stretch;display:-moz-box;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;z-index:1}div.output_scroll{height:24em;width:100%;overflow:auto;border-radius:2px;-webkit-box-shadow:inset 0 2px 8px rgba(0,0,0,.8);box-shadow:inset 0 2px 8px rgba(0,0,0,.8);display:block}div.output_collapsed{margin:0;padding:0;display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}div.out_prompt_overlay{height:100%;padding:0 .4em;position:absolute;border-radius:2px}div.out_prompt_overlay:hover{-webkit-box-shadow:inset 0 0 1px #000;box-shadow:inset 0 0 1px #000;background:rgba(240,240,240,.5)}div.output_prompt{color:#8b0000}div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}div.output_area .MathJax_Display{text-align:left!important}div.output_area div.output_area img,div.output_area svg{max-width:100%;height:auto}div.output_area img.unconfined,div.output_area svg.unconfined{max-width:none}.output{display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}@media (max-width:540px){div.output_area{-webkit-box-orient:vertical;-moz-box-orient:vertical;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;background-color:transparent;border-radius:0}div.output_subarea{overflow-x:auto;padding:.4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1;max-width:calc(100% - 14ex)}div.output_text{text-align:left;line-height:1.21429em}div.output_stderr{background:#fdd}div.output_latex{text-align:left}div.output_javascript:empty{padding:0}.js-error{color:#8b0000}div.raw_input_container{font-family:monospace;padding-top:5px}span.raw_input_prompt{}input.raw_input{font-family:inherit;font-size:inherit;color:inherit;width:auto;vertical-align:baseline;padding:0 .25em;margin:0 .25em}input.raw_input:focus{box-shadow:none}p.p-space{margin-bottom:10px}div.output_unrecognized{padding:5px;font-weight:700;color:red}div.output_unrecognized a,div.output_unrecognized a:hover{color:inherit;text-decoration:none}.rendered_html{}.rendered_html :link,.rendered_html :visited,.rendered_html h1:first-child{margin-top:.538em}.rendered_html h2:first-child{margin-top:.636em}.rendered_html h3:first-child{margin-top:.777em}.rendered_html h4:first-child,.rendered_html h5:first-child,.rendered_html h6:first-child{margin-top:1em}.rendered_html *+ol,.rendered_html *+ul{margin-top:1em}.rendered_html *+table{margin-top:1em}.rendered_html *+p{margin-top:1em}.rendered_html *+img{margin-top:1em}div.text_cell{display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}@media (max-width:540px){div.text_cell>div.prompt{display:none}}div.text_cell_render{outline:0;resize:none;width:inherit;border-style:none;padding:.5em .5em .5em .4em;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}a.anchor-link:link{text-decoration:none;padding:0 20px;visibility:hidden}h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anchor-link,h5:hover .anchor-link,h6:hover .anchor-link{visibility:visible}.text_cell.rendered .input_area{display:none}.text_cell.rendered .text_cell.unrendered .text_cell_render{display:none}.cm-header-1,.cm-header-2,.cm-header-3,.cm-header-4,.cm-header-5,.cm-header-6{font-weight:700;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.cm-header-1{font-size:185.7%}.cm-header-2{font-size:157.1%}.cm-header-3{font-size:128.6%}.cm-header-4{font-size:110%}.cm-header-5,.cm-header-6{font-size:100%;font-style:italic}</style>
+*/
+/* CSS font colors for translated ANSI colors. */
+.ansibold {
+  font-weight: bold;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  border-left-width: 1px;
+  padding-left: 5px;
+  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #90CAF9;
+  border-left-color: #E3F2FD;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #E3F2FD;
+  border-right-width: 1px;
+  background: #E3F2FD;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected {
+  border-color: #ababab;
+  border-left-width: 0px;
+  padding-left: 6px;
+  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
+}
+@media print {
+  div.cell.selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected.jupyter-soft-selected {
+  border-left-width: 0;
+  padding-left: 6px;
+  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
+}
+.edit_mode div.cell.selected {
+  border-color: #66BB6A;
+  border-left-width: 0px;
+  padding-left: 6px;
+  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+@-moz-document url-prefix() {
+  div.inner_cell {
+    overflow-x: hidden;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell > div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+div.input_area > div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area > div.highlight > pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the <head> if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  padding: 0.4em;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
+  /* .CodeMirror-lines */
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #BA2121;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #AA22FF;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #BA2121;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #AA22FF;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but FF barfs all over that */
+  height: 24em;
+  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/FF */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+.rendered_html pre,
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+.rendered_html td,
+
+
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell > div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+</style>
 <style type="text/css">.highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
 .highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
 .highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
 .highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
 .highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
 .highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #A00000 } /* Generic.Deleted */
@@ -115,12 +993,50 @@
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
+<style type="text/css">
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+</style>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Постановка-задачи">Постановка задачи<a class="anchor-link" href="#Постановка-задачи">¶</a></h2><p>Подводятся итоги по выборам в Московскую городскую думу. Есть данные по выборам из системы ГАС «Выборы», публикующиеся более или менее в реальном времени. Но они там разбиты по округам (что логично). Допустим, нас интересует явка «в целом по Москве». По правде говоря, она интересует председателя территориальной избирательной комиссии, членом которой я являюсь — он только что спросил у меня, не опубликована ли эта информация где. Я не нашёл в открытых источниках и поэтому решил быстро написать скрипт, который её считает. Итак.</p>
+<h2 id="Постановка-задачи">&#1055;&#1086;&#1089;&#1090;&#1072;&#1085;&#1086;&#1074;&#1082;&#1072; &#1079;&#1072;&#1076;&#1072;&#1095;&#1080;<a class="anchor-link" href="#Постановка-задачи">&#182;</a></h2><p>Подводятся итоги по выборам в Московскую городскую думу. Есть данные по выборам из системы ГАС «Выборы», публикующиеся более или менее в реальном времени. Но они там разбиты по округам (что логично). Допустим, нас интересует явка «в целом по Москве». По правде говоря, она интересует председателя территориальной избирательной комиссии, членом которой я являюсь — он только что спросил у меня, не опубликована ли эта информация где. Я не нашёл в открытых источниках и поэтому решил быстро написать скрипт, который её считает. Итак.</p>
+
 </div>
 </div>
 </div>
@@ -129,97 +1045,105 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Шаг-1.-Получаем-список-страниц-со-ссылками-на-результаты">Шаг 1. Получаем список страниц со ссылками на результаты<a class="anchor-link" href="#Шаг-1.-Получаем-список-страниц-со-ссылками-на-результаты">¶</a></h2><p>Это придётся сделать частично ручками. Я зашёл на <a href="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root_a=772003003&amp;vrn=27720001539308&amp;region=77&amp;global=null&amp;type=0&amp;prver=0&amp;pronetvd=null">эту страницу</a> и нашёл в исходном коде строчку, отвечающую за выпадающий список «Нижестоящие избирательные комиссии».</p>
+<h2 id="Шаг-1.-Получаем-список-страниц-со-ссылками-на-результаты">&#1064;&#1072;&#1075; 1. &#1055;&#1086;&#1083;&#1091;&#1095;&#1072;&#1077;&#1084; &#1089;&#1087;&#1080;&#1089;&#1086;&#1082; &#1089;&#1090;&#1088;&#1072;&#1085;&#1080;&#1094; &#1089;&#1086; &#1089;&#1089;&#1099;&#1083;&#1082;&#1072;&#1084;&#1080; &#1085;&#1072; &#1088;&#1077;&#1079;&#1091;&#1083;&#1100;&#1090;&#1072;&#1090;&#1099;<a class="anchor-link" href="#Шаг-1.-Получаем-список-страниц-со-ссылками-на-результаты">&#182;</a></h2><p>Это придётся сделать частично ручками. Я зашёл на <a href="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root_a=772003003&amp;vrn=27720001539308&amp;region=77&amp;global=null&amp;type=0&amp;prver=0&amp;pronetvd=null">эту страницу</a> и нашёл в исходном коде строчку, отвечающую за выпадающий список «Нижестоящие избирательные комиссии».</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [6]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">options_str</span><span class="o">=</span><span class="s">"""<option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772000001&amp;tvd=27720001539819&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001539819">1 № 1</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772000136&amp;tvd=27720001539954&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001539954">2 № 2</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772000226&amp;tvd=27720001540044&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001540044">3 № 3</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772000321&amp;tvd=27720001540139&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001540139">4 № 4</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772000408&amp;tvd=27720001540226&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001540226">5 № 5</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772000508&amp;tvd=27720001540326&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001540326">6 № 6</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772000586&amp;tvd=27720001540404&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001540404">7 № 7</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772000664&amp;tvd=27720001540482&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001540482">8 № 8</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772000753&amp;tvd=27720001540571&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001540571">9 № 9</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772000842&amp;tvd=27720001540660&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001540660">10 № 10</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772000923&amp;tvd=27720001540741&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001540741">11 № 11</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772001003&amp;tvd=27720001540821&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001540821">12 № 12</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772001073&amp;tvd=27720001540891&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001540891">13 № 13</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772001149&amp;tvd=27720001540967&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001540967">14 № 14</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772001245&amp;tvd=27720001541063&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001541063">15 № 15</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772001323&amp;tvd=27720001541141&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001541141">16 № 16</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772001405&amp;tvd=27720001541223&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001541223">17 № 17</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772001479&amp;tvd=27720001541297&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001541297">18 № 18</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772001567&amp;tvd=27720001541385&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001541385">19 № 19</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772001647&amp;tvd=27720001541465&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001541465">20 № 20</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772001725&amp;tvd=27720001541543&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001541543">21 № 21</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772001802&amp;tvd=27720001541620&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001541620">22 № 22</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772001878&amp;tvd=27720001541696&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001541696">23 № 23</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772001952&amp;tvd=27720001541770&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001541770">24 № 24</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772002055&amp;tvd=27720001541873&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001541873">25 № 25</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772002124&amp;tvd=27720001541942&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001541942">26 № 26</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772002191&amp;tvd=27720001542009&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001542009">27 № 27</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772002258&amp;tvd=27720001542076&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001542076">28 № 28</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772002339&amp;tvd=27720001542157&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001542157">29 № 29</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772002411&amp;tvd=27720001542229&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001542229">30 № 30</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772002486&amp;tvd=27720001542304&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001542304">31 № 31</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772002559&amp;tvd=27720001542377&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001542377">32 № 32</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772002654&amp;tvd=27720001542472&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001542472">33 № 33</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772002734&amp;tvd=27720001542552&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001542552">34 № 34</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772002830&amp;tvd=27720001542648&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001542648">35 № 35</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772002922&amp;tvd=27720001542740&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001542740">36 № 36</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772003003&amp;tvd=27720001542821&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001542821">37 № 37</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772003101&amp;tvd=27720001542919&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001542919">38 № 38</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772003203&amp;tvd=27720001543021&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001543021">39 № 39</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772003295&amp;tvd=27720001543113&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001543113">40 № 40</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772003378&amp;tvd=27720001543196&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001543196">41 № 41</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772003457&amp;tvd=27720001543275&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001543275">42 № 42</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772003543&amp;tvd=27720001543361&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001543361">43 № 43</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772003621&amp;tvd=27720001543439&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001543439">44 № 44</option></span>
-<span class="s"><option value="http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772003707&amp;tvd=27720001543525&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001543525">45 № 45</option></span>
-<span class="s">"""</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">options_str</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772000001&amp;amp;tvd=27720001539819&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001539819&quot;&gt;1 № 1&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772000136&amp;amp;tvd=27720001539954&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001539954&quot;&gt;2 № 2&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772000226&amp;amp;tvd=27720001540044&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001540044&quot;&gt;3 № 3&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772000321&amp;amp;tvd=27720001540139&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001540139&quot;&gt;4 № 4&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772000408&amp;amp;tvd=27720001540226&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001540226&quot;&gt;5 № 5&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772000508&amp;amp;tvd=27720001540326&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001540326&quot;&gt;6 № 6&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772000586&amp;amp;tvd=27720001540404&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001540404&quot;&gt;7 № 7&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772000664&amp;amp;tvd=27720001540482&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001540482&quot;&gt;8 № 8&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772000753&amp;amp;tvd=27720001540571&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001540571&quot;&gt;9 № 9&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772000842&amp;amp;tvd=27720001540660&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001540660&quot;&gt;10 № 10&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772000923&amp;amp;tvd=27720001540741&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001540741&quot;&gt;11 № 11&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772001003&amp;amp;tvd=27720001540821&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001540821&quot;&gt;12 № 12&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772001073&amp;amp;tvd=27720001540891&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001540891&quot;&gt;13 № 13&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772001149&amp;amp;tvd=27720001540967&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001540967&quot;&gt;14 № 14&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772001245&amp;amp;tvd=27720001541063&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001541063&quot;&gt;15 № 15&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772001323&amp;amp;tvd=27720001541141&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001541141&quot;&gt;16 № 16&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772001405&amp;amp;tvd=27720001541223&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001541223&quot;&gt;17 № 17&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772001479&amp;amp;tvd=27720001541297&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001541297&quot;&gt;18 № 18&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772001567&amp;amp;tvd=27720001541385&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001541385&quot;&gt;19 № 19&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772001647&amp;amp;tvd=27720001541465&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001541465&quot;&gt;20 № 20&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772001725&amp;amp;tvd=27720001541543&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001541543&quot;&gt;21 № 21&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772001802&amp;amp;tvd=27720001541620&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001541620&quot;&gt;22 № 22&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772001878&amp;amp;tvd=27720001541696&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001541696&quot;&gt;23 № 23&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772001952&amp;amp;tvd=27720001541770&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001541770&quot;&gt;24 № 24&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772002055&amp;amp;tvd=27720001541873&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001541873&quot;&gt;25 № 25&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772002124&amp;amp;tvd=27720001541942&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001541942&quot;&gt;26 № 26&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772002191&amp;amp;tvd=27720001542009&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001542009&quot;&gt;27 № 27&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772002258&amp;amp;tvd=27720001542076&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001542076&quot;&gt;28 № 28&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772002339&amp;amp;tvd=27720001542157&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001542157&quot;&gt;29 № 29&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772002411&amp;amp;tvd=27720001542229&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001542229&quot;&gt;30 № 30&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772002486&amp;amp;tvd=27720001542304&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001542304&quot;&gt;31 № 31&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772002559&amp;amp;tvd=27720001542377&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001542377&quot;&gt;32 № 32&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772002654&amp;amp;tvd=27720001542472&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001542472&quot;&gt;33 № 33&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772002734&amp;amp;tvd=27720001542552&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001542552&quot;&gt;34 № 34&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772002830&amp;amp;tvd=27720001542648&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001542648&quot;&gt;35 № 35&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772002922&amp;amp;tvd=27720001542740&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001542740&quot;&gt;36 № 36&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772003003&amp;amp;tvd=27720001542821&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001542821&quot;&gt;37 № 37&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772003101&amp;amp;tvd=27720001542919&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001542919&quot;&gt;38 № 38&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772003203&amp;amp;tvd=27720001543021&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001543021&quot;&gt;39 № 39&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772003295&amp;amp;tvd=27720001543113&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001543113&quot;&gt;40 № 40&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772003378&amp;amp;tvd=27720001543196&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001543196&quot;&gt;41 № 41&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772003457&amp;amp;tvd=27720001543275&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001543275&quot;&gt;42 № 42&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772003543&amp;amp;tvd=27720001543361&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001543361&quot;&gt;43 № 43&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772003621&amp;amp;tvd=27720001543439&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001543439&quot;&gt;44 № 44&lt;/option&gt;</span>
+<span class="s2">&lt;option value=&quot;http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;amp;root=772003707&amp;amp;tvd=27720001543525&amp;amp;vrn=27720001539308&amp;amp;prver=0&amp;amp;pronetvd=null&amp;amp;region=77&amp;amp;sub_region=77&amp;amp;type=0&amp;amp;vibid=27720001543525&quot;&gt;45 № 45&lt;/option&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Шаг-2.-Обрабатываем-один-округ">Шаг 2. Обрабатываем один округ<a class="anchor-link" href="#Шаг-2.-Обрабатываем-один-округ">¶</a></h2><p>Прежде, чем писать код, обрабатывающий весь город, напишем его для одного округа. Для начала нам нужно получить получить из строчки выше адреса страниц по отдельным округам. Чтобы распарсить строчку выше, мы используем <code>BeautifulSoup</code>.</p>
+<h2 id="Шаг-2.-Обрабатываем-один-округ">&#1064;&#1072;&#1075; 2. &#1054;&#1073;&#1088;&#1072;&#1073;&#1072;&#1090;&#1099;&#1074;&#1072;&#1077;&#1084; &#1086;&#1076;&#1080;&#1085; &#1086;&#1082;&#1088;&#1091;&#1075;<a class="anchor-link" href="#Шаг-2.-Обрабатываем-один-округ">&#182;</a></h2><p>Прежде, чем писать код, обрабатывающий весь город, напишем его для одного округа. Для начала нам нужно получить получить из строчки выше адреса страниц по отдельным округам. Чтобы распарсить строчку выше, мы используем <code>BeautifulSoup</code>.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [82]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span>
 <span class="kn">import</span> <span class="nn">urllib2</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [83]:</div>
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">options</span><span class="o">=</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">options_str</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">options</span><span class="o">=</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">options_str</span><span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -227,33 +1151,40 @@
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Возьмём первый элемент типа <code>option</code> и вытащим из него название ОИК (окружной комиссии) и url страницы, относящейся к этой ОИК.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [119]:</div>
+<div class="prompt input_prompt">In&nbsp;[119]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">option</span><span class="o">=</span><span class="n">options</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">"option"</span><span class="p">)</span>
-<span class="n">url</span><span class="o">=</span><span class="n">option</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'value'</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">option</span><span class="o">=</span><span class="n">options</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;option&quot;</span><span class="p">)</span>
+<span class="n">url</span><span class="o">=</span><span class="n">option</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">)</span>
 <span class="n">OIK</span><span class="o">=</span><span class="n">option</span><span class="o">.</span><span class="n">string</span>
-<span class="nb">print</span> <span class="s">"url = %s</span><span class="se">\n</span><span class="s">OIK = %s"</span> <span class="o">%</span> <span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">OIK</span><span class="p">)</span>
+<span class="nb">print</span> <span class="s2">&quot;url = </span><span class="si">%s</span><span class="se">\n</span><span class="s2">OIK = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">OIK</span><span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>url = http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&root;=772000001&tvd;=27720001539819&vrn;=27720001539308&prver;=0&pronetvd;=null&region;=77&sub;_region=77&type;=0&vibid;=27720001539819
+<pre>url = http://www.moscow_city.vybory.izbirkom.ru/region/moscow_city?action=show&amp;root=772000001&amp;tvd=27720001539819&amp;vrn=27720001539308&amp;prver=0&amp;pronetvd=null&amp;region=77&amp;sub_region=77&amp;type=0&amp;vibid=27720001539819
 OIK = 1 № 1
 </pre>
 </div>
 </div>
+
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -261,110 +1192,137 @@ OIK = 1 № 1
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Эта страница не содержит нужной таблицы, но содержит ссылку на неё. Это предпоследняя ссылка на странице.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [87]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">page</span><span class="o">=</span><span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">page</span><span class="o">=</span><span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="n">data</span><span class="o">=</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-<span class="n">a</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">"a"</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">url_res</span><span class="o">=</span><span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'href'</span><span class="p">)</span>
+<span class="n">a</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">url_res</span><span class="o">=</span><span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span>
 <span class="n">res_page</span><span class="o">=</span><span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url_res</span><span class="p">)</span>
 <span class="n">bigtable</span><span class="o">=</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">res_page</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Теперь найдём нужную табличку (точнее, нужный тег <code><table></code>) на этой странице. Делается внимательным вглядыванием в исходник или методом научного тыка.</p>
+<p>Теперь найдём нужную табличку (точнее, нужный тег <code>&lt;table&gt;</code>) на этой странице. Делается внимательным вглядыванием в исходник или методом научного тыка.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [96]:</div>
+<div class="prompt input_prompt">In&nbsp;[96]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">rows</span><span class="o">=</span><span class="n">bigtable</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">'table'</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">'table'</span><span class="p">)[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">'tr'</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rows</span><span class="o">=</span><span class="n">bigtable</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">)[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [108]:</div>
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">rows</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rows</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[108]:</div>
+
+
 <div class="output_text output_subarea output_execute_result">
-<pre><tr bgcolor="#CCCCCC">
-<td style="color:black">1</td>
-<td align="left" style="color:black">Число избирателей, внесенных в список</td>
-<td align="right" style="color:black"><b>43891</b><br />
-</td>
-</tr></pre>
+<pre>&lt;tr bgcolor=&#34;#CCCCCC&#34;&gt;
+&lt;td style=&#34;color:black&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34; style=&#34;color:black&#34;&gt;Число избирателей, внесенных в список&lt;/td&gt;
+&lt;td align=&#34;right&#34; style=&#34;color:black&#34;&gt;&lt;b&gt;43891&lt;/b&gt;&lt;br/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;</pre>
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Нужная нам информация в третьей ячейке, в теге <code><b></code>. И мы хотим получить число, а не строчку. Нам придётся запрашивать эту информацию для разных строчек, поэтому определим функцию</p>
+<p>Нужная нам информация в третьей ячейке, в теге <code>&lt;b&gt;</code>. И мы хотим получить число, а не строчку. Нам придётся запрашивать эту информацию для разных строчек, поэтому определим функцию</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [109]:</div>
+<div class="prompt input_prompt">In&nbsp;[109]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">getdata</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">rows</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">'td'</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">'b'</span><span class="p">)</span><span class="o">.</span><span class="n">string</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">getdata</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">rows</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">string</span><span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [110]:</div>
+<div class="prompt input_prompt">In&nbsp;[110]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">getdata</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">getdata</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[110]:</div>
+
+
 <div class="output_text output_subarea output_execute_result">
 <pre>43891</pre>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -372,40 +1330,52 @@ OIK = 1 № 1
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Нас интересуют только некоторые строчки в протоколе. (По правде сказать, я сейчас запрашиваю их больше, чем надо, чтобы вычислить явку. Но пусть будут.)</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [112]:</div>
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">protocol_line</span><span class="o">=</span><span class="p">[</span><span class="n">getdata</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">protocol_line</span><span class="o">=</span><span class="p">[</span><span class="n">getdata</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
 <span class="n">total</span><span class="p">,</span><span class="n">v_pomesch</span><span class="p">,</span><span class="n">dosrok</span><span class="p">,</span><span class="n">nadom</span><span class="p">,</span><span class="n">nedeistv</span><span class="p">,</span><span class="n">deistv</span><span class="o">=</span><span class="n">protocol_line</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [113]:</div>
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">total</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[113]:</div>
+
+
 <div class="output_text output_subarea output_execute_result">
 <pre>43891</pre>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -413,74 +1383,86 @@ OIK = 1 № 1
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Теперь можно посчитать явку</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [115]:</div>
+<div class="prompt input_prompt">In&nbsp;[115]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">yavka</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">v_pomesch</span><span class="o">+</span><span class="n">dosrok</span><span class="o">+</span><span class="n">nadom</span><span class="p">)</span><span class="o">/</span><span class="n">total</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">yavka</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">v_pomesch</span><span class="o">+</span><span class="n">dosrok</span><span class="o">+</span><span class="n">nadom</span><span class="p">)</span><span class="o">/</span><span class="n">total</span>
 <span class="nb">print</span> <span class="n">yavka</span><span class="o">*</span><span class="mi">100</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>25.7866077328
 </pre>
 </div>
 </div>
+
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Шаг-3.-Получаем-информацию-по-всем-округам">Шаг 3. Получаем информацию по всем округам<a class="anchor-link" href="#Шаг-3.-Получаем-информацию-по-всем-округам">¶</a></h2><p>Мы хотим общую явку по всей Москве. Для этого мы запросим данные по каждому округу, суммируем общее число избирателей и бюллетеней и посчитаем явку по этим данным. Нам понадобится объединить код, написанный выше, и поместить его в цикл.</p>
+<h2 id="Шаг-3.-Получаем-информацию-по-всем-округам">&#1064;&#1072;&#1075; 3. &#1055;&#1086;&#1083;&#1091;&#1095;&#1072;&#1077;&#1084; &#1080;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1080;&#1102; &#1087;&#1086; &#1074;&#1089;&#1077;&#1084; &#1086;&#1082;&#1088;&#1091;&#1075;&#1072;&#1084;<a class="anchor-link" href="#Шаг-3.-Получаем-информацию-по-всем-округам">&#182;</a></h2><p>Мы хотим общую явку по всей Москве. Для этого мы запросим данные по каждому округу, суммируем общее число избирателей и бюллетеней и посчитаем явку по этим данным. Нам понадобится объединить код, написанный выше, и поместить его в цикл.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [120]:</div>
+<div class="prompt input_prompt">In&nbsp;[120]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">cumulative_line</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="mi">6</span><span class="p">)]</span>
-<span class="c">#инииализируем список нулями</span>
-<span class="k">for</span> <span class="n">option</span> <span class="ow">in</span> <span class="n">options</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">"option"</span><span class="p">):</span>
-    <span class="n">url</span><span class="o">=</span><span class="n">option</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'value'</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cumulative_line</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="mi">6</span><span class="p">)]</span>
+<span class="c1">#инииализируем список нулями</span>
+<span class="k">for</span> <span class="n">option</span> <span class="ow">in</span> <span class="n">options</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s2">&quot;option&quot;</span><span class="p">):</span>
+    <span class="n">url</span><span class="o">=</span><span class="n">option</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">)</span>
     <span class="n">OIK</span><span class="o">=</span><span class="n">option</span><span class="o">.</span><span class="n">string</span>
     <span class="n">page</span><span class="o">=</span><span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
     <span class="n">data</span><span class="o">=</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-    <span class="n">a</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">"a"</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
-    <span class="n">url_res</span><span class="o">=</span><span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'href'</span><span class="p">)</span>
+    <span class="n">a</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">url_res</span><span class="o">=</span><span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span>
     <span class="n">res_page</span><span class="o">=</span><span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url_res</span><span class="p">)</span>
     <span class="n">bigtable</span><span class="o">=</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">res_page</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-    <span class="n">rows</span><span class="o">=</span><span class="n">bigtable</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">'table'</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">'table'</span><span class="p">)[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">'tr'</span><span class="p">)</span>
+    <span class="n">rows</span><span class="o">=</span><span class="n">bigtable</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">)[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">getdata</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">rows</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">'td'</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">'b'</span><span class="p">)</span><span class="o">.</span><span class="n">string</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">rows</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">string</span><span class="p">)</span>
     <span class="n">protocol_line</span><span class="o">=</span><span class="p">[</span><span class="n">getdata</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
     <span class="n">total</span><span class="p">,</span><span class="n">v_pomesch</span><span class="p">,</span><span class="n">dosrok</span><span class="p">,</span><span class="n">nadom</span><span class="p">,</span><span class="n">nedeistv</span><span class="p">,</span><span class="n">deistv</span><span class="o">=</span><span class="n">protocol_line</span>
     <span class="n">cumulative_line</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="n">y</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">cumulative_line</span><span class="p">,</span><span class="n">protocol_line</span><span class="p">)]</span>
     <span class="n">yavka</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">v_pomesch</span><span class="o">+</span><span class="n">dosrok</span><span class="o">+</span><span class="n">nadom</span><span class="p">)</span><span class="o">/</span><span class="n">total</span>
-    <span class="nb">print</span> <span class="n">OIK</span><span class="o">+</span><span class="s">" "</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">yavka</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="n">OIK</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">yavka</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">cumulative_line</span>
 <span class="n">total</span><span class="p">,</span><span class="n">v_pomesch</span><span class="p">,</span><span class="n">dosrok</span><span class="p">,</span><span class="n">nadom</span><span class="p">,</span><span class="n">nedeistv</span><span class="p">,</span><span class="n">deistv</span><span class="o">=</span><span class="n">cumulative_line</span>
 <span class="n">yavka</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">v_pomesch</span><span class="o">+</span><span class="n">dosrok</span><span class="o">+</span><span class="n">nadom</span><span class="p">)</span><span class="o">/</span><span class="n">total</span>
 <span class="nb">print</span> <span class="n">yavka</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>1 № 1 0.251854011194
@@ -533,15 +1515,18 @@ OIK = 1 № 1
 </pre>
 </div>
 </div>
+
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Ответ">Ответ<a class="anchor-link" href="#Ответ">¶</a></h2><p>Явка на момент напиания поста по публично доступным данным «ГАС „Выборы”» составляет 21%.</p>
+<h2 id="Ответ">&#1054;&#1090;&#1074;&#1077;&#1090;<a class="anchor-link" href="#Ответ">&#182;</a></h2><p>Явка на момент напиания поста по публично доступным данным «ГАС „Выборы”» составляет 21%.</p>
+
 </div>
 </div>
 </div>
@@ -581,6 +1566,12 @@ OIK = 1 № 1
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	</p>
 
+	<div class="comments">
+	<h2>Комментарии</h2>
+<div class="fb-comments" data-href="https://ischurov.github.io"
+    data-numposts="5"></div>
+
+	</div>
 
 		  </div>	
 		  
@@ -591,8 +1582,8 @@ OIK = 1 № 1
 	              <h2>Об авторе</h2>
 			      <p style='hyphens: auto'>
                     Меня зовут Илья Щуров. Математик. Любитель Py&shy;thon.
-Пишу научные статьи со смешными названиями. Работаю в НИУ ВШЭ. Понемногу
-программирую, фотографирую и путешествую.
+Пишу научные статьи со смешными названиями. Работаю в НИУ ВШЭ. Преподаю. Понемногу
+про&shy;грам&shy;ми&shy;рую, фото&shy;гра&shy;фи&shy;рую и пу&shy;те&shy;шес&shy;твую.
 			      </p>
 			    </aside>
 
@@ -603,6 +1594,28 @@ OIK = 1 № 1
 	                <li ><a href="https://ischurov.github.io/category/konspekt.html">конспект</a></li>
 	            </ul>
 	          </nav>
+              <nav>
+                  <h2>Теги</h2>
+                  <p style='text-align:left'>
+                    <a href="#3d-ref">3d<span><sup>1</sup></span></a>  
+                    <a href="#api-ref">API<span><sup>1</sup></span></a>  
+                    <a href="#gmail-ref">gmail<span><sup>1</sup></span></a>  
+                    <a href="#korreliatsiia-ref">корреляция<span><sup>1</sup></span></a>  
+                    <a href="#matplotlib-ref">matplotlib<span><sup>1</sup></span></a>  
+                    <a href="#mplot3d-ref">mplot3d<span><sup>1</sup></span></a>  
+                    <a href="#odeint-ref">odeint<span><sup>1</sup></span></a>  
+                    <a href="#pandas-ref">pandas<span><sup>1</sup></span></a>  
+                    <a href="#pogoda-ref">погода<span><sup>1</sup></span></a>  
+                    <a href="#politologiia-ref">политология<span><sup>1</sup></span></a>  
+                    <a href="#pyplot-ref">pyplot<span><sup>1</sup></span></a>  
+                    <a href="#python-ref">python<span><sup>4</sup></span></a>  
+                    <a href="#python-politologiia-vybory-ref">python политология выборы<span><sup>1</sup></span></a>  
+                    <a href="#statistika-ref">статистика<span><sup>1</sup></span></a>  
+                    <a href="#teorver-ref">теорвер<span><sup>1</sup></span></a>  
+                    <a href="#vybory-ref">выборы<span><sup>1</sup></span></a>  
+                    <a href="#xkcd-ref">xkcd<span><sup>1</sup></span></a>  
+                  </p>
+                </nav>
 
 	            <aside>
 	            <h2>Соцсети</h2>
