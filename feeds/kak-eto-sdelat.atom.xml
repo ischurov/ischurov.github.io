@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Math, Pics and Code</title><link href="https://ischurov.github.io/" rel="alternate"></link><link href="https://ischurov.github.io/feeds/kak-eto-sdelat.atom.xml" rel="self"></link><id>https://ischurov.github.io/</id><updated>2015-05-17T00:02:00-03:00</updated><entry><title>Немного о картинках</title><link href="https://ischurov.github.io/unstable-pics.html" rel="alternate"></link><published>2015-05-17T00:02:00-03:00</published><updated>2015-05-17T00:02:00-03:00</updated><author><name>Ilya V. Schurov</name></author><id>tag:ischurov.github.io,2015-05-17:unstable-pics.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Math, Pics and Code</title><link href="https://ischurov.github.io/" rel="alternate"></link><link href="https://ischurov.github.io/feeds/kak-eto-sdelat.atom.xml" rel="self"></link><id>https://ischurov.github.io/</id><updated>2015-05-17T00:02:00-03:00</updated><entry><title>Немного о картинках</title><link href="https://ischurov.github.io/unstable-pics.html" rel="alternate"></link><published>2015-05-17T00:02:00-03:00</published><updated>2015-05-17T00:02:00-03:00</updated><author><name>Илья Щуров</name></author><id>tag:ischurov.github.io,2015-05-17:unstable-pics.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -6253,7 +6253,7 @@ AAAASUVORK5CYII=
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="python"></category><category term="matplotlib"></category><category term="pyplot"></category><category term="3d"></category><category term="mplot3d"></category><category term="xkcd"></category><category term="odeint"></category></entry><entry><title>Скачиваем аттачменты из Gmail</title><link href="https://ischurov.github.io/skachivaem-attachmenty-iz-gmail.html" rel="alternate"></link><published>2014-12-07T00:02:00-03:00</published><updated>2014-12-07T00:02:00-03:00</updated><author><name>Ilya V. Schurov</name></author><id>tag:ischurov.github.io,2014-12-07:skachivaem-attachmenty-iz-gmail.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
+</summary><category term="python"></category><category term="matplotlib"></category><category term="pyplot"></category><category term="3d"></category><category term="mplot3d"></category><category term="xkcd"></category><category term="odeint"></category></entry><entry><title>Скачиваем аттачменты из Gmail</title><link href="https://ischurov.github.io/skachivaem-attachmenty-iz-gmail.html" rel="alternate"></link><published>2014-12-07T00:02:00-03:00</published><updated>2014-12-07T00:02:00-03:00</updated><author><name>Илья Щуров</name></author><id>tag:ischurov.github.io,2014-12-07:skachivaem-attachmenty-iz-gmail.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -7517,7 +7517,7 @@ Processed  14a0bed15212713c
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="python"></category><category term="gmail"></category><category term="API"></category></entry><entry><title>Как посчитать явку</title><link href="https://ischurov.github.io/kak-poschitat-iavku.html" rel="alternate"></link><published>2014-09-15T00:53:00+04:00</published><updated>2014-09-15T00:53:00+04:00</updated><author><name>Ilya V. Schurov</name></author><id>tag:ischurov.github.io,2014-09-15:kak-poschitat-iavku.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
+</summary><category term="python"></category><category term="gmail"></category><category term="API"></category></entry><entry><title>Как посчитать явку</title><link href="https://ischurov.github.io/kak-poschitat-iavku.html" rel="alternate"></link><published>2014-09-15T00:53:00+04:00</published><updated>2014-09-15T00:53:00+04:00</updated><author><name>Илья Щуров</name></author><id>tag:ischurov.github.io,2014-09-15:kak-poschitat-iavku.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -9016,7 +9016,7 @@ OIK = 1 № 1
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="python политология выборы"></category></entry><entry><title>Везение одной партии</title><link href="https://ischurov.github.io/vezenie-odnoi-partii.html" rel="alternate"></link><published>2014-08-26T22:23:00-03:00</published><updated>2014-08-26T22:23:00-03:00</updated><author><name>Ilya V. Schurov</name></author><id>tag:ischurov.github.io,2014-08-26:vezenie-odnoi-partii.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
+</summary><category term="python политология выборы"></category></entry><entry><title>Везение одной партии</title><link href="https://ischurov.github.io/vezenie-odnoi-partii.html" rel="alternate"></link><published>2014-08-26T22:23:00-03:00</published><updated>2014-08-26T22:23:00-03:00</updated><author><name>Илья Щуров</name></author><id>tag:ischurov.github.io,2014-08-26:vezenie-odnoi-partii.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *

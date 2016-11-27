@@ -1,48 +1,5 @@
-<!doctype html>
-<html lang="ru">	
-<head>
-	<meta charset="utf-8"/>
-	<title>Math, Pics and Code</title>	
-	<meta name="author" content="Ilya V. Schurov">
-	
-
-	<link rel="stylesheet" href="https://ischurov.github.io/theme/css/main.css" type="text/css" />
-		
-
-
-    <link href="https://ischurov.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Math, Pics and Code Atom Feed" />
-</head>
-	
-<body>
-<!-- facebook social -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8&appId=454295064733340";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<!-- /facebook social -->
-
-
-    <div class="container">
-	  
-	  <header role="banner">
-	    <div class="feeds">
-	      <a href="https://ischurov.github.io/feeds/all.atom.xml" rel="alternate"><img src="https://ischurov.github.io/theme/images/icons/feed-32px.png" alt="atom feed"/></a>
-	    </div>
-		<a href="https://ischurov.github.io" class="title">Math, Pics and Code</a>
-      </header>
-	
-	  <div class="wrapper">
-
-		  <div role="main" class="content">
-
-
-      <article>
-        <h1><a href="https://ischurov.github.io/local-nbviewer.html">Локальный nbviewer: слава Docker'у</a></h1>
-            <style type="text/css">/*!
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Math, Pics and Code</title><link href="https://ischurov.github.io/" rel="alternate"></link><link href="https://ischurov.github.io/feeds/korotkie-zametki.atom.xml" rel="self"></link><id>https://ischurov.github.io/</id><updated>2017-11-27T15:45:05-03:00</updated><entry><title>Локальный nbviewer: слава Docker'у</title><link href="https://ischurov.github.io/local-nbviewer.html" rel="alternate"></link><published>2017-11-27T15:45:05-03:00</published><updated>2017-11-27T15:45:05-03:00</updated><author><name>Илья Щуров</name></author><id>tag:ischurov.github.io,2017-11-27:local-nbviewer.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -273,7 +230,7 @@ div.unrecognized_cell .inner_cell a:hover {
   text-decoration: none;
 }
 @media (max-width: 540px) {
-  div.unrecognized_cell > div.prompt {
+  div.unrecognized_cell &gt; div.prompt {
     display: none;
   }
 }
@@ -326,19 +283,19 @@ div.input_prompt {
   color: #303F9F;
   border-top: 1px solid transparent;
 }
-div.input_area > div.highlight {
+div.input_area &gt; div.highlight {
   margin: 0.4em;
   border: none;
   padding: 0px;
   background-color: transparent;
 }
-div.input_area > div.highlight > pre {
+div.input_area &gt; div.highlight &gt; pre {
   margin: 0px;
   border: none;
   padding: 0px;
   background-color: transparent;
 }
-/* The following gets added to the <head> if it is detected that the user has a
+/* The following gets added to the &lt;head&gt; if it is detected that the user has a
  * monospace font with inconsistent normal/bold/italic height.  See
  * notebookmain.js.  Such fonts will have keywords vertically offset with
  * respect to the rest of the text.  The user should select a better font.
@@ -384,7 +341,7 @@ div.input_area > div.highlight > pre {
 }
 /*
 
-Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Original style from softwaremaniacs.org (c) Ivan Sagalaev &lt;Maniac@SoftwareManiacs.Org&gt;
 Adapted from GitHub theme
 
 */
@@ -846,7 +803,7 @@ div.text_cell {
   align-items: stretch;
 }
 @media (max-width: 540px) {
-  div.text_cell > div.prompt {
+  div.text_cell &gt; div.prompt {
     display: none;
   }
 }
@@ -911,8 +868,8 @@ h6:hover .anchor-link {
   font-size: 100%;
   font-style: italic;
 }
-</style>
-<style type="text/css">.highlight .hll { background-color: #ffffcc }
+&lt;/style&gt;
+&lt;style type="text/css"&gt;.highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
@@ -976,8 +933,8 @@ h6:hover .anchor-link {
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
-<style type="text/css">
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;
+&lt;style type="text/css"&gt;
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -1013,28 +970,28 @@ h6:hover .anchor-link {
 .ansi-white-intense-bg { background-color: #A1A6B2; }
 
 .ansi-bold { font-weight: bold; }
-</style>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>О, эта вечная дилемма: использовать сторонний сервис и зависеть от тех людей, которые его поддерживают, или сделать собственный и поддерживать его самому, разбираясь со всеми проблемами самостоятельно. А проблемы будут! В обоих случаях! Даже в таком тривиальном, казалось бы, деле, как выкладывание конспектов лекций. Я уже было подумал, что за последние полтора года нашёл правильную комбинацию: программистские лекции я пишу в <a href="http://jupyter.org">ipynb</a>, выкладываю исходники на <a href="http://github.com/ischurov/">github</a> и даю ссылки через <a href="http://nbviewer.jupyter.org">nbviewer</a>. И всё работало. До недавнего времени. Но нет: вот уже несколько месяцев nbviewer «радует» регулярными ошибками <code>Error 503 first byte timeout</code> и пишет что-то про <code>Guru mediation</code>. Я надеялся, что «само пройдёт», но недавно обнаружил, что <a href="https://github.com/jupyter/nbviewer/issues/631">сообщения об этом</a> висят открытыми с октября. Так что, видимо, не пройдёт. В общем, я тяжело вздохнул, перебрал в голове пару вариантов и решил устанавливать тот же <code>nbviewer</code> на каком-нибудь своём хостинге, заранее смирившись с тем, что при этом придётся решать тысячу и одну проблему.</p>
-<p>И оказался неправ. Установка заняла примерно 4 минуты и выглядела ровно так (в полном соответствии с описанием в <a href="https://github.com/jupyter/nbviewer">README-файле</a>):</p>
+&lt;/style&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;О, эта вечная дилемма: использовать сторонний сервис и зависеть от тех людей, которые его поддерживают, или сделать собственный и поддерживать его самому, разбираясь со всеми проблемами самостоятельно. А проблемы будут! В обоих случаях! Даже в таком тривиальном, казалось бы, деле, как выкладывание конспектов лекций. Я уже было подумал, что за последние полтора года нашёл правильную комбинацию: программистские лекции я пишу в &lt;a href="http://jupyter.org"&gt;ipynb&lt;/a&gt;, выкладываю исходники на &lt;a href="http://github.com/ischurov/"&gt;github&lt;/a&gt; и даю ссылки через &lt;a href="http://nbviewer.jupyter.org"&gt;nbviewer&lt;/a&gt;. И всё работало. До недавнего времени. Но нет: вот уже несколько месяцев nbviewer «радует» регулярными ошибками &lt;code&gt;Error 503 first byte timeout&lt;/code&gt; и пишет что-то про &lt;code&gt;Guru mediation&lt;/code&gt;. Я надеялся, что «само пройдёт», но недавно обнаружил, что &lt;a href="https://github.com/jupyter/nbviewer/issues/631"&gt;сообщения об этом&lt;/a&gt; висят открытыми с октября. Так что, видимо, не пройдёт. В общем, я тяжело вздохнул, перебрал в голове пару вариантов и решил устанавливать тот же &lt;code&gt;nbviewer&lt;/code&gt; на каком-нибудь своём хостинге, заранее смирившись с тем, что при этом придётся решать тысячу и одну проблему.&lt;/p&gt;
+&lt;p&gt;И оказался неправ. Установка заняла примерно 4 минуты и выглядела ровно так (в полном соответствии с описанием в &lt;a href="https://github.com/jupyter/nbviewer"&gt;README-файле&lt;/a&gt;):&lt;/p&gt;
 
-<pre><code>docker pull jupyter/nbviewer 
+&lt;pre&gt;&lt;code&gt;docker pull jupyter/nbviewer 
 docker run -p 8080:8080 jupyter/nbviewer
 
-</code></pre>
-<p>И всё. Нет, вы понимаете, вообще всё. Дальше я просто зашёл на свой сервер на порт 8080 — и увидел прямо близнеца «настоящего» nbviewer'а. И он работает!</p>
-<p>(Окей, у меня уже был установлен docker, но это тоже не велика беда, если у вас есть под рукой виртуальный сервер с каким-нибудь Linux'ом — завести такой сейчас не проблема.)</p>
-<p>Дальше я в пару кликов получил новенький GitHub personal access token и прописал его при запуске контейнера (я не очень понимаю, зачем, но разработчики nbviewer пишут, что так будет лучше), через полминуты нагуглил, что для запуска контейнера в виде демона достаточно добавить ключик <code>-d</code> и всё! Осталось переделать ссылки на конспекты — ура, они снова доступны!</p>
-<p>Ну, что я могу сказать. Слава Docker'у!</p>
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;И всё. Нет, вы понимаете, вообще всё. Дальше я просто зашёл на свой сервер на порт 8080 — и увидел прямо близнеца «настоящего» nbviewer'а. И он работает!&lt;/p&gt;
+&lt;p&gt;(Окей, у меня уже был установлен docker, но это тоже не велика беда, если у вас есть под рукой виртуальный сервер с каким-нибудь Linux'ом — завести такой сейчас не проблема.)&lt;/p&gt;
+&lt;p&gt;Дальше я в пару кликов получил новенький GitHub personal access token и прописал его при запуске контейнера (я не очень понимаю, зачем, но разработчики nbviewer пишут, что так будет лучше), через полминуты нагуглил, что для запуска контейнера в виде демона достаточно добавить ключик &lt;code&gt;-d&lt;/code&gt; и всё! Осталось переделать ссылки на конспекты — ура, они снова доступны!&lt;/p&gt;
+&lt;p&gt;Ну, что я могу сказать. Слава Docker'у!&lt;/p&gt;
 
-</div>
-</div>
-</div>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
@@ -1060,155 +1017,5 @@ docker run -p 8080:8080 jupyter/nbviewer
         "}); ";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-</script>
-
-      </article>
-
-      <hr />
-
-
-      <article>
-        <h1><a href="https://ischurov.github.io/unstable-pics.html">Немного о картинках</a></h1>
-            
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Для <a href="https://nplus1.ru/news/2015/05/18/stability">поста</a> в проекте <strong>N+1</strong> про неустойчивость многозвенных систем управления я решил нарисовать пару картинок. Первая из них была совсем простой: иллюстрация к фразе «любая «хорошая», гладкая функция похожа на линейную в окрестности фиксированной точки». Нужно было взять какую-нибудь функцию и нарисовать её график несколько раз в разных масштабах. В качестве подопытной функции путём проб и ошибок был выбран многочлен $-x-0.45x^2+0.15x^3$.</p>
-            | <a rel="full-article" href="https://ischurov.github.io/unstable-pics.html">Дальше →</a>
-      </article>
-
-      <hr />
-
-
-      <article>
-        <h1><a href="https://ischurov.github.io/polgoda-plokhaia-pogoda-polgoda-sovsem-nikuda.html">Полгода плохая погода, полгода совсем никуда</a></h1>
-            
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Эта история началась с невинного разговора о погоде. Примерно такого:</p>
-<p>— Смотри-ка, сегодня 10-е марта, а за окном плюс семь. Прямо весна наступила неожиданно.</p>
-<p>— Да… Ну, если март тёплый, значит, апрель будет холодный. Так всегда бывает.</p>
-<p>— Правда? Сейчас проверим…</p>
-<p>И я пошёл искать статистические данные по погоде в Москве. Они нашлись быстро — <a href="http://cliware.meteo.ru/inter/data.html">вот здесь</a>
-            | <a rel="full-article" href="https://ischurov.github.io/polgoda-plokhaia-pogoda-polgoda-sovsem-nikuda.html">Дальше →</a>
-      </article>
-
-      <hr />
-
-
-      <article>
-        <h1><a href="https://ischurov.github.io/skachivaem-attachmenty-iz-gmail.html">Скачиваем аттачменты из Gmail</a></h1>
-            
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Этот пост будет сугубо техническим. Никакой интересной математики, сплошное решение практических задач.</p>
-<p>Несмотря на весь прогресс науки и техники, всевозможные LMS и прочие чудеса, до сих пор самым надёжным способом принять домашние задания у студентов в электронной форме остаётся присылка их на e-mail преподавателя. Конечно, это ужасно. Иногда удаётся уговорить вместо этого загрузить файлы в специальную формочку (которая, к слову, очень легко делается с помощью Google Drive и и каких-то там <a href="http://lifehacker.com/allow-others-to-upload-files-to-your-google-drive-with-1567528648">скриптов</a>
-            | <a rel="full-article" href="https://ischurov.github.io/skachivaem-attachmenty-iz-gmail.html">Дальше →</a>
-      </article>
-
-      <hr />
-
-
-        <div>
-          <h3>Другие посты</h3>
-          <ol class="archive">
-    
-       <li>
-<a href="https://ischurov.github.io/kak-poschitat-iavku.html" rel="bookmark" title="Permalink to Как посчитать явку">Как посчитать явку</a>
-  <time datetime="2014-09-15T00:53:00+04:00" pubdate>Mon 15 September 2014</time>
-<p class="tags">tags: <a href="https://ischurov.github.io/tag/python-politologiia-vybory.html">python политология выборы</a> . </p></a>       </li>
-
-
-    
-       <li>
-<a href="https://ischurov.github.io/vezenie-odnoi-partii.html" rel="bookmark" title="Permalink to Везение одной партии">Везение одной партии</a>
-  <time datetime="2014-08-26T22:23:00-03:00" pubdate>Tue 26 August 2014</time>
-<p class="tags">tags: <a href="https://ischurov.github.io/tag/python.html">python</a> . <a href="https://ischurov.github.io/tag/politologiia.html">политология</a> . <a href="https://ischurov.github.io/tag/vybory.html">выборы</a> . <a href="https://ischurov.github.io/tag/teorver.html">теорвер</a> . </p></a>       </li>
-
-
-          </ol>
-        </div>
-
-		  </div>	
-		  
-		  <div class="sidebar">
-		    <div class="sidebar-container" >
-
-	            <aside>
-	              <h2>Об авторе</h2>
-			      <p style='hyphens: auto'>
-                    Меня зовут Илья Щуров. Математик. Любитель Py&shy;thon.
-Пишу научные статьи со смешными названиями. Работаю в НИУ ВШЭ. Преподаю. Понемногу
-про&shy;грам&shy;ми&shy;рую, фото&shy;гра&shy;фи&shy;рую и пу&shy;те&shy;шес&shy;твую.
-			      </p>
-			    </aside>
-
-  	          <nav>
-	            <h2>Категории</h2>
-	            <ul>
-	                <li ><a href="https://ischurov.github.io/category/kak-eto-sdelat.html">как это сделать</a></li>
-	                <li ><a href="https://ischurov.github.io/category/konspekt.html">конспект</a></li>
-	                <li ><a href="https://ischurov.github.io/category/korotkie-zametki.html">короткие заметки</a></li>
-	            </ul>
-	          </nav>
-              <nav>
-                  <h2>Теги</h2>
-                  <p style='text-align:left'>
-                    <a href="#3d-ref">3d<span><sup>1</sup></span></a>  
-                    <a href="#api-ref">API<span><sup>1</sup></span></a>  
-                    <a href="#docker-ref">docker<span><sup>1</sup></span></a>  
-                    <a href="#gmail-ref">gmail<span><sup>1</sup></span></a>  
-                    <a href="#ipynb-ref">ipynb<span><sup>1</sup></span></a>  
-                    <a href="#jupyter-ref">jupyter<span><sup>1</sup></span></a>  
-                    <a href="#korreliatsiia-ref">корреляция<span><sup>1</sup></span></a>  
-                    <a href="#matplotlib-ref">matplotlib<span><sup>1</sup></span></a>  
-                    <a href="#mplot3d-ref">mplot3d<span><sup>1</sup></span></a>  
-                    <a href="#nbviewer-ref">nbviewer<span><sup>1</sup></span></a>  
-                    <a href="#odeint-ref">odeint<span><sup>1</sup></span></a>  
-                    <a href="#pandas-ref">pandas<span><sup>1</sup></span></a>  
-                    <a href="#pogoda-ref">погода<span><sup>1</sup></span></a>  
-                    <a href="#politologiia-ref">политология<span><sup>1</sup></span></a>  
-                    <a href="#pyplot-ref">pyplot<span><sup>1</sup></span></a>  
-                    <a href="#python-ref">python<span><sup>4</sup></span></a>  
-                    <a href="#python-politologiia-vybory-ref">python политология выборы<span><sup>1</sup></span></a>  
-                    <a href="#statistika-ref">статистика<span><sup>1</sup></span></a>  
-                    <a href="#teorver-ref">теорвер<span><sup>1</sup></span></a>  
-                    <a href="#vybory-ref">выборы<span><sup>1</sup></span></a>  
-                    <a href="#xkcd-ref">xkcd<span><sup>1</sup></span></a>  
-                  </p>
-                </nav>
-
-	            <aside>
-	            <h2>Соцсети</h2>
-			      <ul class="social">
-				    <li><a href="https://twitter.com/ivoyager">twitter</a><i></i></li>
-				    <li><a href="https://facebook.com/ilyaschurov">facebook</a><i></i></li>
-				    <li><a href="https://github.com/ischurov">github</a><i></i></li>
-			      </ul>
-			    </aside>
-
-	        </div>
-		  </div>
-
-	  </div>
-
-      <footer>
-		<p role="contentinfo">
-		  Ilya V. Schurov с помощью <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Тема <a href="https://github.com/fle/pelican-sober">pelican-sober</a>.
-    	</p>
-
-	  </footer>	
-
-	</div>
-	
-
-</body>
-</html>
+&lt;/script&gt;
+</summary><category term="docker"></category><category term="nbviewer"></category><category term="jupyter"></category><category term="ipynb"></category></entry></feed>

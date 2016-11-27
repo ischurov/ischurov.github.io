@@ -2,17 +2,17 @@
 <html lang="ru">	
 <head>
 	<meta charset="utf-8"/>
-	<title>Скачиваем аттачменты из Gmail - Math, Pics and Code</title>	
+	<title>Локальный nbviewer: слава Docker'у - Math, Pics and Code</title>	
 	<meta name="author" content="Ilya V. Schurov">
 	
 
-  <meta name="description" content="Этот пост будет сугубо техническим. Никакой интересной математики, сплошное решение практических задач. Несмотря на весь прогресс науки и техники, всевозможные LMS и прочие чудеса, до сих пор самым надёжным способом принять домашние задания у студентов в электронной форме остаётся присылка их на e-mail преподавателя. Конечно, это ужасно. Иногда удаётся уговорить вместо этого загрузить файлы в специальную формочку (которая, к слову, очень легко делается с помощью Google Drive и и каких-то там скриптов">
+  <meta name="description" content="О, эта вечная дилемма: использовать сторонний сервис и зависеть от тех людей, которые его поддерживают, или сделать собственный и поддерживать его самому, разбираясь со всеми проблемами самостоятельно. А проблемы будут! В обоих случаях! Даже в таком тривиальном, казалось бы, деле, как выкладывание конспектов лекций. Я уже было подумал, что за последние полтора года нашёл правильную комбинацию: программистские лекции я пишу в ipynb">
 
 	<meta name="twitter:card" content="summary">
 	  <meta name="twitter:creator" content="@ivoyager">
-	<meta name="twitter:title" content="Скачиваем аттачменты из Gmail">
-	<meta name="twitter:description" content="Этот пост будет сугубо техническим. Никакой интересной математики, сплошное решение практических задач. Несмотря на весь прогресс науки и техники, всевозможные LMS и прочие чудеса, до сих пор самым надёжным способом принять домашние задания у студентов в электронной форме остаётся присылка их на e-mail преподавателя. Конечно, это ужасно. Иногда удаётся уговорить вместо этого загрузить файлы в специальную формочку (которая, к слову, очень легко делается с помощью Google Drive и и каких-то там скриптов">
-	<meta name="twitter:url" content="https://ischurov.github.io/skachivaem-attachmenty-iz-gmail.html">
+	<meta name="twitter:title" content="Локальный nbviewer: слава Docker'у">
+	<meta name="twitter:description" content="О, эта вечная дилемма: использовать сторонний сервис и зависеть от тех людей, которые его поддерживают, или сделать собственный и поддерживать его самому, разбираясь со всеми проблемами самостоятельно. А проблемы будут! В обоих случаях! Даже в таком тривиальном, казалось бы, деле, как выкладывание конспектов лекций. Я уже было подумал, что за последние полтора года нашёл правильную комбинацию: программистские лекции я пишу в ipynb">
+	<meta name="twitter:url" content="https://ischurov.github.io/local-nbviewer.html">
 
 
 	<link rel="stylesheet" href="https://ischurov.github.io/theme/css/main.css" type="text/css" />
@@ -49,15 +49,15 @@
 		  <div role="main" class="content">
 	<article class="full">
 		
-		<h1>Скачиваем аттачменты из Gmail</h1>
+		<h1>Локальный nbviewer: слава Docker'у</h1>
 		
 <div class="metadata">
-  <time datetime="2014-12-07T00:02:00-03:00" pubdate>2014-12-07</time>
+  <time datetime="2017-11-27T15:45:05-03:00" pubdate>2017-11-27</time>
     <address class="vcard author">
       Автор: <a class="url fn" href="https://ischurov.github.io/author/ilia-shchurov.html">Илья Щуров</a>
     </address>
-  Категория: <a href="https://ischurov.github.io/category/kak-eto-sdelat.html">как это сделать</a>
-<p class="tags">Теги: <a href="https://ischurov.github.io/tag/python.html">python</a>, <a href="https://ischurov.github.io/tag/gmail.html">gmail</a>, <a href="https://ischurov.github.io/tag/api.html">API</a></p></div>		
+  Категория: <a href="https://ischurov.github.io/category/korotkie-zametki.html">короткие заметки</a>
+<p class="tags">Теги: <a href="https://ischurov.github.io/tag/docker.html">docker</a>, <a href="https://ischurov.github.io/tag/nbviewer.html">nbviewer</a>, <a href="https://ischurov.github.io/tag/jupyter.html">jupyter</a>, <a href="https://ischurov.github.io/tag/ipynb.html">ipynb</a></p></div>		
 		<style type="text/css">/*!
 *
 * IPython notebook
@@ -1035,262 +1035,17 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Этот пост будет сугубо техническим. Никакой интересной математики, сплошное решение практических задач.</p>
-<p>Несмотря на весь прогресс науки и техники, всевозможные LMS и прочие чудеса, до сих пор самым надёжным способом принять домашние задания у студентов в электронной форме остаётся присылка их на e-mail преподавателя. Конечно, это ужасно. Иногда удаётся уговорить вместо этого загрузить файлы в специальную формочку (которая, к слову, очень легко делается с помощью Google Drive и и каких-то там <a href="http://lifehacker.com/allow-others-to-upload-files-to-your-google-drive-with-1567528648">скриптов</a>), но всё равно где-то для 15-20% студентов это окажется непреодолимой трудностью. А e-mail работает более-менее всегда. Поэтому проведя контрольную работу по Python в прошедший вторник, я решил не мудрствовать лукаво и предложил сдать мне работы в виде ipynb-файлов, отправив их по почте.</p>
-<p>И вот сейчас, собравшись с духом и надумав их всё-таки проверить, я столкнулся с необходимостью открыть три десятка писем и ручками скачать оттуда вложения. Энтузиазм как-то сразу иссяк...</p>
-<p>Впрочем, о чём это я? Какими такими ручками? 2014-й год за окном (уже почти закончился), всё поддаётся автоматизации! Итак…</p>
-<h2 id="Как-пройти-на-почту">&#1050;&#1072;&#1082; &#1087;&#1088;&#1086;&#1081;&#1090;&#1080; &#1085;&#1072; &#1087;&#1086;&#1095;&#1090;&#1091;<a class="anchor-link" href="#Как-пройти-на-почту">&#182;</a></h2><p>В общем случае работать с любым почтовым сервисом можно с помощью стандартных почтовых протоколов — точно так же, как работает любой почтовый клиент. Есть старый-добрый POP3, есть IMAP, и можно быстренько написать «мини-клиент», который подключится к серверу и скачает всё, что нужно. Но в случае с Gmail есть ещё и их собственное API, которое позволяет получить наиболее естественный доступ ко всем возможностям Gmail (например, тредам), а также безопасную авторизацию. Им я и решил воспользоваться.</p>
-<p>Вот тут лежит <a href="https://developers.google.com/gmail/api/quickstart/quickstart-python">документация</a>, а точнее руководство для быстрого старта, ориентированное на Python. После получения ключа для API и установки <code>google-api-python-client</code>, приведенный там примерчик, конечно, не заработал, поскольку потребовал какую-то библиотеку <code>gflags</code> (которая, как оказывается, на самом деле называется <code>python-gflags</code>), но после её установки всё-таки заработал (поругавшись на то, что там что-то устарело): открыл браузер и попросил авторизовать моё приложение. Я согласился.</p>
-<p>Дальше всё было легко. Ну, или почти легко.</p>
+<p>О, эта вечная дилемма: использовать сторонний сервис и зависеть от тех людей, которые его поддерживают, или сделать собственный и поддерживать его самому, разбираясь со всеми проблемами самостоятельно. А проблемы будут! В обоих случаях! Даже в таком тривиальном, казалось бы, деле, как выкладывание конспектов лекций. Я уже было подумал, что за последние полтора года нашёл правильную комбинацию: программистские лекции я пишу в <a href="http://jupyter.org">ipynb</a>, выкладываю исходники на <a href="http://github.com/ischurov/">github</a> и даю ссылки через <a href="http://nbviewer.jupyter.org">nbviewer</a>. И всё работало. До недавнего времени. Но нет: вот уже несколько месяцев nbviewer «радует» регулярными ошибками <code>Error 503 first byte timeout</code> и пишет что-то про <code>Guru mediation</code>. Я надеялся, что «само пройдёт», но недавно обнаружил, что <a href="https://github.com/jupyter/nbviewer/issues/631">сообщения об этом</a> висят открытыми с октября. Так что, видимо, не пройдёт. В общем, я тяжело вздохнул, перебрал в голове пару вариантов и решил устанавливать тот же <code>nbviewer</code> на каком-нибудь своём хостинге, заранее смирившись с тем, что при этом придётся решать тысячу и одну проблему.</p>
+<p>И оказался неправ. Установка заняла примерно 4 минуты и выглядела ровно так (в полном соответствии с описанием в <a href="https://github.com/jupyter/nbviewer">README-файле</a>):</p>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Шаг-1.-Выбираем-нужные-сообщения">&#1064;&#1072;&#1075; 1. &#1042;&#1099;&#1073;&#1080;&#1088;&#1072;&#1077;&#1084; &#1085;&#1091;&#1078;&#1085;&#1099;&#1077; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1103;<a class="anchor-link" href="#Шаг-1.-Выбираем-нужные-сообщения">&#182;</a></h2><p>Можно было бы сделать какой-нибудь хитрый запрос, чтобы обрабатывать только сообщения, пришедшие в определенный интервал времени, но я поступил проще: в интерфейсе Gmail вручную присвоил всем нужным мне письмам метку <code>py-cw1</code> (это было легко сделать, поскольку все эти письма шли подряд и их можно было выделить двумя кликами). Теперь нужно получить список всех сообщений с этой меткой. А для начала — её внутренний идентификатор (метку можно переименовать, а идентификатор не изменится). Делается это так:</p>
+<pre><code>docker pull jupyter/nbviewer 
+docker run -p 8080:8080 jupyter/nbviewer
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">labels</span><span class="o">=</span><span class="n">gmail_service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span><span class="o">.</span><span class="n">labels</span><span class="p">()</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">userId</span><span class="o">=</span><span class="s1">&#39;me&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">labels</span><span class="p">[</span><span class="s1">&#39;labels&#39;</span><span class="p">]:</span>
-    <span class="k">if</span> <span class="n">label</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;py-cw1&#39;</span><span class="p">:</span>
-        <span class="n">py_cw1_label</span><span class="o">=</span><span class="n">label</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
-        <span class="nb">print</span> <span class="n">py_cw1_label</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Label_17
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Теперь нужно получить список всех сообщений с этой меткой. Я было собрался написать этот код сам, но полез в документацию и обнаружил там <a href="https://developers.google.com/gmail/api/v1/reference/users/messages/list">пример</a> ровно про это. (Я не сразу заметил, что рядом с кодом примера есть переключатель языков и поначалу пытался переводить с Java, но там и для Python всё есть.) Нас интересует функция <code>ListMessagesWithLabels</code>, которая прекрасно заработала безо всяких модификаций.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">messages</span><span class="o">=</span><span class="n">ListMessagesWithLabels</span><span class="p">(</span><span class="n">gmail_service</span><span class="p">,</span><span class="s1">&#39;me&#39;</span><span class="p">,</span><span class="n">py_cw1_label</span><span class="p">)</span>
-<span class="nb">print</span> <span class="n">messages</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[{u&#39;id&#39;: u&#39;14a0c2c700797cea&#39;, u&#39;threadId&#39;: u&#39;14a0c2c700797cea&#39;}, {u&#39;id&#39;: u&#39;14a0c252f30f6044&#39;, u&#39;threadId&#39;: u&#39;14a0c252f30f6044&#39;}, {u&#39;id&#39;: u&#39;14a0c251c9d10413&#39;, u&#39;threadId&#39;: u&#39;14a0c251c9d10413&#39;}]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Конечно, эти id'шники нам ни о чём не говорят — и не надо. Мы будем их использовать, чтобы обрабатывать сообщения по одному.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Шаг-2.-Скачиваем-вложения">&#1064;&#1072;&#1075; 2. &#1057;&#1082;&#1072;&#1095;&#1080;&#1074;&#1072;&#1077;&#1084; &#1074;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1103;<a class="anchor-link" href="#Шаг-2.-Скачиваем-вложения">&#182;</a></h2><p>Дальше я стал думать о том, как пройтись по всем письмам и из каждого письма вытащить и сохранить на диск вложения (attachments). Размышления мои были недолгими, поскольку в <a href="https://developers.google.com/gmail/api/v1/reference/users/messages/attachments/get">соответствующем разделе</a> справки по API снова был приведён пример, делающий ровно то, что мне надо (функция <code>GetAttachments</code>). Вернее, не делающий — потому что функция в документации написана с ошибками.</p>
-<p>Первая ошибка была простой: вместо <code>users()</code> там написали <code>user()</code>. Эту опечатку я быстро поправил. А дальше всё оказалось интереснее, потому что при попытке запустить эту штуку она стала сваливаться с ошибкой <code>KeyError</code>, не находя в ответе сервера нужных полей.</p>
-<p>Оказывается, при запросе содержимого сообщения может быть возвращено либо само вложение, либо его идентификатор. В последнем случае потребуется ещё один запрос, чтобы получить сам файл. В документации это <a href="https://developers.google.com/gmail/api/v1/reference/users/messages/attachments">отражено</a>, а в примере почему-то нет. Мне пришлось переписать функцию <code>GetAttachments</code>, исправив там эти ошибки. (Отмечу, что проблема возникла <a href="http://stackoverflow.com/questions/25832631/download-attachments-from-gmail-using-gmail-api/27335699#27335699">не только у меня</a>.)</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">base64</span>
-<span class="kn">from</span> <span class="nn">apiclient</span> <span class="k">import</span> <span class="n">errors</span>
-
-<span class="c1"># based on Python example from </span>
-<span class="c1"># https://developers.google.com/gmail/api/v1/reference/users/messages/attachments/get</span>
-<span class="c1"># which is licensed under Apache 2.0 License</span>
-
-<span class="k">def</span> <span class="nf">GetAttachments</span><span class="p">(</span><span class="n">service</span><span class="p">,</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">msg_id</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Get and store attachment from Message with given id.</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">    service: Authorized Gmail API service instance.</span>
-<span class="sd">    user_id: User&#39;s email address. The special value &quot;me&quot;</span>
-<span class="sd">    can be used to indicate the authenticated user.</span>
-<span class="sd">    msg_id: ID of Message containing attachment.</span>
-<span class="sd">    prefix: prefix which is added to the attachment filename on saving</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span><span class="o">.</span><span class="n">messages</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">userId</span><span class="o">=</span><span class="n">user_id</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">msg_id</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
-
-        <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">message</span><span class="p">[</span><span class="s1">&#39;payload&#39;</span><span class="p">][</span><span class="s1">&#39;parts&#39;</span><span class="p">]:</span>
-            <span class="k">if</span> <span class="n">part</span><span class="p">[</span><span class="s1">&#39;filename&#39;</span><span class="p">]:</span>
-                <span class="k">if</span> <span class="s1">&#39;data&#39;</span> <span class="ow">in</span> <span class="n">part</span><span class="p">[</span><span class="s1">&#39;body&#39;</span><span class="p">]:</span>
-                    <span class="n">data</span><span class="o">=</span><span class="n">part</span><span class="p">[</span><span class="s1">&#39;body&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="n">att_id</span><span class="o">=</span><span class="n">part</span><span class="p">[</span><span class="s1">&#39;body&#39;</span><span class="p">][</span><span class="s1">&#39;attachmentId&#39;</span><span class="p">]</span>
-                    <span class="n">att</span><span class="o">=</span><span class="n">gmail_service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span><span class="o">.</span><span class="n">messages</span><span class="p">()</span><span class="o">.</span><span class="n">attachments</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">userId</span><span class="o">=</span><span class="n">user_id</span><span class="p">,</span> <span class="n">messageId</span><span class="o">=</span><span class="n">msg_id</span><span class="p">,</span><span class="nb">id</span><span class="o">=</span><span class="n">att_id</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
-                    <span class="n">data</span><span class="o">=</span><span class="n">att</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
-                <span class="n">file_data</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">urlsafe_b64decode</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">))</span>
-                <span class="n">path</span> <span class="o">=</span> <span class="n">prefix</span><span class="o">+</span><span class="n">part</span><span class="p">[</span><span class="s1">&#39;filename&#39;</span><span class="p">]</span>
-
-                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-                    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">file_data</span><span class="p">)</span>
-    <span class="k">except</span> <span class="n">errors</span><span class="o">.</span><span class="n">HttpError</span><span class="p">,</span> <span class="n">error</span><span class="p">:</span>
-        <span class="nb">print</span> <span class="s1">&#39;An error occurred: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">error</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Ну а теперь осталось пройтись по всем найденным сообщениям и скормить их этой функции.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">msg</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">messages</span><span class="p">):</span>
-    <span class="n">m_id</span><span class="o">=</span><span class="n">msg</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">GetAttachments</span><span class="p">(</span><span class="n">gmail_service</span><span class="p">,</span> <span class="s1">&#39;me&#39;</span><span class="p">,</span> <span class="n">m_id</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="p">)</span>
-        <span class="nb">print</span> <span class="s2">&quot;Processed &quot;</span><span class="p">,</span> <span class="n">m_id</span>
-    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
-        <span class="k">if</span> <span class="s1">&#39;parts&#39;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
-            <span class="nb">print</span> <span class="s2">&quot;No attachment in message &quot;</span><span class="p">,</span> <span class="n">m_id</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span> <span class="s2">&quot;Something wrong in message &quot;</span><span class="p">,</span> <span class="n">m_id</span><span class="p">,</span> <span class="n">e</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>No attachment in message  14a0c2c700797cea
-Processed  14a0c252f30f6044
-Processed  14a0c251c9d10413
-Processed  14a0c250f665376f
-Processed  14a0c248554a20bd
-Processed  14a0c2454a35781f
-Processed  14a0c244b886a139
-Processed  14a0c24475140728
-Processed  14a0c2418028e956
-Processed  14a0c2412ee9fc15
-Processed  14a0c2407d038886
-Processed  14a0c23ab73103ce
-Processed  14a0c23aaf3bfa2c
-Processed  14a0c22e99305778
-Processed  14a0c22dcd995583
-Processed  14a0c22a4e4bdc54
-Processed  14a0c226f9acbc67
-Processed  14a0c2223d19dbb0
-Processed  14a0c21fd99ca422
-Processed  14a0c214e7049505
-Processed  14a0c210519b93ba
-Processed  14a0c20df1ace576
-Processed  14a0c20b219633be
-Processed  14a0c20480583663
-Processed  14a0c1ec6253ab04
-Processed  14a0c1ea34af8e1b
-Processed  14a0c1e94466cc63
-Processed  14a0c1dc007bed33
-Processed  14a0c1d956902f07
-Processed  14a0c1a397b030a5
-Processed  14a0c0f1780c35ae
-Processed  14a0c057d40d0fce
-Processed  14a0bff90bfcdef0
-Processed  14a0bfef58d2e139
-Processed  14a0bed15212713c
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Одно сообщение попало в список по ошибке (не содержало вложений), а остальные успешно обработались и сохранились!</p>
-<p>Конечно, я потратил больше времени на освоение Gmail API, чем ушло бы на сохранение этих файлов вручную, но зато это было гораздо увлекательнее! Если это не кажется вам достойным объяснением, предложу другое: если мне понадобится в будущем что-то в массовом порядке сделать со своей почтой, мне теперь будет гораздо проще.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="P.S.-Возвращение-к-классике">P.S. &#1042;&#1086;&#1079;&#1074;&#1088;&#1072;&#1097;&#1077;&#1085;&#1080;&#1077; &#1082; &#1082;&#1083;&#1072;&#1089;&#1089;&#1080;&#1082;&#1077;<a class="anchor-link" href="#P.S.-Возвращение-к-классике">&#182;</a></h2><p>Если вас интересует более классический подход с использованием стандартных почтовых протоколов, аналогичная задача решается, например, <a href="http://stackoverflow.com/questions/348630/how-can-i-download-all-emails-with-attachments-from-gmail">здесь</a>.</p>
+</code></pre>
+<p>И всё. Нет, вы понимаете, вообще всё. Дальше я просто зашёл на свой сервер на порт 8080 — и увидел прямо близнеца «настоящего» nbviewer'а. И он работает!</p>
+<p>(Окей, у меня уже был установлен docker, но это тоже не велика беда, если у вас есть под рукой виртуальный сервер с каким-нибудь Linux'ом — завести такой сейчас не проблема.)</p>
+<p>Дальше я в пару кликов получил новенький GitHub personal access token и прописал его при запуске контейнера (я не очень понимаю, зачем, но разработчики nbviewer пишут, что так будет лучше), через полминуты нагуглил, что для запуска контейнера в виде демона достаточно добавить ключик <code>-d</code> и всё! Осталось переделать ссылки на конспекты — ура, они снова доступны!</p>
+<p>Ну, что я могу сказать. Слава Docker'у!</p>
 
 </div>
 </div>
@@ -1355,9 +1110,9 @@ Processed  14a0bed15212713c
   	          <nav>
 	            <h2>Категории</h2>
 	            <ul>
-	                <li class="active"><a href="https://ischurov.github.io/category/kak-eto-sdelat.html">как это сделать</a></li>
+	                <li ><a href="https://ischurov.github.io/category/kak-eto-sdelat.html">как это сделать</a></li>
 	                <li ><a href="https://ischurov.github.io/category/konspekt.html">конспект</a></li>
-	                <li ><a href="https://ischurov.github.io/category/korotkie-zametki.html">короткие заметки</a></li>
+	                <li class="active"><a href="https://ischurov.github.io/category/korotkie-zametki.html">короткие заметки</a></li>
 	            </ul>
 	          </nav>
               <nav>
