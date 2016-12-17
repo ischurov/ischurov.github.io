@@ -2,17 +2,17 @@
 <html lang="ru">	
 <head>
 	<meta charset="utf-8"/>
-	<title>Локальный nbviewer: слава Docker'у - Math, Pics and Code: блог Ильи Щурова</title>	
+	<title>Пересечение нескольких множеств в одну строчку - Math, Pics and Code: блог Ильи Щурова</title>	
 	<meta name="author" content="Илья Щуров">
 	
 
-  <meta name="description" content="О, эта вечная дилемма: использовать сторонний сервис и зависеть от тех людей, которые его поддерживают, или сделать собственный и поддерживать его самому, разбираясь со всеми проблемами самостоятельно. А проблемы будут! В обоих случаях! Даже в таком тривиальном, казалось бы, деле, как выкладывание конспектов лекций. Я уже было подумал, что за последние полтора года нашёл правильную комбинацию: программистские лекции я пишу в ipynb">
+  <meta name="description" content="Сегодня на паре по программированию для журналистики данных мы столкнулись с такой задачей: есть список множеств, нужно найти пересечение их всех. Как это проще всего сделать в Python? Оказывается, у этой задачи есть решение в одну строчку. Собственно, дело было так. Мы смотрели на данные по госзакупкам через API сайта clearspending.ru">
 
 	<meta name="twitter:card" content="summary">
 	  <meta name="twitter:creator" content="@ivoyager">
-	<meta name="twitter:title" content="Локальный nbviewer: слава Docker'у">
-	<meta name="twitter:description" content="О, эта вечная дилемма: использовать сторонний сервис и зависеть от тех людей, которые его поддерживают, или сделать собственный и поддерживать его самому, разбираясь со всеми проблемами самостоятельно. А проблемы будут! В обоих случаях! Даже в таком тривиальном, казалось бы, деле, как выкладывание конспектов лекций. Я уже было подумал, что за последние полтора года нашёл правильную комбинацию: программистские лекции я пишу в ipynb">
-	<meta name="twitter:url" content="https://ischurov.github.io/local-nbviewer.html">
+	<meta name="twitter:title" content="Пересечение нескольких множеств в одну строчку">
+	<meta name="twitter:description" content="Сегодня на паре по программированию для журналистики данных мы столкнулись с такой задачей: есть список множеств, нужно найти пересечение их всех. Как это проще всего сделать в Python? Оказывается, у этой задачи есть решение в одну строчку. Собственно, дело было так. Мы смотрели на данные по госзакупкам через API сайта clearspending.ru">
+	<meta name="twitter:url" content="https://ischurov.github.io/set-intersections.html">
 
 
 	<link rel="stylesheet" href="https://ischurov.github.io/theme/css/main.css" type="text/css" />
@@ -49,15 +49,15 @@
 		  <div role="main" class="content">
 	<article class="full">
 		
-		<h1>Локальный nbviewer: слава Docker'у</h1>
+		<h1>Пересечение нескольких множеств в одну строчку</h1>
 		
 <div class="metadata">
-  <time datetime="2016-11-27T15:45:05-03:00" pubdate>2016-11-27</time>
+  <time datetime="2016-12-18T00:55:05-03:00" pubdate>2016-12-18</time>
     <address class="vcard author">
       Автор: <a class="url fn" href="https://ischurov.github.io/author/ilia-shchurov.html">Илья Щуров</a>
     </address>
   Категория: <a href="https://ischurov.github.io/category/korotkie-zametki.html">короткие заметки</a>
-<p class="tags">Теги: <a href="https://ischurov.github.io/tag/docker.html">docker</a>, <a href="https://ischurov.github.io/tag/nbviewer.html">nbviewer</a>, <a href="https://ischurov.github.io/tag/jupyter.html">jupyter</a>, <a href="https://ischurov.github.io/tag/ipynb.html">ipynb</a></p></div>		
+<p class="tags">Теги: <a href="https://ischurov.github.io/tag/python.html">python</a>, <a href="https://ischurov.github.io/tag/set.html">set</a>, <a href="https://ischurov.github.io/tag/intesection.html">intesection</a>, <a href="https://ischurov.github.io/tag/one-liner.html">one-liner</a></p></div>		
 		<style type="text/css">/*!
 *
 * IPython notebook
@@ -1035,17 +1035,209 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>О, эта вечная дилемма: использовать сторонний сервис и зависеть от тех людей, которые его поддерживают, или сделать собственный и поддерживать его самому, разбираясь со всеми проблемами самостоятельно. А проблемы будут! В обоих случаях! Даже в таком тривиальном, казалось бы, деле, как выкладывание конспектов лекций. Я уже было подумал, что за последние полтора года нашёл правильную комбинацию: программистские лекции я пишу в <a href="http://jupyter.org">ipynb</a>, выкладываю исходники на <a href="http://github.com/ischurov/">github</a> и даю ссылки через <a href="http://nbviewer.jupyter.org">nbviewer</a>. И всё работало. До недавнего времени. Но нет: вот уже несколько месяцев nbviewer «радует» регулярными ошибками <code>Error 503 first byte timeout</code> и пишет что-то про <code>Guru mediation</code>. Я надеялся, что «само пройдёт», но недавно обнаружил, что <a href="https://github.com/jupyter/nbviewer/issues/631">сообщения об этом</a> висят открытыми с октября. Так что, видимо, не пройдёт. В общем, я тяжело вздохнул, перебрал в голове пару вариантов и решил устанавливать тот же <code>nbviewer</code> на каком-нибудь своём хостинге, заранее смирившись с тем, что при этом придётся решать тысячу и одну проблему.</p>
-<p>И оказался неправ. Установка заняла примерно 4 минуты и выглядела ровно так (в полном соответствии с описанием в <a href="https://github.com/jupyter/nbviewer">README-файле</a>):</p>
+<p>Сегодня на паре по программированию для <a href="https://www.hse.ru/ma/datajourn/">журналистики данных</a> мы столкнулись с такой задачей: есть список множеств, нужно найти пересечение их всех. Как это проще всего сделать в Python? Оказывается, у этой задачи есть решение в одну строчку.</p>
+<p>Собственно, дело было так. Мы смотрели на данные по госзакупкам через <a href="https://github.com/idalab/clearspending-examples/wiki">API</a> сайта <a href="https://clearspending.ru">clearspending.ru</a>. Там у каждого контракта куча разных атрибутов. Как видно из следующих примеров, наборы атрибутов (в данном случае, ключей в словаре) у разных контрактов различаются. Мы хотели найти такие атрибуты, которые есть у всех контрактов.</p>
 
-<pre><code>docker pull jupyter/nbviewer 
-docker run -p 8080:8080 jupyter/nbviewer
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="c1"># пример из документации</span>
+<span class="c1"># https://github.com/idalab/clearspending-examples/wiki/Описание-API-Контракты</span>
+<span class="n">entrypoint</span> <span class="o">=</span> <span class="s2">&quot;http://openapi.clearspending.ru/restapi/v3/contracts/search/&quot;</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">entrypoint</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;customerregion&#39;</span><span class="p">:</span> <span class="s1">&#39;05&#39;</span><span class="p">,</span> <span class="s1">&#39;sort&#39;</span><span class="p">:</span><span class="s1">&#39;-price&#39;</span><span class="p">})</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="n">contracts</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;contracts&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
+</pre></div>
 
-</code></pre>
-<p>И всё. Нет, вы понимаете, вообще всё. Дальше я просто зашёл на свой сервер на порт 8080 — и увидел прямо близнеца «настоящего» nbviewer'а. И он работает!</p>
-<p>(Окей, у меня уже был установлен docker, но это тоже не велика беда, если у вас есть под рукой виртуальный сервер с каким-нибудь Linux'ом — завести такой сейчас не проблема.)</p>
-<p>Дальше я в пару кликов получил новенький GitHub personal access token и прописал его при запуске контейнера (я не очень понимаю, зачем, но разработчики nbviewer пишут, что так будет лучше), через полминуты нагуглил, что для запуска контейнера в виде демона достаточно добавить ключик <code>-d</code> и всё! Осталось переделать ссылки на конспекты — ура, они снова доступны!</p>
-<p>Ну, что я могу сказать. Слава Docker'у!</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">contracts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict_keys([&#39;foundation&#39;, &#39;customer&#39;, &#39;contractProcedure&#39;, &#39;suppliers&#39;, &#39;fz&#39;, &#39;singleCustomerReason&#39;, &#39;execution&#39;, &#39;documentBase&#39;, &#39;currency&#39;, &#39;loadId&#39;, &#39;signDate&#39;, &#39;currentContractStage&#39;, &#39;finances&#39;, &#39;regNum&#39;, &#39;schemaVersion&#39;, &#39;placing&#39;, &#39;mongo_id&#39;, &#39;scan&#39;, &#39;versionNumber&#39;, &#39;protocolDate&#39;, &#39;fileVersion&#39;, &#39;id&#39;, &#39;price&#39;, &#39;attachments&#39;, &#39;publishDate&#39;, &#39;economic_sectors&#39;, &#39;placingWayCode&#39;, &#39;printFormUrl&#39;, &#39;products&#39;, &#39;regionCode&#39;, &#39;contractUrl&#39;, &#39;number&#39;, &#39;currentContractStage_raw&#39;])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">contracts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict_keys([&#39;foundation&#39;, &#39;suppliers&#39;, &#39;products&#39;, &#39;fz&#39;, &#39;execution&#39;, &#39;documentBase&#39;, &#39;currency&#39;, &#39;regionCode&#39;, &#39;signDate&#39;, &#39;currentContractStage&#39;, &#39;finances&#39;, &#39;regNum&#39;, &#39;customer&#39;, &#39;placing&#39;, &#39;mongo_id&#39;, &#39;versionNumber&#39;, &#39;id&#39;, &#39;price&#39;, &#39;publishDate&#39;, &#39;fileVersion&#39;, &#39;misuses&#39;, &#39;loadId&#39;, &#39;contractUrl&#39;, &#39;number&#39;])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>По такому поводу я рассказал про <a href="https://docs.python.org/3/tutorial/datastructures.html#sets">множества</a> в Python (давно откладывал это — к слову не приходилось) и написал такой код.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fields</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">contracts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="c1"># сделали множество из списка ключей первого контракта</span>
+<span class="k">for</span> <span class="n">contract</span> <span class="ow">in</span> <span class="n">contracts</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+    <span class="n">fields</span><span class="o">.</span><span class="n">intersection_update</span><span class="p">(</span><span class="n">contract</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="c1"># пересечь множество fields с множеством, полученным из списка ключей</span>
+    <span class="c1"># очередного контракта и результат записать в fields</span>
+    <span class="c1"># иными словами, выкинуть из fields те элементы, которых нет в</span>
+    <span class="c1"># списке ключей очередного контракта</span>
+<span class="n">fields</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;currency&#39;,
+ &#39;customer&#39;,
+ &#39;fileVersion&#39;,
+ &#39;fz&#39;,
+ &#39;id&#39;,
+ &#39;loadId&#39;,
+ &#39;mongo_id&#39;,
+ &#39;number&#39;,
+ &#39;price&#39;,
+ &#39;products&#39;,
+ &#39;publishDate&#39;,
+ &#39;regNum&#39;,
+ &#39;regionCode&#39;,
+ &#39;versionNumber&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Он мне перестал нравиться ещё до того, как я закончил его писать. Ну, право дело, ведь когда нам нужно сложить числа в списке, мы не пишем цикл — мы просто вызываем функцию <code>sum()</code>. Должно, наверное, и для множеств быть что-то похожее? На паре тратить время на поиски не хотелось, но, придя домой, я всё же решил найти ответ на этот вопрос. <a href="http://stackoverflow.com/a/2541814/3025981">Оказывается</a>, есть очень просто решение!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fields</span> <span class="o">=</span> <span class="nb">set</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="nb">set</span><span class="p">(</span><span class="n">contract</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="k">for</span> <span class="n">contract</span> <span class="ow">in</span> <span class="n">contracts</span><span class="p">])</span>
+<span class="n">fields</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[32]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;currency&#39;,
+ &#39;customer&#39;,
+ &#39;fileVersion&#39;,
+ &#39;fz&#39;,
+ &#39;id&#39;,
+ &#39;loadId&#39;,
+ &#39;mongo_id&#39;,
+ &#39;number&#39;,
+ &#39;price&#39;,
+ &#39;products&#39;,
+ &#39;publishDate&#39;,
+ &#39;regNum&#39;,
+ &#39;regionCode&#39;,
+ &#39;versionNumber&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Дело в том, что <code>set.intersection()</code> принимает на вход любое количество аргументов! С помощью <a href="http://python.math-hse.info:8080/github/ischurov/pythonhse/blob/master/Lecture%205.ipynb#Списковые-включения-(list-comprehensions%29">спискового включения</a> мы делаем список множеств, составленных из ключей каждого контракта, затем звёздочкой <a href="https://docs.python.org/3/tutorial/controlflow.html#unpacking-argument-lists">«распаковываем»</a> этот список в набор аргументов <code>set.intersection()</code> — вжух — и всё готово!</p>
+<p>Пожалуй, по сравнению с моим исходным подходом есть только один недостаток: по памяти это решение более требовательное, потому что сначала создаётся список, потом он передаётся функции. Причём из-за необходимости распаковывать элементы здесь бессмысленно заменять список на генератор — <a href="http://stackoverflow.com/questions/25345676/unpacking-a-python-generator-into-arguments-memory-efficient">всё равно</a> память придётся тратить. Впрочем, с практической точки зрения это скорее всего не принципиально.</p>
 
 </div>
 </div>
