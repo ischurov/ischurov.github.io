@@ -984,7 +984,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[6]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[2]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;requests&lt;/span&gt;
@@ -1003,7 +1003,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[7]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[3]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -1017,11 +1017,11 @@ h6:hover .anchor-link {
 &lt;div class="output"&gt;
 
 
-&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[7]:&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[3]:&lt;/div&gt;
 
 
 &lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;dict_keys([&amp;#39;foundation&amp;#39;, &amp;#39;customer&amp;#39;, &amp;#39;contractProcedure&amp;#39;, &amp;#39;suppliers&amp;#39;, &amp;#39;fz&amp;#39;, &amp;#39;singleCustomerReason&amp;#39;, &amp;#39;execution&amp;#39;, &amp;#39;documentBase&amp;#39;, &amp;#39;currency&amp;#39;, &amp;#39;loadId&amp;#39;, &amp;#39;signDate&amp;#39;, &amp;#39;currentContractStage&amp;#39;, &amp;#39;finances&amp;#39;, &amp;#39;regNum&amp;#39;, &amp;#39;schemaVersion&amp;#39;, &amp;#39;placing&amp;#39;, &amp;#39;mongo_id&amp;#39;, &amp;#39;scan&amp;#39;, &amp;#39;versionNumber&amp;#39;, &amp;#39;protocolDate&amp;#39;, &amp;#39;fileVersion&amp;#39;, &amp;#39;id&amp;#39;, &amp;#39;price&amp;#39;, &amp;#39;attachments&amp;#39;, &amp;#39;publishDate&amp;#39;, &amp;#39;economic_sectors&amp;#39;, &amp;#39;placingWayCode&amp;#39;, &amp;#39;printFormUrl&amp;#39;, &amp;#39;products&amp;#39;, &amp;#39;regionCode&amp;#39;, &amp;#39;contractUrl&amp;#39;, &amp;#39;number&amp;#39;, &amp;#39;currentContractStage_raw&amp;#39;])&lt;/pre&gt;
+&lt;pre&gt;dict_keys([&amp;#39;finances&amp;#39;, &amp;#39;documentBase&amp;#39;, &amp;#39;versionNumber&amp;#39;, &amp;#39;mongo_id&amp;#39;, &amp;#39;suppliers&amp;#39;, &amp;#39;placingWayCode&amp;#39;, &amp;#39;contractUrl&amp;#39;, &amp;#39;foundation&amp;#39;, &amp;#39;products&amp;#39;, &amp;#39;scan&amp;#39;, &amp;#39;fileVersion&amp;#39;, &amp;#39;contractProcedure&amp;#39;, &amp;#39;economic_sectors&amp;#39;, &amp;#39;signDate&amp;#39;, &amp;#39;fz&amp;#39;, &amp;#39;currentContractStage&amp;#39;, &amp;#39;printFormUrl&amp;#39;, &amp;#39;price&amp;#39;, &amp;#39;protocolDate&amp;#39;, &amp;#39;number&amp;#39;, &amp;#39;regNum&amp;#39;, &amp;#39;currentContractStage_raw&amp;#39;, &amp;#39;loadId&amp;#39;, &amp;#39;attachments&amp;#39;, &amp;#39;customer&amp;#39;, &amp;#39;placing&amp;#39;, &amp;#39;regionCode&amp;#39;, &amp;#39;id&amp;#39;, &amp;#39;currency&amp;#39;, &amp;#39;singleCustomerReason&amp;#39;, &amp;#39;execution&amp;#39;, &amp;#39;publishDate&amp;#39;, &amp;#39;schemaVersion&amp;#39;])&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
@@ -1032,7 +1032,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[8]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[4]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -1046,11 +1046,11 @@ h6:hover .anchor-link {
 &lt;div class="output"&gt;
 
 
-&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[8]:&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[4]:&lt;/div&gt;
 
 
 &lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;dict_keys([&amp;#39;foundation&amp;#39;, &amp;#39;suppliers&amp;#39;, &amp;#39;products&amp;#39;, &amp;#39;fz&amp;#39;, &amp;#39;execution&amp;#39;, &amp;#39;documentBase&amp;#39;, &amp;#39;currency&amp;#39;, &amp;#39;regionCode&amp;#39;, &amp;#39;signDate&amp;#39;, &amp;#39;currentContractStage&amp;#39;, &amp;#39;finances&amp;#39;, &amp;#39;regNum&amp;#39;, &amp;#39;customer&amp;#39;, &amp;#39;placing&amp;#39;, &amp;#39;mongo_id&amp;#39;, &amp;#39;versionNumber&amp;#39;, &amp;#39;id&amp;#39;, &amp;#39;price&amp;#39;, &amp;#39;publishDate&amp;#39;, &amp;#39;fileVersion&amp;#39;, &amp;#39;misuses&amp;#39;, &amp;#39;loadId&amp;#39;, &amp;#39;contractUrl&amp;#39;, &amp;#39;number&amp;#39;])&lt;/pre&gt;
+&lt;pre&gt;dict_keys([&amp;#39;signDate&amp;#39;, &amp;#39;versionNumber&amp;#39;, &amp;#39;mongo_id&amp;#39;, &amp;#39;finances&amp;#39;, &amp;#39;contractUrl&amp;#39;, &amp;#39;foundation&amp;#39;, &amp;#39;misuses&amp;#39;, &amp;#39;regionCode&amp;#39;, &amp;#39;fileVersion&amp;#39;, &amp;#39;documentBase&amp;#39;, &amp;#39;fz&amp;#39;, &amp;#39;currentContractStage&amp;#39;, &amp;#39;price&amp;#39;, &amp;#39;placing&amp;#39;, &amp;#39;number&amp;#39;, &amp;#39;products&amp;#39;, &amp;#39;publishDate&amp;#39;, &amp;#39;customer&amp;#39;, &amp;#39;regNum&amp;#39;, &amp;#39;suppliers&amp;#39;, &amp;#39;id&amp;#39;, &amp;#39;currency&amp;#39;, &amp;#39;execution&amp;#39;, &amp;#39;loadId&amp;#39;])&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
@@ -1071,13 +1071,16 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[10]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[5]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;fields&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;fields&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;span class="c1"&gt;# сделали множество из списка ключей первого контракта&lt;/span&gt;
+&lt;span class="c1"&gt;# здесь словарь contracts[0] рассматривается как iterable&lt;/span&gt;
+&lt;span class="c1"&gt;# а в этом случае он итерирует свои ключи&lt;/span&gt;
+&lt;span class="c1"&gt;# поэтому .keys() дописывать не нужно&lt;/span&gt;
 &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;contract&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:]:&lt;/span&gt;
-    &lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;intersection_update&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;contract&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+    &lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;intersection_update&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;contract&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="c1"&gt;# пересечь множество fields с множеством, полученным из списка ключей&lt;/span&gt;
     &lt;span class="c1"&gt;# очередного контракта и результат записать в fields&lt;/span&gt;
     &lt;span class="c1"&gt;# иными словами, выкинуть из fields те элементы, которых нет в&lt;/span&gt;
@@ -1093,7 +1096,7 @@ h6:hover .anchor-link {
 &lt;div class="output"&gt;
 
 
-&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[10]:&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[5]:&lt;/div&gt;
 
 
 &lt;div class="output_text output_subarea output_execute_result"&gt;
@@ -1131,10 +1134,10 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[32]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[6]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;fields&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;intersection&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;contract&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;contract&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;fields&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;intersection&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;contract&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;contract&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;span class="n"&gt;fields&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -1146,7 +1149,7 @@ h6:hover .anchor-link {
 &lt;div class="output"&gt;
 
 
-&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[32]:&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[6]:&lt;/div&gt;
 
 
 &lt;div class="output_text output_subarea output_execute_result"&gt;
@@ -1179,9 +1182,52 @@ h6:hover .anchor-link {
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Дело в том, что &lt;code&gt;set.intersection()&lt;/code&gt; принимает на вход любое количество аргументов! С помощью &lt;a href="http://python.math-hse.info:8080/github/ischurov/pythonhse/blob/master/Lecture%205.ipynb#Списковые-включения-(list-comprehensions%29"&gt;спискового включения&lt;/a&gt; мы делаем список множеств, составленных из ключей каждого контракта, затем звёздочкой &lt;a href="https://docs.python.org/3/tutorial/controlflow.html#unpacking-argument-lists"&gt;«распаковываем»&lt;/a&gt; этот список в набор аргументов &lt;code&gt;set.intersection()&lt;/code&gt; — вжух — и всё готово!&lt;/p&gt;
 &lt;p&gt;Пожалуй, по сравнению с моим исходным подходом есть только один недостаток: по памяти это решение более требовательное, потому что сначала создаётся список, потом он передаётся функции. Причём из-за необходимости распаковывать элементы здесь бессмысленно заменять список на генератор — &lt;a href="http://stackoverflow.com/questions/25345676/unpacking-a-python-generator-into-arguments-memory-efficient"&gt;всё равно&lt;/a&gt; память придётся тратить. Впрочем, с практической точки зрения это скорее всего не принципиально.&lt;/p&gt;
+&lt;p&gt;UPD. После &lt;a href="https://twitter.com/rusorrow/status/810249396516438016"&gt;подсказки&lt;/a&gt; &lt;a href="https://twitter.com/rusorrow"&gt;@rusorrow&lt;/a&gt; о том, что &lt;code&gt;.keys()&lt;/code&gt; не нужен при создании множества, я подумал, что можно было бы сделать ещё короче: с помощью &lt;code&gt;map&lt;/code&gt; — мне кажется, что так даже лучше — это, пожалуй, тот случай, когда &lt;code&gt;map&lt;/code&gt; упрощает код по сравнению со списочными включениями.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[7]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;intersection&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nb"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[7]:&lt;/div&gt;
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;{&amp;#39;currency&amp;#39;,
+ &amp;#39;customer&amp;#39;,
+ &amp;#39;fileVersion&amp;#39;,
+ &amp;#39;fz&amp;#39;,
+ &amp;#39;id&amp;#39;,
+ &amp;#39;loadId&amp;#39;,
+ &amp;#39;mongo_id&amp;#39;,
+ &amp;#39;number&amp;#39;,
+ &amp;#39;price&amp;#39;,
+ &amp;#39;products&amp;#39;,
+ &amp;#39;publishDate&amp;#39;,
+ &amp;#39;regNum&amp;#39;,
+ &amp;#39;regionCode&amp;#39;,
+ &amp;#39;versionNumber&amp;#39;}&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
