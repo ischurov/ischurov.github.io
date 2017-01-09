@@ -6,6 +6,8 @@
 	<meta name="author" content="Илья Щуров">
 	
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
 	<link rel="stylesheet" href="https://ischurov.github.io/theme/css/main.css" type="text/css" />
 		
 
@@ -58,7 +60,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>О, «Медуза» <a href="https://meduza.io/games/bud-hakerom-igra-meduzy">вспомнила</a> одну из любимых игрушек моего детства — «Коровы и быки» (или «Быки и коровы»). Она была стандартным «поездным» развлечением по пути на какой-нибудь юг: благо, ничего, кроме ручки и бумаги для игры не требуются, да и правила простые. Каждый загадывает по четырёхзначному числу без повторяющихся цифр, потом по очереди пытается угадать число соперника. В ответ на догадку соперник сообщает число «быков» — угаданных цифр, которые стоят на своём месте, и «коров» — угаданных цифр, стоящих не на своём месте. Например, если загадано 1234, а догадкой было 1345, то 1 — это бык, 3 и 4 — коровы, и в ответ услышишь «один бык две коровы». Опираясь на эту информацию, нужно сделать новый ход (предложить новую догадку) и так далее, пока не получишь наконец «четырёх быков» (полностью угаданное число). Задача парной игры: угадать число соперника быстрее, чем он угадает твоё. (Понятно, что на самом деле «парность» здесь условная: это просто две параллельные игры, в которых вы и соперник меняетесь ролями — ну, скорее похоже на бег, чем на теннис: от твоих действий никак не зависит, когда соперник придёт к финишу — можно только пытаться его обогнать.)</p>…</p>
+<p>О, «Медуза» <a href="https://meduza.io/games/bud-hakerom-igra-meduzy">вспомнила</a> одну из любимых игрушек моего детства — «Коровы и быки» (или «Быки и коровы»). Она была стандартным «поездным» развлечением по пути на какой-нибудь юг: благо, ничего, кроме ручки и бумаги для игры не требуются, да и правила простые. Каждый загадывает по четырёхзначному числу без повторяющихся цифр, потом по очереди пытается угадать число соперника. В ответ на догадку соперник сообщает число «быков» — угаданных цифр, которые стоят на своём месте, и «коров» — угаданных цифр, стоящих не на своём месте. Например, если загадано 1234, а догадкой было 1345, то 1 — это бык, 3 и 4 — коровы, и в ответ услышишь «один бык две коровы». Опираясь на эту информацию, нужно сделать новый ход (предложить новую догадку) и так далее, пока не получишь наконец «четырёх быков» (полностью угаданное число). Задача парной игры: угадать число соперника быстрее, чем он угадает твоё. (Понятно, что на самом деле «парность» здесь условная: это просто две параллельные игры, в которых вы и соперник меняетесь ролями — ну, скорее похоже на бег, чем на теннис: от твоих действий никак не зависит, когда соперник придёт к финишу — можно только пытаться его обогнать.)</p>…</p>
     <p><a rel="full-article" href="https://ischurov.github.io/bulls_n_cows.html">Дальше
         →</a></p>
   </div>
@@ -79,7 +81,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Что уж говорить: <a href="http://sunandstuff.com/mandelbrot/about/">страничка Sunandstuff про фракталы</a>, мелькающая сегодня целый день в моей ленте, и правда красивая (хотя объяснения немного хромают). У меня с этим сюжетом особые отношения: мне в детстве в руки попала книжка «Красота фракталов», в которой, кроме кучи непонятных формул (до сих пор их не понимаю), были ещё очень красивые картинки, а также — самое главное — короткий алгоритм, который позволял эти картинки строить самому. Это казалось мне чудом: программа в 10 строк рисует бесконечно сложные изображения! С тех пор я как одержимый программирую фрактал Мандельброта на всём, что движется. Сначала это был Basic на 486-м компьютере (на одну картинку уходила ровно ночь), потом я выучил Pascal (и с удивлением обнаружил, что он работает раз в сто быстрее бейсика!), потом C, потом даже пытался выучить ассемблер, чтобы рисовать фракталы ещё быстрее (не преуспел, впрочем). Картинка с Мандельбротом, построенном на калькуляторе, украшает мою первую статью в «Компьютерре». Потом я узнал, что по-научному та область, в которой появляется множества Мандельброта и Жюлиа, называется «голоморфной динамикой», и кроме красивых картинок там есть ещё и красивые теоремы, а также до сих пор неразгаданные загадки. Впрочем, своих работ в этой области у меня нет, хоть я и занимаюсь близкими динамическими вещами. Что, однако, не помешает мне рассказать, как строить эти картинки с помощью Python.</p>…</p>
+<p>Что уж говорить: <a href="http://sunandstuff.com/mandelbrot/about/">страничка Sunandstuff про фракталы</a>, мелькающая сегодня целый день в моей ленте, и правда красивая (хотя объяснения немного хромают). У меня с этим сюжетом особые отношения: мне в детстве в руки попала книжка «Красота фракталов», в которой, кроме кучи непонятных формул (до сих пор их не понимаю), были ещё очень красивые картинки, а также — самое главное — короткий алгоритм, который позволял эти картинки строить самому. Это казалось мне чудом: программа в 10 строк рисует бесконечно сложные изображения! С тех пор я как одержимый программирую фрактал Мандельброта на всём, что движется. Сначала это был Basic на 486-м компьютере (на одну картинку уходила ровно ночь), потом я выучил Pascal (и с удивлением обнаружил, что он работает раз в сто быстрее бейсика!), потом C, потом даже пытался выучить ассемблер, чтобы рисовать фракталы ещё быстрее (не преуспел, впрочем). Картинка с Мандельбротом, построенном на калькуляторе, украшает мою первую статью в «Компьютерре». Потом я узнал, что по-научному та область, в которой появляется множества Мандельброта и Жюлиа, называется «голоморфной динамикой», и кроме красивых картинок там есть ещё и красивые теоремы, а также до сих пор неразгаданные загадки. Впрочем, своих работ в этой области у меня нет, хоть я и занимаюсь близкими динамическими вещами. Что, однако, не помешает мне рассказать, как строить эти картинки с помощью Python.</p>…</p>
     <p><a rel="full-article" href="https://ischurov.github.io/mandelbrot.html">Дальше
         →</a></p>
   </div>
@@ -87,7 +89,7 @@
 <div class="metadata">
   <time datetime="2015-05-17T00:02:00-03:00" pubdate>2015-05-17</time>
     <address class="vcard author">
-      Автор: <a class="url fn" href="https://ischurov.github.io/author/ilya-v-schurov.html">Ilya V. Schurov</a>
+      Автор: <a class="url fn" href="https://ischurov.github.io/author/ilia-shchurov.html">Илья Щуров</a>
     </address>
   Категория: <a href="https://ischurov.github.io/category/kak-eto-sdelat.html">как это сделать</a>
 <p class="tags">Теги: <a href="https://ischurov.github.io/tag/python.html">python</a>, <a href="https://ischurov.github.io/tag/matplotlib.html">matplotlib</a>, <a href="https://ischurov.github.io/tag/pyplot.html">pyplot</a>, <a href="https://ischurov.github.io/tag/3d.html">3d</a>, <a href="https://ischurov.github.io/tag/mplot3d.html">mplot3d</a>, <a href="https://ischurov.github.io/tag/xkcd.html">xkcd</a>, <a href="https://ischurov.github.io/tag/odeint.html">odeint</a></p></div>  <div>
@@ -108,7 +110,7 @@
 <div class="metadata">
   <time datetime="2014-12-07T00:02:00-03:00" pubdate>2014-12-07</time>
     <address class="vcard author">
-      Автор: <a class="url fn" href="https://ischurov.github.io/author/ilya-v-schurov.html">Ilya V. Schurov</a>
+      Автор: <a class="url fn" href="https://ischurov.github.io/author/ilia-shchurov.html">Илья Щуров</a>
     </address>
   Категория: <a href="https://ischurov.github.io/category/kak-eto-sdelat.html">как это сделать</a>
 <p class="tags">Теги: <a href="https://ischurov.github.io/tag/python.html">python</a>, <a href="https://ischurov.github.io/tag/gmail.html">gmail</a>, <a href="https://ischurov.github.io/tag/api.html">API</a></p></div>  <div>
@@ -130,10 +132,10 @@
 <div class="metadata">
   <time datetime="2014-09-15T00:53:00+04:00" pubdate>2014-09-15</time>
     <address class="vcard author">
-      Автор: <a class="url fn" href="https://ischurov.github.io/author/ilya-v-schurov.html">Ilya V. Schurov</a>
+      Автор: <a class="url fn" href="https://ischurov.github.io/author/ilia-shchurov.html">Илья Щуров</a>
     </address>
   Категория: <a href="https://ischurov.github.io/category/kak-eto-sdelat.html">как это сделать</a>
-<p class="tags">Теги: <a href="https://ischurov.github.io/tag/python-politologiia-vybory.html">python политология выборы</a></p></div>  <div>
+<p class="tags">Теги: <a href="https://ischurov.github.io/tag/python.html">python</a>, <a href="https://ischurov.github.io/tag/politologiia.html">политология</a>, <a href="https://ischurov.github.io/tag/vybory.html">выборы</a></p></div>  <div>
     <h2>
       <a href="https://ischurov.github.io/kak-poschitat-iavku.html" rel="bookmark" title="Постоянная ссылка на Как посчитать явку">Как посчитать явку</a>
     </h2>
@@ -219,14 +221,13 @@
                     <a href="https://ischurov.github.io/tag/one-liner.html">one-liner<span><sup>1</sup></span></a>  
                     <a href="https://ischurov.github.io/tag/pandas.html">pandas<span><sup>1</sup></span></a>  
                     <a href="https://ischurov.github.io/tag/pogoda.html">погода<span><sup>1</sup></span></a>  
-                    <a href="https://ischurov.github.io/tag/politologiia.html">политология<span><sup>1</sup></span></a>  
+                    <a href="https://ischurov.github.io/tag/politologiia.html">политология<span><sup>2</sup></span></a>  
                     <a href="https://ischurov.github.io/tag/pyplot.html">pyplot<span><sup>1</sup></span></a>  
-                    <a href="https://ischurov.github.io/tag/python.html">python<span><sup>7</sup></span></a>  
-                    <a href="https://ischurov.github.io/tag/python-politologiia-vybory.html">python политология выборы<span><sup>1</sup></span></a>  
+                    <a href="https://ischurov.github.io/tag/python.html">python<span><sup>8</sup></span></a>  
                     <a href="https://ischurov.github.io/tag/set.html">set<span><sup>1</sup></span></a>  
                     <a href="https://ischurov.github.io/tag/statistika.html">статистика<span><sup>1</sup></span></a>  
                     <a href="https://ischurov.github.io/tag/teorver.html">теорвер<span><sup>1</sup></span></a>  
-                    <a href="https://ischurov.github.io/tag/vybory.html">выборы<span><sup>1</sup></span></a>  
+                    <a href="https://ischurov.github.io/tag/vybory.html">выборы<span><sup>2</sup></span></a>  
                     <a href="https://ischurov.github.io/tag/xkcd.html">xkcd<span><sup>1</sup></span></a>  
                   </p>
                 </nav>

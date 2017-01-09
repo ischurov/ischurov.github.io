@@ -15,6 +15,8 @@
 	<meta name="twitter:url" content="https://ischurov.github.io/bulls_n_cows.html">
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
 	<link rel="stylesheet" href="https://ischurov.github.io/theme/css/main.css" type="text/css" />
 		
 
@@ -62,15 +64,882 @@
 *
 * IPython notebook
 *
-*/.ansibold{font-weight:700}.ansiblack{}.ansired{color:#8b0000}.ansigreen{6400}.ansiyellow{color:#c4a000}.ansiblue{8b}.ansipurple{color:#9400d3}.ansicyan{color:#4682b4}.ansigray{color:gray}.ansibgblack{background-}.ansibgred{background-color:red}.ansibggreen{background-color:green}.ansibgyellow{background-color:#ff0}.ansibgblue{background-f}.ansibgpurple{background-color:#ff00ff}.ansibgcyan{background-ff}.ansibggray{background-color:gray}div.cell{border:1px solid transparent;display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;border-radius:2px;box-sizing:border-box;-moz-box-sizing:border-box;border-width:thin;border-style:solid;width:100%;padding:5px;margin:0;outline:0}div.cell.selected{border-color:#ababab}@media print{div.cell.selected{border-color:transparent}}.edit_mode div.cell.selected{border-color:green}.prompt{min-width:14ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}@-moz-document url-prefix(){div.inner_cell{overflow-x:hidden}}div.input_area{border:1px solid #cfcfcf;border-radius:2px;background:#f7f7f7;line-height:1.21429em}div.prompt:empty{padding-top:0;padding-bottom:0}div.unrecognized_cell{padding:5px 5px 5px 0;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}div.unrecognized_cell .inner_cell{border-radius:2px;padding:5px;font-weight:700;color:red;border:1px solid #cfcfcf;background:#eaeaea}div.unrecognized_cell .inner_cell a,div.unrecognized_cell .inner_cell a:hover{color:inherit;text-decoration:none}@media (max-width:540px){.prompt{text-align:left}div.unrecognized_cell>div.prompt{display:none}}div.code_cell{}div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}@media (max-width:540px){div.input{-webkit-box-orient:vertical;-moz-box-orient:vertical;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:navy;border-top:1px solid transparent}div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}div.input_area>div.highlight>pre{margin:0;border:none;padding:0;background-color:transparent}.CodeMirror{line-height:1.21429em;font-size:14px;height:auto;background:0 0}.CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}.CodeMirror-lines{padding:.4em}.CodeMirror-linenumber{padding:0 8px 0 4px}.CodeMirror-gutters{border-bottom-left-radius:2px;border-top-left-radius:2px}.CodeMirror pre{padding:0;border:0;border-radius:0}.highlight-base,.highlight-variable{}.highlight-variable-2{color:#1a1a1a}.highlight-variable-3{color:#333}.highlight-string{color:#BA2121}.highlight-comment{color:#408080;font-style:italic}.highlight-number{80}.highlight-atom{color:#88F}.highlight-keyword{color:green;font-weight:700}.highlight-builtin{color:green}.highlight-error{color:red}.highlight-operator{color:#A2F;font-weight:700}.highlight-meta{color:#A2F}.highlight-def{f}.highlight-string-2{color:#f50}.highlight-qualifier{color:#555}.highlight-bracket{color:#997}.highlight-tag{color:#170}.highlight-attribute{c}.highlight-header{f}.highlight-quote{90}.highlight-link{c}.cm-s-ipython span.cm-keyword{color:green;font-weight:700}.cm-s-ipython span.cm-atom{color:#88F}.cm-s-ipython span.cm-number{80}.cm-s-ipython span.cm-def{f}.cm-s-ipython span.cm-variable{}.cm-s-ipython span.cm-operator{color:#A2F;font-weight:700}.cm-s-ipython span.cm-variable-2{color:#1a1a1a}.cm-s-ipython span.cm-variable-3{color:#333}.cm-s-ipython span.cm-comment{color:#408080;font-style:italic}.cm-s-ipython span.cm-string{color:#BA2121}.cm-s-ipython span.cm-string-2{color:#f50}.cm-s-ipython span.cm-meta{color:#A2F}.cm-s-ipython span.cm-qualifier{color:#555}.cm-s-ipython span.cm-builtin{color:green}.cm-s-ipython span.cm-bracket{color:#997}.cm-s-ipython span.cm-tag{color:#170}.cm-s-ipython span.cm-attribute{c}.cm-s-ipython span.cm-header{f}.cm-s-ipython span.cm-quote{90}.cm-s-ipython span.cm-link{c}.cm-s-ipython span.cm-error{color:red}.cm-s-ipython span.cm-tab{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=')right no-repeat}div.output_wrapper{display:-webkit-box;-webkit-box-align:stretch;display:-moz-box;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;z-index:1}div.output_scroll{height:24em;width:100%;overflow:auto;border-radius:2px;-webkit-box-shadow:inset 0 2px 8px rgba(0,0,0,.8);box-shadow:inset 0 2px 8px rgba(0,0,0,.8);display:block}div.output_collapsed{margin:0;padding:0;display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}div.out_prompt_overlay{height:100%;padding:0 .4em;position:absolute;border-radius:2px}div.out_prompt_overlay:hover{-webkit-box-shadow:inset 0 0 1px #000;box-shadow:inset 0 0 1px #000;background:rgba(240,240,240,.5)}div.output_prompt{color:#8b0000}div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}div.output_area .MathJax_Display{text-align:left!important}div.output_area div.output_area img,div.output_area svg{max-width:100%;height:auto}div.output_area img.unconfined,div.output_area svg.unconfined{max-width:none}.output{display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}@media (max-width:540px){div.output_area{-webkit-box-orient:vertical;-moz-box-orient:vertical;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;background-color:transparent;border-radius:0}div.output_subarea{overflow-x:auto;padding:.4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1;max-width:calc(100% - 14ex)}div.output_text{text-align:left;line-height:1.21429em}div.output_stderr{background:#fdd}div.output_latex{text-align:left}div.output_javascript:empty{padding:0}.js-error{color:#8b0000}div.raw_input_container{font-family:monospace;padding-top:5px}span.raw_input_prompt{}input.raw_input{font-family:inherit;font-size:inherit;color:inherit;width:auto;vertical-align:baseline;padding:0 .25em;margin:0 .25em}input.raw_input:focus{box-shadow:none}p.p-space{margin-bottom:10px}div.output_unrecognized{padding:5px;font-weight:700;color:red}div.output_unrecognized a,div.output_unrecognized a:hover{color:inherit;text-decoration:none}.rendered_html{}.rendered_html :link,.rendered_html :visited,.rendered_html h1:first-child{margin-top:.538em}.rendered_html h2:first-child{margin-top:.636em}.rendered_html h3:first-child{margin-top:.777em}.rendered_html h4:first-child,.rendered_html h5:first-child,.rendered_html h6:first-child{margin-top:1em}.rendered_html *+ol,.rendered_html *+ul{margin-top:1em}.rendered_html *+table{margin-top:1em}.rendered_html *+p{margin-top:1em}.rendered_html *+img{margin-top:1em}div.text_cell{display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}@media (max-width:540px){div.text_cell>div.prompt{display:none}}div.text_cell_render{outline:0;resize:none;width:inherit;border-style:none;padding:.5em .5em .5em .4em;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}a.anchor-link:link{text-decoration:none;padding:0 20px;visibility:hidden}h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anchor-link,h5:hover .anchor-link,h6:hover .anchor-link{visibility:visible}.text_cell.rendered .input_area{display:none}.text_cell.rendered .text_cell.unrendered .text_cell_render{display:none}.cm-header-1,.cm-header-2,.cm-header-3,.cm-header-4,.cm-header-5,.cm-header-6{font-weight:700;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.cm-header-1{font-size:185.7%}.cm-header-2{font-size:157.1%}.cm-header-3{font-size:128.6%}.cm-header-4{font-size:110%}.cm-header-5,.cm-header-6{font-size:100%;font-style:italic}</style>
+*/
+/* CSS font colors for translated ANSI colors. */
+.ansibold {
+  font-weight: bold;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  border-left-width: 1px;
+  padding-left: 5px;
+  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #90CAF9;
+  border-left-color: #E3F2FD;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #E3F2FD;
+  border-right-width: 1px;
+  background: #E3F2FD;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected {
+  border-color: #ababab;
+  border-left-width: 0px;
+  padding-left: 6px;
+  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
+}
+@media print {
+  div.cell.selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected.jupyter-soft-selected {
+  border-left-width: 0;
+  padding-left: 6px;
+  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
+}
+.edit_mode div.cell.selected {
+  border-color: #66BB6A;
+  border-left-width: 0px;
+  padding-left: 6px;
+  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+@-moz-document url-prefix() {
+  div.inner_cell {
+    overflow-x: hidden;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell > div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+div.input_area > div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area > div.highlight > pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the <head> if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  padding: 0.4em;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
+  /* .CodeMirror-lines */
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #BA2121;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #AA22FF;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #BA2121;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #AA22FF;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but FF barfs all over that */
+  height: 24em;
+  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/FF */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+.rendered_html pre,
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+.rendered_html td,
+
+
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell > div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+</style>
 <style type="text/css">.highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
 .highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
 .highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
 .highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
 .highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
 .highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #A00000 } /* Generic.Deleted */
@@ -126,21 +995,58 @@
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
+<style type="text/css">
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+</style>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>О, «Медуза» <a href="https://meduza.io/games/bud-hakerom-igra-meduzy">вспомнила</a> одну из любимых игрушек моего детства — «Коровы и быки» (или «Быки и коровы»). Она была стандартным «поездным» развлечением по пути на какой-нибудь юг: благо, ничего, кроме ручки и бумаги для игры не требуются, да и правила простые. Каждый загадывает по четырёхзначному числу без повторяющихся цифр, потом по очереди пытается угадать число соперника. В ответ на догадку соперник сообщает число «быков» — угаданных цифр, которые стоят на своём месте, и «коров» — угаданных цифр, стоящих не на своём месте. Например, если загадано 1234, а догадкой было 1345, то 1 — это бык, 3 и 4 — коровы, и в ответ услышишь «один бык две коровы». Опираясь на эту информацию, нужно сделать новый ход (предложить новую догадку) и так далее, пока не получишь наконец «четырёх быков» (полностью угаданное число). Задача парной игры: угадать число соперника быстрее, чем он угадает твоё. (Понятно, что на самом деле «парность» здесь условная: это просто две параллельные игры, в которых вы и соперник меняетесь ролями — ну, скорее похоже на бег, чем на теннис: от твоих действий никак не зависит, когда соперник придёт к финишу — можно только пытаться его обогнать.)</p>
-<p>Компьютерная реализация этой игры пришла вместе с моим первым компьютером — Апогеем БК-01: он загружал программы с аудиомагнитофона, так что вместо имён файлов там были звуковые метки, и мои уши до сих пор помнят, как звучит эта фраза «Коровы и быки» в исполнении неизвестного женского (кажется, несколько пожилого) голоса, после которого на кассете — приятное жужжание, которое компьютер превращал в код. Это была готовая программа и она не умела играть сама, умела только загадывать число и отвечать пользовователю, который пытался его угадать (ну вот примерно как медузовский скрипт делает).</p>
-<p>Мне, конечно, хотелось написать такую программу, которая бы умела сама угадывать числа, но поначалу эта задача казалась сложной — когда ты играешь, то применяешь какую-то нетривиальную логику типа «а вот если цифра один тут бык, то двойка тогда точно корова, но тогда она стоит не на втором и не на третьем месте, а первое уже занято — ну, значит, единица не бык, а значит…» и так далее. В общем, до боли знакомые рассуждения для всех любителей логических задач. Но как же их запрограммировать? Это прямо искусственный интеллект надо писать!</p>
+<p>О, «Медуза» <a href="https://meduza.io/games/bud-hakerom-igra-meduzy">вспомнила</a> одну из любимых игрушек моего детства — «Коровы и быки» (или «Быки и коровы»). Она была стандартным «поездным» развлечением по пути на какой-нибудь юг: благо, ничего, кроме ручки и бумаги для игры не требуются, да и правила простые. Каждый загадывает по четырёхзначному числу без повторяющихся цифр, потом по очереди пытается угадать число соперника. В ответ на догадку соперник сообщает число «быков» — угаданных цифр, которые стоят на своём месте, и «коров» — угаданных цифр, стоящих не на своём месте. Например, если загадано 1234, а догадкой было 1345, то 1 — это бык, 3 и 4 — коровы, и в ответ услышишь «один бык две коровы». Опираясь на эту информацию, нужно сделать новый ход (предложить новую догадку) и так далее, пока не получишь наконец «четырёх быков» (полностью угаданное число). Задача парной игры: угадать число соперника быстрее, чем он угадает твоё. (Понятно, что на самом деле «парность» здесь условная: это просто две параллельные игры, в которых вы и соперник меняетесь ролями — ну, скорее похоже на бег, чем на теннис: от твоих действий никак не зависит, когда соперник придёт к финишу — можно только пытаться его обогнать.)</p>
+<p>Компьютерная реализация этой игры пришла вместе с моим первым компьютером — Апогеем БК-01: он загружал программы с аудиомагнитофона, так что вместо имён файлов там были звуковые метки, и мои уши до сих пор помнят, как звучит эта фраза «Коровы и быки» в исполнении неизвестного женского (кажется, несколько пожилого) голоса, после которого на кассете — приятное жужжание, которое компьютер превращал в код. Это была готовая программа и она не умела играть сама, умела только загадывать число и отвечать пользовователю, который пытался его угадать (ну вот примерно как медузовский скрипт делает).</p>
+<p>Мне, конечно, хотелось написать такую программу, которая бы умела сама угадывать числа, но поначалу эта задача казалась сложной — когда ты играешь, то применяешь какую-то нетривиальную логику типа «а вот если цифра один тут бык, то двойка тогда точно корова, но тогда она стоит не на втором и не на третьем месте, а первое уже занято — ну, значит, единица не бык, а значит…» и так далее. В общем, до боли знакомые рассуждения для всех любителей логических задач. Но как же их запрограммировать? Это прямо искусственный интеллект надо писать!</p>
 <blockquote><p>Возможно, придись моё детство на сегодняшнее время, я бы сказал «да ерунда, сейчас забабахаем глубокую рекуррентную  нейросеть на миллион нейронов на Tensorflow, запустим на тысяче GPU, заставим её сыграть миллиард партий против самой себя и получится чемпион по «Коровам и быкам» — не хуже Alpha Go!», но тогда, к сожалению (или к счастью) таких возможностей не было.</p>
 </blockquote>
-<p>И вот однажды — я, кажется, даже не думал об этом особенно — мне в голову пришёл алгоритм игры, который показался мне оптимальным. Он очень простой. На каждом шаге у нас есть некоторая история игры — информация о предыдущих (своих) ходах и их результатах. Изначально эта история пустая. Рассмотрим теперь какое-нибудь из допустимых чисел — то есть таких, которые в принципе могут участвовать в игре (в данном случае: четырёхзначные, без повторяющихся цифр). Глядя на текущую историю, зададим такой вопрос: может ли это число быть тем самым, которое загадано? Даст ли оно те же реакции на наши предыдущие ходы, которые мы действительно получили? Если да, то такое число мы назовём <em>совместимым с историей</em>, иначе — <em>несовместимым</em>. В начальный момент, когда история пустая, любое число является совместимым (проверять нечего). По ходу игры история растёт, а множество совместимых чисел уменьшается. Идея состояла в том, чтобы просто каждый раз называть какое-нибудь число, совместимое со всей предыдущей историей — то есть то, которое по крайней мере теоретически может быть верным ответом.</p>
+<p>И вот однажды — я, кажется, даже не думал об этом особенно — мне в голову пришёл алгоритм игры, который показался мне оптимальным. Он очень простой. На каждом шаге у нас есть некоторая история игры — информация о предыдущих (своих) ходах и их результатах. Изначально эта история пустая. Рассмотрим теперь какое-нибудь из допустимых чисел — то есть таких, которые в принципе могут участвовать в игре (в данном случае: четырёхзначные, без повторяющихся цифр). Глядя на текущую историю, зададим такой вопрос: может ли это число быть тем самым, которое загадано? Даст ли оно те же реакции на наши предыдущие ходы, которые мы действительно получили? Если да, то такое число мы назовём <em>совместимым с историей</em>, иначе — <em>несовместимым</em>. В начальный момент, когда история пустая, любое число является совместимым (проверять нечего). По ходу игры история растёт, а множество совместимых чисел уменьшается. Идея состояла в том, чтобы просто каждый раз называть какое-нибудь число, совместимое со всей предыдущей историей — то есть то, которое по крайней мере теоретически может быть верным ответом.</p>
 <p>Идея очень простая, и её реализация оказалась тоже несложной. Действительно: компьютеры плохо умеют думать (по правде говоря, вообще никак), но зато хорошо считают и перебирают. Не нужно реализовывать никакую сложную логику на тему «а если бы эта цифра стояла здесь…» — достаточно просто перебирать все возможные допустимые числа и для каждого из них отвечать на вопрос «какая реакция была бы дана на такую-то догадку, если бы это число было загаданным?»</p>
-<p>На удивление этот алгоритм даёт довольно неплохой результат. Я уже не помню, на каком языке написал его впервые, но сейчас мы используем Python — на нём он выглядит особенно изящно. Итак.</p>
+<p>На удивление этот алгоритм даёт довольно неплохой результат. Я уже не помню, на каком языке написал его впервые, но сейчас мы используем Python — на нём он выглядит особенно изящно. Итак.</p>
 <p><a href="https://flic.kr/p/4sjJZq"><img src="https://c3.staticflickr.com/3/2260/2266955834_d16c3ee49b_z.jpg" alt="The cows"></a></p>
-<h3 id="Давайте-это-запрограммируем!">&#1044;&#1072;&#1074;&#1072;&#1081;&#1090;&#1077; &#1101;&#1090;&#1086; &#1079;&#1072;&#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1080;&#1088;&#1091;&#1077;&#1084;!<a class="anchor-link" href="#Давайте-это-запрограммируем!">&#182;</a></h3><p>Первое, что нам понадобится — это множество допустимых чисел. По правде говоря, в «коровых и быках» числа не имеют собственно числовой природы, а являются просто цепочками знаков, поэтому мы будем использовать строки вместо настоящих чисел. Чтобы создать нужный набор строк, проще всего использовать функцию <code>itertools.product</code>, находящую декартово произведение списков или других похожих на них объектов.</p>
+<h3 id="Давайте-это-запрограммируем!">&#1044;&#1072;&#1074;&#1072;&#1081;&#1090;&#1077; &#1101;&#1090;&#1086; &#1079;&#1072;&#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1080;&#1088;&#1091;&#1077;&#1084;!<a class="anchor-link" href="#Давайте-это-запрограммируем!">&#182;</a></h3><p>Первое, что нам понадобится — это множество допустимых чисел. По правде говоря, в «коровых и быках» числа не имеют собственно числовой природы, а являются просто цепочками знаков, поэтому мы будем использовать строки вместо настоящих чисел. Чтобы создать нужный набор строк, проще всего использовать функцию <code>itertools.product</code>, находящую декартово произведение списков или других похожих на них объектов.</p>
 
 </div>
 </div>
@@ -150,8 +1056,8 @@
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">itertools</span> <span class="k">import</span> <span class="n">product</span>
-<span class="n">everything</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="s">&#39;0123456789&#39;</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="k">import</span> <span class="n">product</span>
+<span class="n">everything</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="s1">&#39;0123456789&#39;</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
              <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
 </pre></div>
 
@@ -165,7 +1071,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Здесь сразу несколько хитростей, заслуживающих отдельного рассказа: строка <code>'0123456789'</code> в данном случае рассматривается как последовательность символов (в этом контексте она эквивалентна <code>['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']</code>), функция <code>product</code> создаёт список (ну хорошо, не список, а итератор), состоящий из всевозможных кортежей типа <code>('0', '1', '2', '7')</code>, чтобы склеить их в строки мы применяем <code>"".join()</code> (можно было бы этого не делать и работать с кортежами, но так они приятнее выглядят). Условие о том, чтобы в числе не было повторяющихся цифр, записано в виде <code>len(set(x)) == len(x)</code> — то есть элементов во множестве, созданном из элементов <code>x</code> (то есть цифр очередного нашего числа) должно быть столько же, сколько элементов в самом <code>x</code> (в множествах не бывает повторяющихся элементов, поэтому это самый простой способ проверить то, что нам нужно).</p>
+<p>Здесь сразу несколько хитростей, заслуживающих отдельного рассказа: строка <code>'0123456789'</code> в данном случае рассматривается как последовательность символов (в этом контексте она эквивалентна <code>['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']</code>), функция <code>product</code> создаёт список (ну хорошо, не список, а итератор), состоящий из всевозможных кортежей типа <code>('0', '1', '2', '7')</code>, чтобы склеить их в строки мы применяем <code>"".join()</code> (можно было бы этого не делать и работать с кортежами, но так они приятнее выглядят). Условие о том, чтобы в числе не было повторяющихся цифр, записано в виде <code>len(set(x)) == len(x)</code> — то есть элементов во множестве, созданном из элементов <code>x</code> (то есть цифр очередного нашего числа) должно быть столько же, сколько элементов в самом <code>x</code> (в множествах не бывает повторяющихся элементов, поэтому это самый простой способ проверить то, что нам нужно).</p>
 <p>Теперь напишем функцию, которая будет возвращать число быков и коров.</p>
 
 </div>
@@ -176,7 +1082,7 @@
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">bulls_n_cows</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">bulls_n_cows</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">assert</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">everything</span> <span class="ow">and</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">everything</span>
     <span class="n">bulls</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
     <span class="n">cows</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">b</span><span class="p">))</span> <span class="o">-</span> <span class="n">bulls</span>
@@ -193,8 +1099,8 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Функция симметричная (если мы поменяем аргументы местами, ответ не изменится), поэтому я не стал называть аргументы <code>guess</code> и <code>answer</code> — здесь эти детали ни к чему. В начале стоит <code>assert</code>, проверяющий, что функция получила на вход только допустимые числа. В принципе, эту строчку можно будет потом убрать — она нужна, чтобы убедиться, что мы нигде не ошиблись и не пытаемся скормить этой функции что-нибудь не то. (Лучше сразу получить ошибку, чем ломать голову над странным результатом.)</p>
-<p>Хочется обратить внимание на строку, находящую число коров — она использует множества и выглядит очень изящно, правда? Фактически, тут просто написано: коровы — эти те цифры, которые встречаются в обоих числах и не являются быками.</p>
+<p>Функция симметричная (если мы поменяем аргументы местами, ответ не изменится), поэтому я не стал называть аргументы <code>guess</code> и <code>answer</code> — здесь эти детали ни к чему. В начале стоит <code>assert</code>, проверяющий, что функция получила на вход только допустимые числа. В принципе, эту строчку можно будет потом убрать — она нужна, чтобы убедиться, что мы нигде не ошиблись и не пытаемся скормить этой функции что-нибудь не то. (Лучше сразу получить ошибку, чем ломать голову над странным результатом.)</p>
+<p>Хочется обратить внимание на строку, находящую число коров — она использует множества и выглядит очень изящно, правда? Фактически, тут просто написано: коровы — эти те цифры, которые встречаются в обоих числах и не являются быками.</p>
 
 </div>
 </div>
@@ -214,7 +1120,7 @@
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">is_compatible</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">history</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">is_compatible</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">history</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">bulls_n_cows</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">previous_guess</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="n">bulls</span><span class="p">,</span> <span class="n">cows</span><span class="p">)</span>
               <span class="k">for</span> <span class="n">previous_guess</span><span class="p">,</span> <span class="n">bulls</span><span class="p">,</span> <span class="n">cows</span> <span class="ow">in</span> <span class="n">history</span><span class="p">)</span>
 </pre></div>
@@ -249,13 +1155,13 @@
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">choice</span>
-<span class="c"># эта функция нам понадобится, чтобы выбирать случайные элементы</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">choice</span>
+<span class="c1"># эта функция нам понадобится, чтобы выбирать случайные элементы</span>
 <span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">seed</span>
 <span class="n">seed</span><span class="p">(</span><span class="mi">43</span><span class="p">)</span>
-<span class="c"># для воспроизводимости</span>
+<span class="c1"># для воспроизводимости</span>
 <span class="kn">from</span> <span class="nn">itertools</span> <span class="k">import</span> <span class="n">count</span>
-<span class="c"># это бесконечный счётчик</span>
+<span class="c1"># это бесконечный счётчик</span>
 </pre></div>
 
 </div>
@@ -268,32 +1174,34 @@
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">naive_player</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="k">True</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">naive_player</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s">&quot;My real answer is {}, but let&#39;s pretend I don&#39;t know it.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;My real answer is </span><span class="si">{}</span><span class="s2">, but let&#39;s &quot;</span>
+              <span class="s2">&quot;pretend I don&#39;t know it.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
                 <span class="n">answer</span><span class="p">))</span>
     <span class="n">guess_space</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">everything</span><span class="p">)</span>
-    <span class="c"># это множество, из которого мы будем выбирать догадки</span>
-    <span class="c"># и вычёркивать уже выбранные или не подходящие</span>
+    <span class="c1"># это множество, из которого мы будем выбирать догадки</span>
+    <span class="c1"># и вычёркивать уже выбранные или не подходящие</span>
     <span class="n">history</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="c"># в начальный момент история пуста</span>
+    <span class="c1"># в начальный момент история пуста</span>
 
     <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="n">count</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">while</span> <span class="k">True</span><span class="p">:</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
             <span class="n">guess</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">guess_space</span><span class="p">))</span>
             <span class="n">guess_space</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">guess</span><span class="p">)</span>
-            <span class="c"># больше мы уже никогда выбирать это число не будем</span>
+            <span class="c1"># больше мы уже никогда выбирать это число не будем</span>
             <span class="k">if</span> <span class="n">is_compatible</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">history</span><span class="p">):</span>
-                <span class="c"># если совместимо с историей, выбрать его</span>
+                <span class="c1"># если совместимо с историей, выбрать его</span>
                 <span class="k">break</span>
         <span class="n">bulls</span><span class="p">,</span> <span class="n">cows</span> <span class="o">=</span> <span class="n">bulls_n_cows</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">answer</span><span class="p">)</span>
         <span class="n">history</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">guess</span><span class="p">,</span> <span class="n">bulls</span><span class="p">,</span> <span class="n">cows</span><span class="p">))</span>
         <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s">&quot;Attempt {}. My guess is {}. I have {} bull(s) and {} cow(s)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Attempt </span><span class="si">{}</span><span class="s2">. My guess is </span><span class="si">{}</span><span class="s2">. I have </span><span class="si">{}</span><span class="s2"> bull(s) &quot;</span>
+                  <span class="s2">&quot;and </span><span class="si">{}</span><span class="s2"> cow(s)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
                 <span class="n">attempt</span><span class="p">,</span> <span class="n">guess</span><span class="p">,</span> <span class="n">bulls</span><span class="p">,</span> <span class="n">cows</span><span class="p">))</span>
         <span class="k">if</span> <span class="n">bulls</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">guess</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s">&quot;I won! (Surprise!)&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I won! (Surprise!)&quot;</span><span class="p">)</span>
             <span class="k">break</span>
     <span class="k">return</span> <span class="n">history</span>
 
@@ -310,7 +1218,7 @@
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>My real answer is 0671, but let&apos;s pretend I don&apos;t know it.
+<pre>My real answer is 0671, but let&#39;s pretend I don&#39;t know it.
 Attempt 1. My guess is 6091. I have 1 bull(s) and 2 cow(s)
 Attempt 2. My guess is 7016. I have 0 bull(s) and 4 cow(s)
 Attempt 3. My guess is 6170. I have 1 bull(s) and 3 cow(s)
@@ -333,12 +1241,12 @@ I won! (Surprise!)
 <p><a href="https://flic.kr/p/R1GHrb"><img src="https://c1.staticflickr.com/1/413/32169425496_38e88f96b9_z.jpg" alt="Some cow"></a></p>
 <h3 id="Но-так-ли-уж-хорош-наш-алгоритм?">&#1053;&#1086; &#1090;&#1072;&#1082; &#1083;&#1080; &#1091;&#1078; &#1093;&#1086;&#1088;&#1086;&#1096; &#1085;&#1072;&#1096; &#1072;&#1083;&#1075;&#1086;&#1088;&#1080;&#1090;&#1084;?<a class="anchor-link" href="#Но-так-ли-уж-хорош-наш-алгоритм?">&#182;</a></h3><p>По правде говоря, не факт. Он не делает совсем глупых шагов — не пытается использовать в качестве догадки то, что заведомо не может быть ответом. Но является ли это оптимальной стратегией? Приводит ли она к самой быстрой победе?</p>
 <p>Например, когда я играю в «коровы и быки» сам, мои первые два хода обычно — это <code>1234</code> и <code>5678</code>. Я не уверен, что они оптимальны, но мне кажется, что так я получаю сразу много информации о всех цифрах — такой «широкий» выстрел. При этом если в <code>1234</code> есть хотя бы один бык или хотя бы одна корова, <code>5678</code> не может быть правильным ответом: в моём случае это не попыта угадать ответ, а попытка получить больше информации о нём.</p>
-<p>О! А ведь это идея! Может быть, правильная стратегия — выбирать такие числа, которые каждый раз приносят максимум информации об ответе? Только вот что это значит? Как измерить количество информации?</p>
-<p>В данном случае очень просто: чем больше у нас информации, тем меньше пространство поиска правильного ответа, то есть множество совместимых чисел. Разные попытки приносят разное количество информации, то есть по-разному сужают это множество. Например, если я просто продублирую одну из попыток, на которую уже получил реакцию раньше, это не даст никакой новой информации. Для тех чисел, которые не фигурировали в игре раньше, разные реакции дают разное количество информации: например, «0 коров 0 быков» позволяет сразу вычеркнуть четыре цифры, а какие-нибудь «1 бык 1 корова» может заставить повозиться.</p>
+<p>О! А ведь это идея! Может быть, правильная стратегия — выбирать такие числа, которые каждый раз приносят максимум информации об ответе? Только вот что это значит? Как измерить количество информации?</p>
+<p>В данном случае очень просто: чем больше у нас информации, тем меньше пространство поиска правильного ответа, то есть множество совместимых чисел. Разные попытки приносят разное количество информации, то есть по-разному сужают это множество. Например, если я просто продублирую одну из попыток, на которую уже получил реакцию раньше, это не даст никакой новой информации. Для тех чисел, которые не фигурировали в игре раньше, разные реакции дают разное количество информации: например, «0 коров 0 быков» позволяет сразу вычеркнуть четыре цифры, а какие-нибудь «1 бык 1 корова» может заставить повозиться.</p>
 <p>Как же можно понять, сколько информации принесёт тот или иной ход, если мы не знаем, какая на него последует реакция? Мы не можем найти этого точно, но можем оценить, пользуясь соображениями терии вероятностей.</p>
-<p>Допустим, мы сыграли несколько ходов и теперь имеем какую-то историю. Единственное, что мы знаем в этот момент наверняка: правильный ответ является каким-то из чисел, совместимых с этой историей. Если  у нас нет каких-то априорных сведений о том, как загадывалось число (если бы мы играли против хорошого знакомого человека, то могли бы использовать какие-то знания о нём — например, набор любимых цифр или комбинаций — но сейчас мы считаем, что таких данных у нас нет), с нашей точки зрения, все совместимые числа имеют равные шансы оказаться ответом.</p>
+<p>Допустим, мы сыграли несколько ходов и теперь имеем какую-то историю. Единственное, что мы знаем в этот момент наверняка: правильный ответ является каким-то из чисел, совместимых с этой историей. Если  у нас нет каких-то априорных сведений о том, как загадывалось число (если бы мы играли против хорошого знакомого человека, то могли бы использовать какие-то знания о нём — например, набор любимых цифр или комбинаций — но сейчас мы считаем, что таких данных у нас нет), с нашей точки зрения, все совместимые числа имеют равные шансы оказаться ответом.</p>
 <p>Пусть теперь нас интересует, сколько информации нам принесёт ход $x$. Мы сейчас не требуем, чтобы $x$ обязательно был совместим с историей. Зафиксируем теперь какой-нибудь  <em>предполагаемый ответ</em> $y$ — вот его нужно выбрать только среди допустимых чисел. Найдём, сколько коров и быков мы бы получили в резульатате хода $x$ при условии, что правильным ответом был бы $y$. Добавим дополнительную запись в историю, соответствующую этому (воображаемому) результату, после чего найдём новое (воображаемое) множество совместимых чисел. Чем оно меньше, тем лучше.</p>
-<p>Конечно, здесь есть одно но. Какой всё-таки $y$ брать? Поскольку мы не знаем, какой, и все элементы совместимного множества равновероятны в качестве кандидата на правильный ответ, нам нужно повторить эту процедуру для всех таких чисел (в качестве $y$'ов), для каждого посчитать размер нового множества совместимых чисел, а потом найти среднее из этих размеров. Так мы получим величину, которую я предлагаю назвать <em>«ожидаемым размером нового совместимого множества»</em>. Она покажет нам, насколько «в среднем» хорош наш ход: нам останется только выбрать такой $x$, чтобы эта величина была минимальной. В этом состоит наш новый алгоритм игры.</p>
+<p>Конечно, здесь есть одно но. Какой всё-таки $y$ брать? Поскольку мы не знаем, какой, и все элементы совместимного множества равновероятны в качестве кандидата на правильный ответ, нам нужно повторить эту процедуру для всех таких чисел (в качестве $y$'ов), для каждого посчитать размер нового множества совместимых чисел, а потом найти среднее из этих размеров. Так мы получим величину, которую я предлагаю назвать <em>«ожидаемым размером нового совместимого множества»</em>. Она покажет нам, насколько «в среднем» хорош наш ход: нам останется только выбрать такой $x$, чтобы эта величина была минимальной. В этом состоит наш новый алгоритм игры.</p>
 <h3 id="Займёмся-реализацией!">&#1047;&#1072;&#1081;&#1084;&#1105;&#1084;&#1089;&#1103; &#1088;&#1077;&#1072;&#1083;&#1080;&#1079;&#1072;&#1094;&#1080;&#1077;&#1081;!<a class="anchor-link" href="#Займёмся-реализацией!">&#182;</a></h3><p>Для начала напишем функцию, которая находит всё множество совместимых чисел (до сих пор нам требовались только отдельные числа из него, а теперь нужно оно целиком).</p>
 
 </div>
@@ -349,8 +1257,8 @@ I won! (Surprise!)
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">compatible_area</span><span class="p">(</span><span class="n">history</span><span class="p">,</span> <span class="n">old_compatible_area</span><span class="o">=</span><span class="k">None</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">old_compatible_area</span> <span class="ow">is</span> <span class="k">None</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">compatible_area</span><span class="p">(</span><span class="n">history</span><span class="p">,</span> <span class="n">old_compatible_area</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">old_compatible_area</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">old_compatible_area</span> <span class="o">=</span> <span class="n">everything</span>
     <span class="k">return</span> <span class="p">[</span><span class="n">guess</span> <span class="k">for</span> <span class="n">guess</span> <span class="ow">in</span> <span class="n">old_compatible_area</span> 
             <span class="k">if</span> <span class="n">is_compatible</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">history</span><span class="p">)]</span>
@@ -377,29 +1285,30 @@ I won! (Surprise!)
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">expected_new_compatible_area</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">history</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">expected_new_compatible_area</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">history</span><span class="p">):</span>
     <span class="n">current_compatible_area</span> <span class="o">=</span> <span class="n">compatible_area</span><span class="p">(</span><span class="n">history</span><span class="p">)</span>
     <span class="n">new_compatible_area_lengths</span> <span class="o">=</span> <span class="p">[]</span>
     
-    <span class="c"># будем сохранять сюда размеры совместимых множеств, которые будут</span>
-    <span class="c"># получаться по ходу, для </span>
-    <span class="c"># последующего усреднения</span>
+    <span class="c1"># будем сохранять сюда размеры совместимых множеств, </span>
+    <span class="c1"># которые будут получаться по ходу, для </span>
+    <span class="c1"># последующего усреднения</span>
     
-    <span class="n">new_history</span> <span class="o">=</span> <span class="n">history</span> <span class="o">+</span> <span class="p">[</span><span class="k">None</span><span class="p">]</span>
-    <span class="c"># добавим пустой элемент в историю</span>
+    <span class="n">new_history</span> <span class="o">=</span> <span class="n">history</span> <span class="o">+</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+    <span class="c1"># добавим пустой элемент в историю</span>
     
     <span class="k">for</span> <span class="n">answer</span> <span class="ow">in</span> <span class="n">current_compatible_area</span><span class="p">:</span>
-        <span class="c"># перебираем все элементы из старого совместимого множества</span>
+        <span class="c1"># перебираем все элементы из старого совместимого множества</span>
         
         <span class="n">new_history</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="o">*</span><span class="n">bulls_n_cows</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">answer</span><span class="p">))</span>
-        <span class="c"># добавили новый элемент в историю</span>
+        <span class="c1"># добавили новый элемент в историю</span>
         
         <span class="n">new_compatible_area_lengths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
             <span class="nb">len</span><span class="p">(</span><span class="n">compatible_area</span><span class="p">(</span><span class="n">new_history</span><span class="p">,</span>
                                 <span class="n">current_compatible_area</span><span class="p">)))</span>
-        <span class="c"># посчитали новый размер совместимой области</span>
+        <span class="c1"># посчитали новый размер совместимой области</span>
         
-    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">new_compatible_area_lengths</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">new_compatible_area_lengths</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">new_compatible_area_lengths</span><span class="p">)</span> <span class="o">/</span> 
+            <span class="nb">len</span><span class="p">(</span><span class="n">new_compatible_area_lengths</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -422,7 +1331,7 @@ I won! (Surprise!)
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">expected_new_compatible_area</span><span class="p">(</span><span class="s">&#39;1567&#39;</span><span class="p">,</span> <span class="p">[(</span><span class="s">&#39;1234&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expected_new_compatible_area</span><span class="p">(</span><span class="s1">&#39;1567&#39;</span><span class="p">,</span> <span class="p">[(</span><span class="s1">&#39;1234&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)])</span>
 </pre></div>
 
 </div>
@@ -452,7 +1361,7 @@ I won! (Surprise!)
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://flic.kr/p/3WYXrh"><img src="https://c7.staticflickr.com/3/2413/1934917078_359cfee43f.jpg" alt="Two Cows by Martin Gommel on Flickr"></a></p>
-<div style="text-align:center;"><span style="font-size:80%">Two Cows by Martin Gommel on Flickr / [CC BY-SA-ND](https://creativecommons.org/licenses/by-nc-nd/2.0/)</span></div><h3 id="М-у-у-у">&#1052;-&#1091;-&#1091;-&#1091;<a class="anchor-link" href="#М-у-у-у">&#182;</a></h3><p>Мне пришлось подождать примерно полминуты пока выполнялась эта ячейка! К сожалению, нам нужно делать многократный полный перебор по всем элементам текущей совместимой области, а на начальных шагах она очень большая. Пожалуй, нет никаких шансов использовать его для выбора наилучшего хода: нам пришлось бы запускать эту функцию столько раз, сколько всего есть допустимых чисел (не обязательно даже совместимых с историей!), то есть очень-очень много раз.</p>
+<div style="text-align:center;"><span style="font-size:80%">Two Cows by Martin Gommel on Flickr / <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-SA-ND</a></span></div><h3 id="М-у-у-у">&#1052;-&#1091;-&#1091;-&#1091;<a class="anchor-link" href="#М-у-у-у">&#182;</a></h3><p>Мне пришлось подождать примерно полминуты пока выполнялась эта ячейка! К сожалению, нам нужно делать многократный полный перебор по всем элементам текущей совместимой области, а на начальных шагах она очень большая. Пожалуй, нет никаких шансов использовать его для выбора наилучшего хода: нам пришлось бы запускать эту функцию столько раз, сколько всего есть допустимых чисел (не обязательно даже совместимых с историей!), то есть очень-очень много раз.</p>
 <p>Однако, мы можем упростить игру, чтобы сократить перебор и на этой упрощённой версии изучить, насколько новый алгоритм лучше старого. Будем теперь играть трёхзначными числами, в которых нет цифр 8, 9 и 0. Нам придётся переопределить переменную <code>everything</code>.</p>
 
 </div>
@@ -463,7 +1372,7 @@ I won! (Surprise!)
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">everything</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="s">&#39;1234567&#39;</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">everything</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="s1">&#39;1234567&#39;</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
              <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
 </pre></div>
 
@@ -480,9 +1389,9 @@ I won! (Surprise!)
 <blockquote><p>Я хочу ответить на два вопроса:</p>
 <ol>
 <li>Правда ли, что совместимые с историей числа всегда дают больше информации, чем несовместимые?</li>
-<li>Правда ли, что на самом деле всё равно, какое совместимое число брать — все они дают одинаковое количество информации?</li>
+<li>Правда ли, что на самом деле всё равно, какое совместимое число брать — все они дают одинаковое количество информации?</li>
 </ol>
-<p>Если ответы на оба вопроса положительны, то наш исходный алгоритм не хуже нового. Если нет — надо дальше смотреть.</p>
+<p>Если ответы на оба вопроса положительны, то наш исходный алгоритм не хуже нового. Если нет — надо дальше смотреть.</p>
 </blockquote>
 
 </div>
@@ -493,9 +1402,9 @@ I won! (Surprise!)
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="c"># я хочу таблички и графики, поэтому использую</span>
-<span class="c"># пакет pandas</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="c1"># я хочу таблички и графики, поэтому использую</span>
+<span class="c1"># пакет pandas</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 
@@ -519,26 +1428,32 @@ I won! (Surprise!)
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">enca_stats_first_turn</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span> <span class="n">first_guess</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">enca_stats_first_turn</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span> <span class="n">first_guess</span><span class="p">):</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">everything</span><span class="p">)</span>
-    <span class="n">df</span><span class="p">[</span><span class="s">&#39;in_compatible_area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-    <span class="c"># в этом столбце будет храниться информация</span>
-    <span class="c"># о том, находится ли данное число в</span>
-    <span class="c"># совместимом множестве</span>
-    <span class="n">df</span><span class="p">[</span><span class="s">&#39;expected_new_compatible_area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-    <span class="c"># а сюда запишем ожидаемый</span>
-    <span class="c"># размер нового совместимого множества</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;in_compatible_area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    <span class="c1"># в этом столбце будет храниться информация</span>
+    <span class="c1"># о том, находится ли данное число в</span>
+    <span class="c1"># совместимом множестве</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;expected_new_compatible_area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    <span class="c1"># а сюда запишем ожидаемый</span>
+    <span class="c1"># размер нового совместимого множества</span>
     
     <span class="n">history</span> <span class="o">=</span> <span class="p">[(</span><span class="n">first_guess</span><span class="p">,</span> <span class="o">*</span><span class="n">bulls_n_cows</span><span class="p">(</span><span class="n">first_guess</span><span class="p">,</span> <span class="n">answer</span><span class="p">))]</span>
     <span class="n">current_compatible_area</span> <span class="o">=</span> <span class="n">compatible_area</span><span class="p">(</span><span class="n">history</span><span class="p">)</span>
     
     <span class="k">for</span> <span class="n">guess</span> <span class="ow">in</span> <span class="n">everything</span><span class="p">:</span>
-        <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">guess</span><span class="p">,</span> <span class="s">&#39;in_compatible_area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">guess</span> <span class="ow">in</span> <span class="n">current_compatible_area</span><span class="p">)</span>
-        <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">guess</span><span class="p">,</span> <span class="s">&#39;expected_new_compatible_area&#39;</span><span class="p">]</span> <span class="o">=</span> \
+        <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">guess</span><span class="p">,</span> <span class="s1">&#39;in_compatible_area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span>
+            <span class="n">guess</span> <span class="ow">in</span> <span class="n">current_compatible_area</span><span class="p">)</span>
+        <span class="c1"># для правильной работы</span>
+        <span class="c1"># библиотеки построения графиков</span>
+        <span class="c1"># приходится конвертировать</span>
+        <span class="c1"># булевские значения в строковые</span>
+        
+        <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">guess</span><span class="p">,</span> <span class="s1">&#39;expected_new_compatible_area&#39;</span><span class="p">]</span> <span class="o">=</span> \
             <span class="n">expected_new_compatible_area</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">history</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">df</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">enca_stats_first_turn</span><span class="p">(</span><span class="s">&#39;126&#39;</span><span class="p">,</span> <span class="s">&#39;213&#39;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">enca_stats_first_turn</span><span class="p">(</span><span class="s1">&#39;126&#39;</span><span class="p">,</span> <span class="s1">&#39;213&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -551,8 +1466,8 @@ I won! (Surprise!)
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="n">df</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s">&#39;in_compatible_area&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="n">df</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;in_compatible_area&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -760,7 +1675,7 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">&#39;in_compatible_area&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;in_compatible_area&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -821,7 +1736,7 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">df</span> <span class="o">=</span> <span class="n">enca_stats_first_turn</span><span class="p">(</span><span class="s">&#39;126&#39;</span><span class="p">,</span> <span class="s">&#39;123&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">enca_stats_first_turn</span><span class="p">(</span><span class="s1">&#39;126&#39;</span><span class="p">,</span> <span class="s1">&#39;123&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -834,7 +1749,7 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">&#39;in_compatible_area&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;in_compatible_area&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -895,7 +1810,7 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">df</span><span class="o">.</span><span class="n">expected_new_compatible_area</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">expected_new_compatible_area</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -910,7 +1825,7 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&apos;134&apos;</pre>
+<pre>&#39;134&#39;</pre>
 </div>
 
 </div>
@@ -934,7 +1849,7 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">in_compatible_area</span><span class="o">==</span><span class="s">&quot;True&quot;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">in_compatible_area</span><span class="o">==</span><span class="s2">&quot;True&quot;</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -1044,8 +1959,9 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">simulate_history</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span> <span class="n">guesses</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">[(</span><span class="n">guess</span><span class="p">,</span> <span class="o">*</span><span class="n">bulls_n_cows</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">answer</span><span class="p">))</span> <span class="k">for</span> <span class="n">guess</span> <span class="ow">in</span> <span class="n">guesses</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">simulate_history</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span> <span class="n">guesses</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[(</span><span class="n">guess</span><span class="p">,</span> <span class="o">*</span><span class="n">bulls_n_cows</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">answer</span><span class="p">))</span> 
+            <span class="k">for</span> <span class="n">guess</span> <span class="ow">in</span> <span class="n">guesses</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -1058,8 +1974,10 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="k">for</span> <span class="n">probable_answer</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">in_compatible_area</span><span class="o">==</span><span class="s">&quot;True&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">probable_answer</span><span class="p">,</span> <span class="n">compatible_area</span><span class="p">(</span><span class="n">simulate_history</span><span class="p">(</span><span class="n">probable_answer</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;123&#39;</span><span class="p">,</span> <span class="s">&#39;124&#39;</span><span class="p">])))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">probable_answer</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">in_compatible_area</span><span class="o">==</span><span class="s2">&quot;True&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">probable_answer</span><span class="p">,</span> 
+          <span class="n">compatible_area</span><span class="p">(</span>
+            <span class="n">simulate_history</span><span class="p">(</span><span class="n">probable_answer</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;123&#39;</span><span class="p">,</span> <span class="s1">&#39;124&#39;</span><span class="p">])))</span>
 </pre></div>
 
 </div>
@@ -1072,18 +1990,18 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>124 [&apos;124&apos;]
-125 [&apos;125&apos;, &apos;126&apos;, &apos;127&apos;]
-126 [&apos;125&apos;, &apos;126&apos;, &apos;127&apos;]
-127 [&apos;125&apos;, &apos;126&apos;, &apos;127&apos;]
-143 [&apos;143&apos;, &apos;423&apos;]
-153 [&apos;153&apos;, &apos;163&apos;, &apos;173&apos;, &apos;523&apos;, &apos;623&apos;, &apos;723&apos;]
-163 [&apos;153&apos;, &apos;163&apos;, &apos;173&apos;, &apos;523&apos;, &apos;623&apos;, &apos;723&apos;]
-173 [&apos;153&apos;, &apos;163&apos;, &apos;173&apos;, &apos;523&apos;, &apos;623&apos;, &apos;723&apos;]
-423 [&apos;143&apos;, &apos;423&apos;]
-523 [&apos;153&apos;, &apos;163&apos;, &apos;173&apos;, &apos;523&apos;, &apos;623&apos;, &apos;723&apos;]
-623 [&apos;153&apos;, &apos;163&apos;, &apos;173&apos;, &apos;523&apos;, &apos;623&apos;, &apos;723&apos;]
-723 [&apos;153&apos;, &apos;163&apos;, &apos;173&apos;, &apos;523&apos;, &apos;623&apos;, &apos;723&apos;]
+<pre>124 [&#39;124&#39;]
+125 [&#39;125&#39;, &#39;126&#39;, &#39;127&#39;]
+126 [&#39;125&#39;, &#39;126&#39;, &#39;127&#39;]
+127 [&#39;125&#39;, &#39;126&#39;, &#39;127&#39;]
+143 [&#39;143&#39;, &#39;423&#39;]
+153 [&#39;153&#39;, &#39;163&#39;, &#39;173&#39;, &#39;523&#39;, &#39;623&#39;, &#39;723&#39;]
+163 [&#39;153&#39;, &#39;163&#39;, &#39;173&#39;, &#39;523&#39;, &#39;623&#39;, &#39;723&#39;]
+173 [&#39;153&#39;, &#39;163&#39;, &#39;173&#39;, &#39;523&#39;, &#39;623&#39;, &#39;723&#39;]
+423 [&#39;143&#39;, &#39;423&#39;]
+523 [&#39;153&#39;, &#39;163&#39;, &#39;173&#39;, &#39;523&#39;, &#39;623&#39;, &#39;723&#39;]
+623 [&#39;153&#39;, &#39;163&#39;, &#39;173&#39;, &#39;523&#39;, &#39;623&#39;, &#39;723&#39;]
+723 [&#39;153&#39;, &#39;163&#39;, &#39;173&#39;, &#39;523&#39;, &#39;623&#39;, &#39;723&#39;]
 </pre>
 </div>
 </div>
@@ -1097,8 +2015,10 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="k">for</span> <span class="n">probable_answer</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">in_compatible_area</span><span class="o">==</span><span class="s">&quot;True&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">probable_answer</span><span class="p">,</span> <span class="n">compatible_area</span><span class="p">(</span><span class="n">simulate_history</span><span class="p">(</span><span class="n">probable_answer</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;123&#39;</span><span class="p">,</span> <span class="s">&#39;134&#39;</span><span class="p">])))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">probable_answer</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">in_compatible_area</span><span class="o">==</span><span class="s2">&quot;True&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">probable_answer</span><span class="p">,</span> 
+          <span class="n">compatible_area</span><span class="p">(</span>
+            <span class="n">simulate_history</span><span class="p">(</span><span class="n">probable_answer</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;123&#39;</span><span class="p">,</span> <span class="s1">&#39;134&#39;</span><span class="p">])))</span>
 </pre></div>
 
 </div>
@@ -1111,18 +2031,18 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>124 [&apos;124&apos;]
-125 [&apos;125&apos;, &apos;126&apos;, &apos;127&apos;]
-126 [&apos;125&apos;, &apos;126&apos;, &apos;127&apos;]
-127 [&apos;125&apos;, &apos;126&apos;, &apos;127&apos;]
-143 [&apos;143&apos;]
-153 [&apos;153&apos;, &apos;163&apos;, &apos;173&apos;]
-163 [&apos;153&apos;, &apos;163&apos;, &apos;173&apos;]
-173 [&apos;153&apos;, &apos;163&apos;, &apos;173&apos;]
-423 [&apos;423&apos;]
-523 [&apos;523&apos;, &apos;623&apos;, &apos;723&apos;]
-623 [&apos;523&apos;, &apos;623&apos;, &apos;723&apos;]
-723 [&apos;523&apos;, &apos;623&apos;, &apos;723&apos;]
+<pre>124 [&#39;124&#39;]
+125 [&#39;125&#39;, &#39;126&#39;, &#39;127&#39;]
+126 [&#39;125&#39;, &#39;126&#39;, &#39;127&#39;]
+127 [&#39;125&#39;, &#39;126&#39;, &#39;127&#39;]
+143 [&#39;143&#39;]
+153 [&#39;153&#39;, &#39;163&#39;, &#39;173&#39;]
+163 [&#39;153&#39;, &#39;163&#39;, &#39;173&#39;]
+173 [&#39;153&#39;, &#39;163&#39;, &#39;173&#39;]
+423 [&#39;423&#39;]
+523 [&#39;523&#39;, &#39;623&#39;, &#39;723&#39;]
+623 [&#39;523&#39;, &#39;623&#39;, &#39;723&#39;]
+723 [&#39;523&#39;, &#39;623&#39;, &#39;723&#39;]
 </pre>
 </div>
 </div>
@@ -1158,9 +2078,9 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">bulls_n_cows</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="c"># assert a in everything and b in everything</span>
-    <span class="c"># закомментировали assert, чтобы быстрее было</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">bulls_n_cows</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="c1"># assert a in everything and b in everything</span>
+    <span class="c1"># закомментировали assert, чтобы быстрее было</span>
     <span class="n">bulls</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
     <span class="n">cows</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">b</span><span class="p">))</span> <span class="o">-</span> <span class="n">bulls</span>
     <span class="k">return</span> <span class="n">bulls</span><span class="p">,</span> <span class="n">cows</span>
@@ -1173,16 +2093,17 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
     <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_iterations</span> <span class="o">+</span> <span class="mi">2</span><span class="p">):</span>
         <span class="n">current_compatible_area</span> <span class="o">=</span> <span class="n">compatible_area</span><span class="p">(</span><span class="n">history</span><span class="p">)</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">current_compatible_area</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="c"># если остаётся только одно совместимое число, то</span>
-            <span class="c"># его и надо выбирать</span>
-            <span class="c"># иначе мы рискуем играть очень долго:</span>
-            <span class="c"># любые другие ходы столь же хороши</span>
-            <span class="c"># с точки зрения нашего критерия</span>
-            <span class="c"># потому что уменьшать совместимое</span>
-            <span class="c"># множество уже некуда</span>
+            <span class="c1"># если остаётся только одно совместимое число, то</span>
+            <span class="c1"># его и надо выбирать</span>
+            <span class="c1"># иначе мы рискуем играть очень долго:</span>
+            <span class="c1"># любые другие ходы столь же хороши</span>
+            <span class="c1"># с точки зрения нашего критерия</span>
+            <span class="c1"># потому что уменьшать совместимое</span>
+            <span class="c1"># множество уже некуда</span>
             <span class="n">guess</span> <span class="o">=</span> <span class="n">current_compatible_area</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">guess</span> <span class="o">=</span> <span class="nb">min</span><span class="p">((</span><span class="n">expected_new_compatible_area</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">history</span><span class="p">),</span> <span class="n">g</span><span class="p">)</span> 
+            <span class="n">guess</span> <span class="o">=</span> <span class="nb">min</span><span class="p">((</span><span class="n">expected_new_compatible_area</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">history</span><span class="p">),</span> 
+                         <span class="n">g</span><span class="p">)</span> 
                         <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">everything</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
         <span class="n">history</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">guess</span><span class="p">,</span> <span class="o">*</span><span class="n">bulls_n_cows</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span> <span class="n">guess</span><span class="p">)))</span>
         <span class="k">if</span> <span class="n">history</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">guess</span><span class="p">):</span>
@@ -1200,7 +2121,7 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">optimal_information_player</span><span class="p">(</span><span class="s">&#39;543&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">optimal_information_player</span><span class="p">(</span><span class="s1">&#39;543&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1215,7 +2136,7 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[(&apos;317&apos;, 0, 1), (&apos;124&apos;, 0, 1), (&apos;275&apos;, 0, 1), (&apos;253&apos;, 1, 1), (&apos;543&apos;, 3, 0)]</pre>
+<pre>[(&#39;317&#39;, 0, 1), (&#39;124&#39;, 0, 1), (&#39;275&#39;, 0, 1), (&#39;253&#39;, 1, 1), (&#39;543&#39;, 3, 0)]</pre>
 </div>
 
 </div>
@@ -1239,7 +2160,7 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">sample</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">sample</span>
 </pre></div>
 
 </div>
@@ -1252,7 +2173,7 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[571]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">optimal_information_player</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">optimal_information_player</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> 
            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">sample</span><span class="p">(</span><span class="n">everything</span><span class="p">,</span> <span class="mi">200</span><span class="p">)]</span>
 </pre></div>
 
@@ -1276,7 +2197,7 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[579]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1315,7 +2236,7 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[572]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">results_naive</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">naive_player</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="k">False</span><span class="p">))</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">results_naive</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">naive_player</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span> 
                  <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">everything</span><span class="o">*</span><span class="mi">100</span><span class="p">]</span>
 </pre></div>
 
@@ -1329,7 +2250,7 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[575]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">results_naive</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">results_naive</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1368,8 +2289,8 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[583]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="k">import</span> <span class="n">ttest_ind</span>
-<span class="n">ttest_ind</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">results_naive</span><span class="p">,</span> <span class="n">equal_var</span><span class="o">=</span><span class="k">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="k">import</span> <span class="n">ttest_ind</span>
+<span class="n">ttest_ind</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">results_naive</span><span class="p">,</span> <span class="n">equal_var</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1410,7 +2331,8 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[584]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">optimal_information_compatible_player</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span> <span class="n">max_iterations</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">optimal_information_compatible_player</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span> 
+                                          <span class="n">max_iterations</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
     <span class="n">guess</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">everything</span><span class="p">)</span>
     <span class="n">history</span> <span class="o">=</span> <span class="n">simulate_history</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span> <span class="p">[</span><span class="n">guess</span><span class="p">])</span>
     <span class="k">if</span> <span class="n">history</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">guess</span><span class="p">):</span>
@@ -1437,8 +2359,8 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Чтобы уловить разницу в результатах (если она есть), нам потребуется сделать много испытаний. Я поставил следующую ячейку считаться и пошёл спать.</p>
-<p><a href="https://flic.kr/p/eZ5TC1"><img src="https://c5.staticflickr.com/6/5346/9178632356_8635b818ca_z.jpg" alt=""></a></p>
-<div style="text-align:center; font-size:80%">Dozing off Andrew Black on Flickr / [CC-BY-NC-ND](https://creativecommons.org/licenses/by-nc-nd/2.0/)</div>
+<p><a href="https://flic.kr/p/eZ5TC1"><img src="https://c5.staticflickr.com/6/5346/9178632356_8635b818ca_z.jpg" alt="Dozing off Andrew Black on Flickr"></a></p>
+<div style="text-align:center; font-size:80%">Dozing off Andrew Black on Flickr / <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC-BY-NC-ND</a></div>
 </div>
 </div>
 </div>
@@ -1447,9 +2369,9 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[591]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">results_inf_comp</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">optimal_information_compatible_player</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">results_inf_comp</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">optimal_information_compatible_player</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> 
                     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">everything</span><span class="o">*</span><span class="mi">10</span><span class="p">]</span>
-<span class="c"># это будет долго считаться</span>
+<span class="c1"># это будет долго считаться</span>
 </pre></div>
 
 </div>
@@ -1472,7 +2394,7 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[592]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">results_inf_comp</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">results_inf_comp</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1511,7 +2433,7 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[593]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">ttest_ind</span><span class="p">(</span><span class="n">results_naive</span><span class="p">,</span> <span class="n">results_inf_comp</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">results_naive</span><span class="p">,</span> <span class="n">results_inf_comp</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1552,7 +2474,7 @@ ZtalHODNzLrU/wACfOjuz3YMVAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">plotly.offline</span> <span class="k">import</span> <span class="n">init_notebook_mode</span><span class="p">,</span> <span class="n">iplot</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">plotly.offline</span> <span class="k">import</span> <span class="n">init_notebook_mode</span><span class="p">,</span> <span class="n">iplot</span>
 <span class="kn">from</span> <span class="nn">plotly.graph_objs</span> <span class="k">import</span> <span class="n">Scatter3d</span>
 <span class="n">init_notebook_mode</span><span class="p">()</span>
 </pre></div>
@@ -1654,8 +2576,8 @@ e.setOptions(this.idLayerLine,"setLayoutProperty",r.line.layout),e.setOptions(th
 <div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="p">((</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">everything</span><span class="p">))</span>
-<span class="n">iplot</span><span class="p">([</span><span class="n">Scatter3d</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="n">z</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">&#39;markers&#39;</span><span class="p">)])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="p">((</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">everything</span><span class="p">))</span>
+<span class="n">iplot</span><span class="p">([</span><span class="n">Scatter3d</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="n">z</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers&#39;</span><span class="p">)])</span>
 </pre></div>
 
 </div>
@@ -1693,7 +2615,7 @@ e.setOptions(this.idLayerLine,"setLayoutProperty",r.line.layout),e.setOptions(th
 <div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">history</span> <span class="o">=</span> <span class="n">naive_player</span><span class="p">(</span><span class="s">&#39;253&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">history</span> <span class="o">=</span> <span class="n">naive_player</span><span class="p">(</span><span class="s1">&#39;253&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1706,7 +2628,7 @@ e.setOptions(this.idLayerLine,"setLayoutProperty",r.line.layout),e.setOptions(th
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>My real answer is 253, but let&apos;s pretend I don&apos;t know it.
+<pre>My real answer is 253, but let&#39;s pretend I don&#39;t know it.
 Attempt 1. My guess is 437. I have 0 bull(s) and 1 cow(s)
 Attempt 2. My guess is 123. I have 1 bull(s) and 1 cow(s)
 Attempt 3. My guess is 325. I have 0 bull(s) and 3 cow(s)
@@ -1725,7 +2647,7 @@ I won! (Surprise!)
 <div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">history</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">history</span>
 </pre></div>
 
 </div>
@@ -1740,7 +2662,7 @@ I won! (Surprise!)
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[(&apos;437&apos;, 0, 1), (&apos;123&apos;, 1, 1), (&apos;325&apos;, 0, 3), (&apos;253&apos;, 3, 0)]</pre>
+<pre>[(&#39;437&#39;, 0, 1), (&#39;123&#39;, 1, 1), (&#39;325&#39;, 0, 3), (&#39;253&#39;, 3, 0)]</pre>
 </div>
 
 </div>
@@ -1754,7 +2676,7 @@ I won! (Surprise!)
 <div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">get_color</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">history</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_color</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">history</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">history</span><span class="p">)):</span>
         <span class="k">if</span> <span class="n">guess</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">compatible_area</span><span class="p">(</span><span class="n">history</span><span class="p">[:</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]):</span>
             <span class="k">break</span>
@@ -1771,7 +2693,7 @@ I won! (Surprise!)
 <div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">get_color</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">history</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">everything</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">get_color</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">history</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">everything</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -1794,7 +2716,7 @@ I won! (Surprise!)
 <div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">iplot</span><span class="p">([</span><span class="n">Scatter3d</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="n">z</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">&#39;markers&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">))])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">iplot</span><span class="p">([</span><span class="n">Scatter3d</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="n">z</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">))])</span>
 </pre></div>
 
 </div>
@@ -1832,8 +2754,8 @@ I won! (Surprise!)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Вместо-заключения">&#1042;&#1084;&#1077;&#1089;&#1090;&#1086; &#1079;&#1072;&#1082;&#1083;&#1102;&#1095;&#1077;&#1085;&#1080;&#1103;<a class="anchor-link" href="#Вместо-заключения">&#182;</a></h3><p>Если верить <a href="https://en.wikipedia.org/wiki/Bulls_and_Cows">английской Википедии</a>, ссылающейся на <a href="http://slovesnov.users.sourceforge.net/index.php?bullscows,english">этот сайт</a> и <a href="http://www.cs.nccu.edu.tw/~chaolin/papers/science3203.pdf">эту китайскую статью</a>, классическая версия «Коров и быков» имеет полное оптимальное решение (последняя ссылка мне кажется сомнительной). Русская Википедия <a href="https://ru.wikipedia.org/wiki/Быки_и_коровы">рассказывает</a>, что Дональд Кнут (создатель TeX'а) предложил оптимальный алгоритм для игры в Mastermind (вариация «Коров и быков», в которой цифры могут повторяться, но всего их меньше). Доказательство оптимальности этих алгоритмов, насколько я понимаю, существенно опирается на конкретные правила: они плохо обобщаются на случай чисел произвольной длины и с произвольным алфавитом. Те алгоритмы, которые мы обсудили в этом посте, наоборот, обобщаются хорошо (по крайней мере, теоретически). Хотя, по всей видимости, не являются оптимальными.</p>
-<p>По мере подготовки этого поста я много раз сталкивался с неожиданными результатами. Оказывается, этот сюжет далеко не исчерпан. Если в знаете ещё что-нибудь интересное про «Быков и коров» — пишите в комментариях!</p>
+<h3 id="Вместо-заключения">&#1042;&#1084;&#1077;&#1089;&#1090;&#1086; &#1079;&#1072;&#1082;&#1083;&#1102;&#1095;&#1077;&#1085;&#1080;&#1103;<a class="anchor-link" href="#Вместо-заключения">&#182;</a></h3><p>Если верить <a href="https://en.wikipedia.org/wiki/Bulls_and_Cows">английской Википедии</a>, ссылающейся на <a href="http://slovesnov.users.sourceforge.net/index.php?bullscows,english">этот сайт</a> и <a href="http://www.cs.nccu.edu.tw/~chaolin/papers/science3203.pdf">эту китайскую статью</a>, классическая версия «Коров и быков» имеет полное оптимальное решение (последняя ссылка мне кажется сомнительной). Русская Википедия <a href="https://ru.wikipedia.org/wiki/Быки_и_коровы">рассказывает</a>, что Дональд Кнут (создатель TeX'а) предложил оптимальный алгоритм для игры в Mastermind (вариация «Коров и быков», в которой цифры могут повторяться, но всего их меньше). Доказательство оптимальности этих алгоритмов, насколько я понимаю, существенно опирается на конкретные правила: они плохо обобщаются на случай чисел произвольной длины и с произвольным алфавитом. Те алгоритмы, которые мы обсудили в этом посте, наоборот, обобщаются хорошо (по крайней мере, теоретически). Хотя, по всей видимости, не являются оптимальными.</p>
+<p>По мере подготовки этого поста я много раз сталкивался с неожиданными результатами. Оказывается, этот сюжет далеко не исчерпан. Если в знаете ещё что-нибудь интересное про «Быков и коров» — пишите в комментариях!</p>
 
 </div>
 </div>
@@ -1926,14 +2848,13 @@ I won! (Surprise!)
                     <a href="https://ischurov.github.io/tag/one-liner.html">one-liner<span><sup>1</sup></span></a>  
                     <a href="https://ischurov.github.io/tag/pandas.html">pandas<span><sup>1</sup></span></a>  
                     <a href="https://ischurov.github.io/tag/pogoda.html">погода<span><sup>1</sup></span></a>  
-                    <a href="https://ischurov.github.io/tag/politologiia.html">политология<span><sup>1</sup></span></a>  
+                    <a href="https://ischurov.github.io/tag/politologiia.html">политология<span><sup>2</sup></span></a>  
                     <a href="https://ischurov.github.io/tag/pyplot.html">pyplot<span><sup>1</sup></span></a>  
-                    <a href="https://ischurov.github.io/tag/python.html">python<span><sup>7</sup></span></a>  
-                    <a href="https://ischurov.github.io/tag/python-politologiia-vybory.html">python политология выборы<span><sup>1</sup></span></a>  
+                    <a href="https://ischurov.github.io/tag/python.html">python<span><sup>8</sup></span></a>  
                     <a href="https://ischurov.github.io/tag/set.html">set<span><sup>1</sup></span></a>  
                     <a href="https://ischurov.github.io/tag/statistika.html">статистика<span><sup>1</sup></span></a>  
                     <a href="https://ischurov.github.io/tag/teorver.html">теорвер<span><sup>1</sup></span></a>  
-                    <a href="https://ischurov.github.io/tag/vybory.html">выборы<span><sup>1</sup></span></a>  
+                    <a href="https://ischurov.github.io/tag/vybory.html">выборы<span><sup>2</sup></span></a>  
                     <a href="https://ischurov.github.io/tag/xkcd.html">xkcd<span><sup>1</sup></span></a>  
                   </p>
                 </nav>
