@@ -2,17 +2,17 @@
 <html lang="ru">	
 <head>
 	<meta charset="utf-8"/>
-	<title>Пересечение нескольких множеств в одну строчку - Math, Pics and Code: блог Ильи Щурова</title>	
+	<title>Python.v.JS - Math, Pics and Code: блог Ильи Щурова</title>	
 	<meta name="author" content="Илья Щуров">
 	
 
-  <meta name="description" content="Сегодня на паре по программированию для журналистики данных мы столкнулись с такой задачей: есть список множеств, нужно найти пересечение их всех. Как это проще всего сделать в Python? Оказывается, у этой задачи есть решение в одну строчку. Собственно, дело было так. Мы смотрели на данные по госзакупкам через API сайта clearspending.ru">
+  <meta name="description" content="Однажды это должно было случиться. Я долго старался этого избежать, искал обходные пути и тайные лайзеки. Пытался выкручиваться так и сяк. Но всё-таки жизнь неумолима. Что должно произойти, то произойдёт. Когда-нибудь это может случиться и с вами. Да-да, никто не застрахован! Вы думаете, что выучили C, C++, Pascal, Python, Ruby и даже Haskell, и это вас спасёт? Нет. В один прекрасный день вы столкнётесь с ним. Он войдёт в вашу жизнь, хотите вы этого или нет. Имя ему — JavaScript.">
 
 	<meta name="twitter:card" content="summary">
 	  <meta name="twitter:creator" content="@ivoyager">
-	<meta name="twitter:title" content="Пересечение нескольких множеств в одну строчку">
-	<meta name="twitter:description" content="Сегодня на паре по программированию для журналистики данных мы столкнулись с такой задачей: есть список множеств, нужно найти пересечение их всех. Как это проще всего сделать в Python? Оказывается, у этой задачи есть решение в одну строчку. Собственно, дело было так. Мы смотрели на данные по госзакупкам через API сайта clearspending.ru">
-	<meta name="twitter:url" content="https://ischurov.github.io/set-intersections.html">
+	<meta name="twitter:title" content="Python.v.JS">
+	<meta name="twitter:description" content="Однажды это должно было случиться. Я долго старался этого избежать, искал обходные пути и тайные лайзеки. Пытался выкручиваться так и сяк. Но всё-таки жизнь неумолима. Что должно произойти, то произойдёт. Когда-нибудь это может случиться и с вами. Да-да, никто не застрахован! Вы думаете, что выучили C, C++, Pascal, Python, Ruby и даже Haskell, и это вас спасёт? Нет. В один прекрасный день вы столкнётесь с ним. Он войдёт в вашу жизнь, хотите вы этого или нет. Имя ему — JavaScript.">
+	<meta name="twitter:url" content="https://ischurov.github.io/python-v-js.html">
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
@@ -51,15 +51,15 @@
 		  <div role="main" class="content">
 	<article class="full">
 		
-		<h1>Пересечение нескольких множеств в одну строчку</h1>
+		<h1>Python.v.JS</h1>
 		
 <div class="metadata">
-  <time datetime="2016-12-18T00:55:05-03:00" pubdate>2016-12-18</time>
+  <time datetime="2017-01-15T00:31:00-03:00" pubdate>2017-01-15</time>
     <address class="vcard author">
       Автор: <a class="url fn" href="https://ischurov.github.io/author/ilia-shchurov.html">Илья Щуров</a>
     </address>
   Категория: <a href="https://ischurov.github.io/category/korotkie-zametki.html">короткие заметки</a>
-<p class="tags">Теги: <a href="https://ischurov.github.io/tag/python.html">python</a>, <a href="https://ischurov.github.io/tag/set.html">set</a>, <a href="https://ischurov.github.io/tag/intesection.html">intesection</a>, <a href="https://ischurov.github.io/tag/one-liner.html">one-liner</a></p></div>		
+<p class="tags">Теги: <a href="https://ischurov.github.io/tag/python.html">python</a>, <a href="https://ischurov.github.io/tag/javascript.html">javascript</a>, <a href="https://ischurov.github.io/tag/python-v-js.html">python-v-js</a></p></div>		
 		<style type="text/css">/*!
 *
 * IPython notebook
@@ -133,37 +133,20 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Сегодня на паре по программированию для <a href="https://www.hse.ru/ma/datajourn/">журналистики данных</a> мы столкнулись с такой задачей: есть список множеств, нужно найти пересечение их всех. Как это проще всего сделать в Python? Оказывается, у этой задачи есть решение в одну строчку.</p>
-<p>Собственно, дело было так. Мы смотрели на данные по госзакупкам через <a href="https://github.com/idalab/clearspending-examples/wiki">API</a> сайта <a href="https://clearspending.ru">clearspending.ru</a>. Там у каждого контракта куча разных атрибутов. Как видно из следующих примеров, наборы атрибутов (в данном случае, ключей в словаре) у разных контрактов различаются. Мы хотели найти такие атрибуты, которые есть у всех контрактов.</p>
+<p>Однажды это должно было случиться. Я долго старался этого избежать, искал обходные пути и тайные лайзеки. Пытался выкручиваться так и сяк. Но всё-таки жизнь неумолима. Что должно произойти, то произойдёт. Когда-нибудь это может случиться и с вами. Да-да, никто не застрахован! Вы думаете, что выучили C, C++, Pascal, Python, Ruby и даже Haskell, и это вас спасёт? Нет. В один прекрасный день вы столкнётесь с ним. Он войдёт в вашу жизнь, хотите вы этого или нет. Имя ему — JavaScript.</p>
+<p>В общем, каникулы я провёл преимущественно за чтением книг из серии <a href="https://github.com/getify/You-Dont-Know-JS">You Don't Know JavaScript</a> (YDKJ): до сих пор мои познания в этой области были очень поверхностными, но тут я решил, что раз уж собираюсь что-то рассказывать на эту тему студентам, то надо бы и самому подучить матчасть на фундаментальном уровне.</p>
+<p>Ну и вместо конспекта первой лекции сделал сайт со сравнением Python и JavaScript — не в смысле, какой язык лучше (это и так понятно), а в смысле сходств и отличий в синтаксисе и внутреннем устройстве: чтобы те, кто знает один из этих языков, могли бы быстрее выучить другой. Встречайте: <a href="http://ischurov.github.io/pythonvjs/">Python.v.JS</a>. Пока там не очень много примеров, но я надеюсь, что со временем их количество будет расти. Если хотите что-нибудь добавить и исправить, милости просим — просто делаете fork <a href="http://github.com/ischurov/pythonvjs">проекта</a> на github'е, правите что надо в каталоге <code>sources</code> и делаете pull request.</p>
+<p>Ну а в качестве затравки, вот что бывает в JavaScript (кстати, для Jupyter есть javascript-ядро, <a href="https://www.npmjs.com/package/ijavascript">ijavascript</a>). Если интересно, почему так — в книжках YDKJ есть ответы.</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">requests</span>
-<span class="c"># пример из документации</span>
-<span class="c"># https://github.com/idalab/clearspending-examples/wiki/Описание-API-Контракты</span>
-<span class="n">entrypoint</span> <span class="o">=</span> <span class="s">&quot;http://openapi.clearspending.ru/restapi/v3/contracts/search/&quot;</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">entrypoint</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;customerregion&#39;</span><span class="p">:</span> <span class="s">&#39;05&#39;</span><span class="p">,</span> <span class="s">&#39;sort&#39;</span><span class="p">:</span><span class="s">&#39;-price&#39;</span><span class="p">})</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-<span class="n">contracts</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s">&#39;contracts&#39;</span><span class="p">][</span><span class="s">&#39;data&#39;</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">contracts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<div class=" highlight hl-javascript"><pre><span class="p">[]</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span>
 </pre></div>
 
 </div>
@@ -178,7 +161,7 @@
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>dict_keys([&apos;finances&apos;, &apos;documentBase&apos;, &apos;versionNumber&apos;, &apos;mongo_id&apos;, &apos;suppliers&apos;, &apos;placingWayCode&apos;, &apos;contractUrl&apos;, &apos;foundation&apos;, &apos;products&apos;, &apos;scan&apos;, &apos;fileVersion&apos;, &apos;contractProcedure&apos;, &apos;economic_sectors&apos;, &apos;signDate&apos;, &apos;fz&apos;, &apos;currentContractStage&apos;, &apos;printFormUrl&apos;, &apos;price&apos;, &apos;protocolDate&apos;, &apos;number&apos;, &apos;regNum&apos;, &apos;currentContractStage_raw&apos;, &apos;loadId&apos;, &apos;attachments&apos;, &apos;customer&apos;, &apos;placing&apos;, &apos;regionCode&apos;, &apos;id&apos;, &apos;currency&apos;, &apos;singleCustomerReason&apos;, &apos;execution&apos;, &apos;publishDate&apos;, &apos;schemaVersion&apos;])</pre>
+<pre>true</pre>
 </div>
 
 </div>
@@ -192,7 +175,7 @@
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">contracts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<div class=" highlight hl-javascript"><pre><span class="mi">0</span> <span class="o">==</span> <span class="p">[]</span>
 </pre></div>
 
 </div>
@@ -207,7 +190,7 @@
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>dict_keys([&apos;signDate&apos;, &apos;versionNumber&apos;, &apos;mongo_id&apos;, &apos;finances&apos;, &apos;contractUrl&apos;, &apos;foundation&apos;, &apos;misuses&apos;, &apos;regionCode&apos;, &apos;fileVersion&apos;, &apos;documentBase&apos;, &apos;fz&apos;, &apos;currentContractStage&apos;, &apos;price&apos;, &apos;placing&apos;, &apos;number&apos;, &apos;products&apos;, &apos;publishDate&apos;, &apos;customer&apos;, &apos;regNum&apos;, &apos;suppliers&apos;, &apos;id&apos;, &apos;currency&apos;, &apos;execution&apos;, &apos;loadId&apos;])</pre>
+<pre>true</pre>
 </div>
 
 </div>
@@ -215,87 +198,13 @@
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>По такому поводу я рассказал про <a href="https://docs.python.org/3/tutorial/datastructures.html#sets">множества</a> в Python (давно откладывал это — к слову не приходилось) и написал такой код.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">fields</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">contracts</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="c"># сделали множество из списка ключей первого контракта</span>
-<span class="c"># здесь словарь contracts[0] рассматривается как iterable</span>
-<span class="c"># а в этом случае он итерирует свои ключи</span>
-<span class="c"># поэтому .keys() дописывать не нужно</span>
-<span class="k">for</span> <span class="n">contract</span> <span class="ow">in</span> <span class="n">contracts</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
-    <span class="n">fields</span><span class="o">.</span><span class="n">intersection_update</span><span class="p">(</span><span class="n">contract</span><span class="p">)</span>
-    <span class="c"># пересечь множество fields с множеством, полученным из списка ключей</span>
-    <span class="c"># очередного контракта и результат записать в fields</span>
-    <span class="c"># иными словами, выкинуть из fields те элементы, которых нет в</span>
-    <span class="c"># списке ключей очередного контракта</span>
-<span class="n">fields</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&apos;currency&apos;,
- &apos;customer&apos;,
- &apos;fileVersion&apos;,
- &apos;fz&apos;,
- &apos;id&apos;,
- &apos;loadId&apos;,
- &apos;mongo_id&apos;,
- &apos;number&apos;,
- &apos;price&apos;,
- &apos;products&apos;,
- &apos;publishDate&apos;,
- &apos;regNum&apos;,
- &apos;regionCode&apos;,
- &apos;versionNumber&apos;}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Он мне перестал нравиться ещё до того, как я закончил его писать. Ну, право дело, ведь когда нам нужно сложить числа в списке, мы не пишем цикл — мы просто вызываем функцию <code>sum()</code>. Должно, наверное, и для множеств быть что-то похожее? На паре тратить время на поиски не хотелось, но, придя домой, я всё же решил найти ответ на этот вопрос. <a href="http://stackoverflow.com/a/2541814/3025981">Оказывается</a>, есть очень просто решение!</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">fields</span> <span class="o">=</span> <span class="nb">set</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="nb">set</span><span class="p">(</span><span class="n">contract</span><span class="p">)</span> <span class="k">for</span> <span class="n">contract</span> <span class="ow">in</span> <span class="n">contracts</span><span class="p">])</span>
-<span class="n">fields</span>
+<div class=" highlight hl-javascript"><pre><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -310,20 +219,7 @@
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&apos;currency&apos;,
- &apos;customer&apos;,
- &apos;fileVersion&apos;,
- &apos;fz&apos;,
- &apos;id&apos;,
- &apos;loadId&apos;,
- &apos;mongo_id&apos;,
- &apos;number&apos;,
- &apos;price&apos;,
- &apos;products&apos;,
- &apos;publishDate&apos;,
- &apos;regNum&apos;,
- &apos;regionCode&apos;,
- &apos;versionNumber&apos;}</pre>
+<pre>&apos;1,2,102,3,20&apos;</pre>
 </div>
 
 </div>
@@ -331,25 +227,13 @@
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Дело в том, что <code>set.intersection()</code> принимает на вход любое количество аргументов! С помощью <a href="http://python.math-hse.info:8080/github/ischurov/pythonhse/blob/master/Lecture%205.ipynb#Списковые-включения-(list-comprehensions%29">спискового включения</a> мы делаем список множеств, составленных из ключей каждого контракта, затем звёздочкой <a href="https://docs.python.org/3/tutorial/controlflow.html#unpacking-argument-lists">«распаковываем»</a> этот список в набор аргументов <code>set.intersection()</code> — вжух — и всё готово!</p>
-<p>Пожалуй, по сравнению с моим исходным подходом есть только один недостаток: по памяти это решение более требовательное, потому что сначала создаётся список, потом он передаётся функции. Причём из-за необходимости распаковывать элементы здесь бессмысленно заменять список на генератор — <a href="http://stackoverflow.com/questions/25345676/unpacking-a-python-generator-into-arguments-memory-efficient">всё равно</a> память придётся тратить. Впрочем, с практической точки зрения это скорее всего не принципиально.</p>
-<p>UPD. После <a href="https://twitter.com/rusorrow/status/810249396516438016">подсказки</a> <a href="https://twitter.com/rusorrow">@rusorrow</a> о том, что <code>.keys()</code> не нужен при создании множества, я подумал, что можно было бы сделать ещё короче: с помощью <code>map</code> — мне кажется, что так даже лучше — это, пожалуй, тот случай, когда <code>map</code> упрощает код по сравнению со списочными включениями.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="nb">set</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="o">*</span><span class="nb">map</span><span class="p">(</span><span class="nb">set</span><span class="p">,</span> <span class="n">contracts</span><span class="p">))</span>
+<div class=" highlight hl-javascript"><pre><span class="s1">&#39;2&#39;</span> <span class="o">+</span> <span class="s1">&#39;3&#39;</span>
 </pre></div>
 
 </div>
@@ -364,20 +248,36 @@
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&apos;currency&apos;,
- &apos;customer&apos;,
- &apos;fileVersion&apos;,
- &apos;fz&apos;,
- &apos;id&apos;,
- &apos;loadId&apos;,
- &apos;mongo_id&apos;,
- &apos;number&apos;,
- &apos;price&apos;,
- &apos;products&apos;,
- &apos;publishDate&apos;,
- &apos;regNum&apos;,
- &apos;regionCode&apos;,
- &apos;versionNumber&apos;}</pre>
+<pre>&apos;23&apos;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span class="s1">&#39;2&#39;</span> <span class="o">-</span> <span class="s1">&#39;3&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-1</pre>
 </div>
 
 </div>
